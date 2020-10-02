@@ -442,8 +442,8 @@
     $(function () {
         @foreach(['success', 'warning', 'error', 'info'] as $item)
             @if(session($item))
-            toastr['{{ $item }}']('{{ session($item) }}');
-        @endif
+                toastr['{{ $item }}']('{{ session($item) }}');
+            @endif
         @endforeach
     });
 </script>
