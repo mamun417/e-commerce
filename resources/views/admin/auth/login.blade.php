@@ -1,64 +1,45 @@
-@extends('layouts.app')
+@extends('admin.auth.layouts.app')
 
 @section('content')
-    <div class="wrapper without_header_sidebar">
-        <!-- contnet wrapper -->
-        <div class="content_wrapper">
-            <!-- page content -->
-            <div class="login_page center_container">
-                <div class="center_content">
-                    <div class="logo">
-                        <img src="{{ asset('panel/assets/images/logo.png') }}" alt="" class="img-fluid">
-                    </div>
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="ibox-content shadow">
 
-                        <div class="form-group icon_parent">
-                            <label for="password">Email</label>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                   name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-
-                            <span class="icon_soon_bottom_right"><i class="fas fa-envelope"></i></span>
-                        </div>
-                        <div class="form-group icon_parent">
-                            <label for="password">Password</label>
-                            <input id="password" type="password"
-                                   class="form-control @error('password') is-invalid @enderror" name="password" required
-                                   autocomplete="current-password">
-
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-
-                            <span class="icon_soon_bottom_right"><i class="fas fa-unlock"></i></span>
-                        </div>
-                        <div class="form-group">
-                            <label class="chech_container">Remember me
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <a class="registration" href="{{ route('register') }}">Create new account</a><br>
-                            <a href="{{ route('password.request') }}" class="text-white">I forgot my password</a>
-                            <button type="submit" class="btn btn-blue">Login</button>
-                        </div>
-                    </form>
-                    <div class="footer">
-                        <p>Copyright &copy; 2020 <a href="https://easylearningbd.com/">easy Learning</a>. All rights
-                            reserved.</p>
-                    </div>
-
-                </div>
+            <div style="text-align: center">
+                <img alt="image" src="{{ asset('panel/assets/images/logo.png') }}" width="166"/>
             </div>
-        </div><!--/ content wrapper -->
-    </div><!--/ wrapper -->
+
+            <h3 class="font-bold">Login</h3>
+            <form class="m-t" role="form" method="POST" action="{{ route('admin.login') }}">
+                @csrf
+
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                           name="email" value="" required autocomplete="email" autofocus
+                           placeholder="Email">
+                    @error('email')
+                    <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <input id="password" type="password" value="12345678"
+                           class="form-control @error('password') is-invalid @enderror" name="password" required
+                           autocomplete="current-password" placeholder="Password">
+                    @error('password')
+                    <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <button type="submit" class="btn btn-primary block full-width m-b"><strong>Login</strong></button>
+
+                <a href="{{ route('password.request') }}"><small>Forgot password?</small></a>
+
+                <p class="text-center">
+                    <span>Do not have an account?</span>
+                </p>
+                <a class="btn btn-sm btn-white btn-block" href="{{ route('register') }}">Create an account</a>
+
+            </form>
+        </div>
+    </div>
 @endsection

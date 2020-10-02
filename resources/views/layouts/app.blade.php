@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{{ asset('panel/assets/images/favicon.png') }}">
     <!--Page title-->
-    <title>Admin easy Learning</title>
+    <title>Panel Easy Learning</title>
     <!--bootstrap-->
     <link rel="stylesheet" href="{{ asset('panel/assets/css/bootstrap.min.css') }}">
     <!--font awesome-->
@@ -442,8 +442,8 @@
     $(function () {
         @foreach(['success', 'warning', 'error', 'info'] as $item)
             @if(session($item))
-            toastr['{{ $item }}']('{{ session($item) }}');
-        @endif
+                toastr['{{ $item }}']('{{ session($item) }}');
+            @endif
         @endforeach
     });
 </script>
