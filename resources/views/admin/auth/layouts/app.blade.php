@@ -5,17 +5,17 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset('admin/img/favicon.png') }}" sizes="192x192" />
-    <link rel="apple-touch-icon" href="{{ asset('admin/img/favicon.png') }}" />
+    <link rel="icon" href="{{ asset('backend/img/favicon.png') }}" sizes="192x192" />
+    <link rel="apple-touch-icon" href="{{ asset('backend/img/favicon.png') }}" />
     <title>Admin Easy Learning</title>
-    <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/plugins/iCheck/custom.css')}}" rel="stylesheet">
-    <link href="{{ asset('admin/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/plugins/iCheck/custom.css')}}" rel="stylesheet">
+    <link href="{{ asset('backend/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet">
 
     {{--Social icon--}}
-    <link href="{{ asset('admin/css/plugins/bootstrapSocial/bootstrap-social.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/plugins/bootstrapSocial/bootstrap-social.css') }}" rel="stylesheet">
 
     @stack('extra-css')
 
@@ -38,11 +38,11 @@
     </div>
 </body>
 
-<script src="{{ asset('admin/js/jquery-3.1.1.min.js') }}"></script>
-<script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('backend/js/jquery-3.1.1.min.js') }}"></script>
+<script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
 
 <!-- iCheck -->
-<script src="{{ asset('admin/js/plugins/iCheck/icheck.min.js') }}"></script>
+<script src="{{ asset('backend/js/plugins/iCheck/icheck.min.js') }}"></script>
 
 @yield('custom-js')
 

@@ -5,7 +5,7 @@
             <li class="nav-header-custom">
                 <div class="dropdown profile-element">
                     <div style="margin-bottom: 30px;">
-                        <img alt="image" src="https://app.medmission.com.bd/public/admin/img/logo.png" width="166">
+                        <img alt="image" src="{{ asset('panel/assets/images/logo.png') }}" width="166">
                     </div>
 
                     <span>
@@ -36,12 +36,12 @@
                     </ul>
                 </div>
                 <div class="logo-element">
-                    <img alt="image" src="https://app.medmission.com.bd/public/admin/img/favicon.png" width="28px">
+                    <img alt="image" src="{{ asset('panel/assets/images/logo_small2.png') }}" width="28px">
                 </div>
             </li>
 
             <li class="">
-                <a href="{{ url('home') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                <a href="{{ route('admin.dashboard') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
             </li>
         </ul>
     </div>
