@@ -1,5 +1,5 @@
 html, body{
-    background-color: #233646!important;
+    /*background-color: #233646!important;*/
     color: #000!important;
 }
 
@@ -254,11 +254,6 @@ th.trash-table.sorting_desc::after {
     border-radius: 4px;
 }
 
-.nav-header-custom {
-    padding: 33px 25px;
-    /*background-color: #2f4050;
-    background-image: url("patterns/header-profile.png");*/
-}
 .nav-header-custom a {
     color: #DFE4ED;
 }
