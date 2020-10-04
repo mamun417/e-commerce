@@ -30,6 +30,9 @@ Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'adm
         return view('admin.dashboard');
     })->name('dashboard');
 
+    Route::resource('categories', 'CategoryController');
+    Route::resource('brands', 'BrandController');
+
     //Password
     Route::get('password-change', 'AdminController@changePassword')->name('password.change');
     Route::post('password-update', 'AdminController@updatePassword')->name('password.update');
