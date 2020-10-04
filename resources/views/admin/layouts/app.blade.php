@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ asset('panel/assets/images/favicon.png') }}" sizes="192x192" />
     <link rel="apple-touch-icon" href="{{ asset('backend/img/favicon.png') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Admin Easy Learning</title>
+    <title>@yield('title', 'Ecommerce') - {{ config('app.name', 'Laravel blog') }}</title>
 
     <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/font-awesome/css/font-awesome.css') }}" rel="stylesheet">

@@ -5,8 +5,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset('backend/img/favicon.png') }}" sizes="192x192" />
-    <link rel="apple-touch-icon" href="{{ asset('backend/img/favicon.png') }}" />
+    <link rel="icon" href="{{ asset('panel/assets/images/favicon.png') }}" sizes="192x192" />
+    <link rel="apple-touch-icon" href="{{ asset('panel/assets/images/favicon.png') }}" />
     <title>Admin Easy Learning</title>
     <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/plugins/iCheck/custom.css')}}" rel="stylesheet">

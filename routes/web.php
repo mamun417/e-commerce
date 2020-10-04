@@ -12,7 +12,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 //Admin authentication
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
     // Route::get('/', 'Auth\LoginController@showLoginForm');
@@ -24,6 +23,14 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], fu
 });
 
 //Admin
-Route::get('admin/dashboard', function () {
-    return view('admin.home');
-})->middleware('auth:admin')->name('admin.dashboard');
+Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
+
+    //Dashboard
+    Route::get('dashboard', function () {
+        return view('admin.dashboard');
+    })->name('dashboard');
+
+    //Password
+    Route::get('password-change', 'AdminController@changePassword')->name('password.change');
+    Route::post('password-update', 'AdminController@updatePassword')->name('password.update');
+});

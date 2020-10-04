@@ -9,6 +9,7 @@ class Authenticate extends Middleware
 {
     protected $guards = [];
 
+    // get guard
     public function handle($request, Closure $next, ...$guards)
     {
         $this->guards = $guards;
@@ -24,7 +25,7 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (!$request->expectsJson()) {
-            $guard = $this->guards[0];
+            $guard = array_shift($this->guards);
 
             if ($guard === 'admin') {
                 return route('admin.login');

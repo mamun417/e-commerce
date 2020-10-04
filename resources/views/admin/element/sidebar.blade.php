@@ -20,7 +20,7 @@
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
                         <li><a href="https://app.medmission.com.bd/profile"><i class="fa fa-user-circle"></i>
                                 Profile</a></li>
-                        <li><a href="https://app.medmission.com.bd/password-change"><i class="fa fa-key"></i> Change
+                        <li><a href="{{ route('admin.password.change') }}"><i class="fa fa-key"></i> Change
                                 Password</a></li>
                         <li class="divider"></li>
                         <li>
