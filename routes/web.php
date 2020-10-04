@@ -4,17 +4,19 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 
-//Admin authentication
+//Admin Authentication
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
+
     // Route::get('/', 'Auth\LoginController@showLoginForm');
+
     Route::get('/', function () {
         return redirect()->route('admin.login');
     });
@@ -30,7 +32,10 @@ Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'adm
         return view('admin.dashboard');
     })->name('dashboard');
 
+    //Category
     Route::resource('categories', 'CategoryController');
+
+    //Brand
     Route::resource('brands', 'BrandController');
 
     //Password
