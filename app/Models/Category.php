@@ -17,6 +17,11 @@ class Category extends Model
 
     protected $fillable = ['name', 'slug', 'parent_id', 'image', 'image_url'];
 
+    public function scopeParentCategory($query)
+    {
+        return $query->where('parent_id', 0);
+    }
+
     public function parent()
     {
         return $this->belongsTo(Category::class);

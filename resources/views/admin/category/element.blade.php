@@ -16,15 +16,16 @@
     @enderror
 </div>
 
+@foreach($parent_categories as $category)
+    @include('admin.category.options', ['category' => $category])
+@endforeach
+
 <div class="form-group">
     <label>Parent Category</label>
     <select class="form-control" name="parent_id">
         <option value="0">None</option>
-        @foreach($categories as $category)
-            @if ($category->)
-
-            @endif
-            <option {{ old('parent_id') === $category->id ? 'selected' : '' }} value="">{{ $category->name }}</option>
+        @foreach($parent_categories as $category)
+            @include('admin.category.options', ['category' => $category])
         @endforeach
     </select>
 </div>

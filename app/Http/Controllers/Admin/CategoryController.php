@@ -18,8 +18,8 @@ class CategoryController extends Controller
 
     public function create()
     {
-        $categories = Category::latest()->get();
-        return view('admin.category.create', compact('categories'));
+        $parent_categories = Category::latest()->with('children')->parentCategory()->get();
+        return view('admin.category.create', compact('parent_categories'));
     }
 
     public function store(CreateCategoryRequest $request)
