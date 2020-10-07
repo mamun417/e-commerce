@@ -4,9 +4,9 @@
 
             <li class="nav-header">
                 <div class="dropdown profile-element text-center">
-                   {{-- <div style="margin-bottom: 30px;">
-                        <img alt="image" src="{{ asset('panel/assets/images/logo.png') }}" width="166">
-                    </div>--}}
+                    {{-- <div style="margin-bottom: 30px;">
+                         <img alt="image" src="{{ asset('panel/assets/images/logo.png') }}" width="166">
+                     </div>--}}
 
                     <span>
                         <img alt="image" class="img-circle avater_logo"
@@ -44,7 +44,15 @@
             </li>
 
             <li class="">
-                <a href="{{ route('admin.dashboard') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                <a href="{{ route('admin.dashboard') }}">
+                    <i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="{{ route('admin.categories.index') }}">
+                    <i class="fa fa-th-large"></i> <span class="nav-label">Categories</span>
+                </a>
             </li>
         </ul>
     </div>

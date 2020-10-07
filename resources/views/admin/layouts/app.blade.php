@@ -7,31 +7,19 @@
     <link rel="icon" href="{{ asset('panel/assets/images/favicon.png') }}" sizes="192x192" />
     <link rel="apple-touch-icon" href="{{ asset('backend/img/favicon.png') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Ecommerce') - {{ config('app.name', 'Laravel blog') }}</title>
+    <title>@yield('title', config('app.name')) | {{ config('app.name', 'Laravel blog') }}</title>
 
     <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/plugins/iCheck/custom.css')}}" rel="stylesheet">
-
     <link href="{{ asset('backend/css/style.css') }}" rel="stylesheet">
-
-    <!-- Toastr style -->
     <link href="{{ asset('backend/css/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
-
-    {{--sweet alert--}}
     <link href="{{ asset('backend/css/plugins/sweetalert/sweetalert.css') }}" rel="stylesheet">
-
-    {{--Tokenize2--}}
     <link href="{{ asset('backend/js/extra-plugin/tokenize2/tokenize2.min.css') }}" rel="stylesheet">
-
-    {{--Editor --}}
     <link href="{{asset('backend/css/animate.css')}}" rel="stylesheet">
-
-    {{--custom style--}}
     <link href="{{ asset('backend/css/custom_style.css') }}" rel="stylesheet">
-
-    <!--time circle-->
     <link href="{{ asset('backend/js/plugins/time-circles/TimeCircles.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/plugins/jasny/jasny-bootstrap.min.css') }}" rel="stylesheet">
 
     @stack('extra-links')
 
@@ -56,33 +44,17 @@
 <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('backend/js/plugins/metisMenu/jquery.metisMenu.js') }}"></script>
 <script src="{{ asset('backend/js/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
-
-<!-- Custom and plugin javascript -->
 <script src="{{ asset('backend/js/inspinia.js') }}"></script>
 <script src="{{ asset('backend/js/plugins/pace/pace.min.js')}}"></script>
-
-<!-- iCheck -->
 <script src="{{ asset('backend/js/plugins/iCheck/icheck.min.js') }}"></script>
-
-<!-- Date range use moment.js same as full calendar plugin -->
 <script src="{{ asset('backend/js/plugins/fullcalendar/moment.min.js') }}"></script>
-
-<!-- Date range picker -->
 <script src="{{ asset('backend/js/plugins/daterangepicker/daterangepicker.js') }}"></script>
-
-<!-- Toastr -->
 <script src="{{ asset('backend/js/plugins/toastr/toastr.min.js') }}"></script>
-
-{{--Sweetalert--}}
 <script src="{{ asset('backend/js/plugins/sweetalert/sweetalert.min.js') }}"></script>
-
-{{--Tokenize2--}}
 <script src="{{ asset('backend/js/extra-plugin/tokenize2/tokenize2.min.js') }}"></script>
-
-<script type="text/javascript" src="{{ asset('backend/js/plugins/time-circles/TimeCircles.js') }}"></script>
-
-{{--Editor--}}
+<script src="{{ asset('backend/js/plugins/time-circles/TimeCircles.js') }}"></script>
 <script src="{{ asset('backend/js/plugins/summernote/summernote.min.js')}}"></script>
+<script src="{{ asset('backend/js/plugins/jasny/jasny-bootstrap.min.js') }}"></script>
 
 <script>
 
@@ -103,6 +75,22 @@
             @endif
         @endforeach
     });
+
+    //show confirm message when delete table row
+    function deleteRow(rowId) {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this item!",
+            type: "warning",
+            showCancelButton: true,
+            allowOutsideClick: true,
+            confirmButtonColor: "#1ab394",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: true
+        }, function () {
+            document.getElementById('row-delete-form'+rowId).submit();
+        });
+    }
 </script>
 
 @yield('custom-js')

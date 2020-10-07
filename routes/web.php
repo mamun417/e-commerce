@@ -4,15 +4,17 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
-});
+    return view('pages.home');
+})->name('home');
 
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
 
-//Admin Authentication
+
+
+//admin authentication
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
     // Route::get('/', 'Auth\LoginController@showLoginForm');
@@ -24,21 +26,21 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], fu
     Auth::routes();
 });
 
-//Admin
+//admin
 Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
-    //Dashboard
+    //dashboard
     Route::get('dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
 
-    //Category
+    //category
     Route::resource('categories', 'CategoryController');
 
-    //Brand
+    //brand
     Route::resource('brands', 'BrandController');
 
-    //Password
+    //password
     Route::get('password-change', 'AdminController@changePassword')->name('password.change');
     Route::post('password-update', 'AdminController@updatePassword')->name('password.update');
 });
