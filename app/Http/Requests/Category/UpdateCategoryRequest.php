@@ -4,10 +4,7 @@ namespace App\Http\Requests\Category;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-/**
- * @property mixed slug
- */
-class CreateCategoryRequest extends FormRequest
+class UpdateCategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,9 +23,11 @@ class CreateCategoryRequest extends FormRequest
      */
     public function rules()
     {
+        $category_id = $this->category->id;
+
         return [
-            'name' => 'required|max:255|unique:categories',
-            'slug' => 'required|max:255|unique:categories'
+            'name' => 'required|max:255|unique:categories,name,'. $category_id,
+            'slug' => 'required|max:255|unique:categories,slug,'. $category_id,
         ];
     }
 }

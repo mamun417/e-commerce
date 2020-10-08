@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class CategoryHelper extends Controller
 {
+    /**
+     * remove parent or nested children category by id
+     * @param $categories
+     * @param $id
+     * @return mixed
+     */
     public static function removeCategoryById($categories, $id)
     {
         foreach ($categories as $key => $category) {
