@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Admin\Helper\CategoryHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Category\CreateCategoryRequest;
 use App\Models\Category;
@@ -36,16 +37,11 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         $parent_categories = Category::latest()
-            ->with('children')
             ->parentCategory()
-            ->get()
-            ->reject(function ($parent_category) use ($category) {
-                info($category->id);
-                info($parent_category->id);
-                return $category->id === $parent_category->id;
-            });
+            ->with('children')
+            ->get();
 
-        dd($parent_categories->toArray());
+        $parent_categories = CategoryHelper::removeCategoryById($parent_categories, $category->id);
 
         return view('admin.category.edit', compact('parent_categories', 'category'));
     }

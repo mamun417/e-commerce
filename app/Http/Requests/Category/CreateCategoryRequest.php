@@ -4,6 +4,9 @@ namespace App\Http\Requests\Category;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @property mixed slug
+ */
 class CreateCategoryRequest extends FormRequest
 {
     /**

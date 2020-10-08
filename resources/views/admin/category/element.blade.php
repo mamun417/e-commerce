@@ -16,11 +16,9 @@
     @enderror
 </div>
 
-{{--
 @foreach($parent_categories as $category)
     @include('admin.category.component.tree-options', ['category' => $category])
 @endforeach
---}}
 
 <div class="form-group">
     <label>Parent Category</label>
