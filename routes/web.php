@@ -35,6 +35,7 @@ Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'adm
     })->name('dashboard');
 
     //category
+    Route::get('categories/change-status/{category}', 'CategoryController@changeStatus')->name('category.status.change');
     Route::resource('categories', 'CategoryController');
 
     //brand

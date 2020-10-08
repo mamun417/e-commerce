@@ -17,7 +17,7 @@ class Category extends Model
     const ACTIVE_CATEGORY = '1';
     const DEACTIVATE_CATEGORY = '0';
 
-    protected $fillable = ['name', 'slug', 'parent_id', 'image', 'image_url'];
+    protected $fillable = ['status', 'name', 'slug', 'parent_id', 'image', 'image_url'];
 
     public function scopeParentCategory($query)
     {

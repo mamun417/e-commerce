@@ -88,7 +88,7 @@
                                             <td>{{ $category->image }}</td>
 
                                             <td>
-                                                <a href="" title="Change publication status">
+                                                <a href="{{ route('admin.category.status.change', $category->id) }}" title="Change publication status">
                                                     @if($category->status)
                                                         <span class="badge badge-primary"><strong>Active</strong></span>
                                                     @else

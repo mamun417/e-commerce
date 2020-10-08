@@ -63,4 +63,10 @@ class CategoryController extends Controller
         $category->delete();
         return back()->with('success', 'Category has been deleted successful.');
     }
+
+    public function changeStatus(Category $category)
+    {
+        $category->update(['status' => !$category->status]);
+        return back()->with('success', 'Category status has been updated successful.');
+    }
 }
