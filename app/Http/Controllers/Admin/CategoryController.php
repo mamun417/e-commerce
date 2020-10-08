@@ -26,7 +26,7 @@ class CategoryController extends Controller
     {
         $request_data = $request->only(['name', 'slug', 'parent_id', 'img']);
 
-        $request['slug'] = Str::slug($request->slug);
+        $request_data['slug'] = Str::slug($request->slug);
 
         Category::create($request_data);
 
@@ -35,7 +35,19 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        dd($category->parent->toArray());
+        $parent_categories = Category::latest()
+            ->with('children')
+            ->parentCategory()
+            ->get()
+            ->reject(function ($parent_category) use ($category) {
+                info($category->id);
+                info($parent_category->id);
+                return $category->id === $parent_category->id;
+            });
+
+        dd($parent_categories->toArray());
+
+        return view('admin.category.edit', compact('parent_categories', 'category'));
     }
 
     public function update(Request $request, Category $category)

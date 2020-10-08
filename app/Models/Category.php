@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static create($param)
  * @method static latest()
  * @property mixed parent_id
+ * @property mixed parent
  */
 class Category extends Model
 {

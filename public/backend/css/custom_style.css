@@ -14,11 +14,6 @@ html, body {
     border-radius: 5px;
 }
 
-.cus_btn {
-    padding: 3px 4px !important;
-    margin-bottom: 0 !important;
-}
-
 .pagination > .active > a, .pagination > .active > span,
 .pagination > .active > a:hover, .pagination > .active > span:hover,
 .pagination > .active > a:focus, .pagination > .active > span:focus {

@@ -32,27 +32,36 @@
                         @if (count($categories))
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <form action="{{ route('admin.categories.index') }}" method="get" class="form-inline" role="form">
+                                    <form action="{{ route('admin.categories.index') }}" method="get"
+                                          class="form-inline" role="form">
 
                                         <div class="form-group">
                                             <div>Records Per Page</div>
-                                            <select name="perPage" id="perPage" onchange="submit()" class="input-sm form-control" style="width: 115px;">
-                                                <option value="10"{{ request('perPage') == 10 ? ' selected' : '' }}>10</option>
-                                                <option value="25"{{ request('perPage') == 25 ? ' selected' : '' }}>25</option>
-                                                <option value="50"{{ request('perPage') == 50 ? ' selected' : '' }}>50</option>
-                                                <option value="100"{{ request('perPage') == 100 ? ' selected' : '' }}>100</option>
+                                            <select name="perPage" id="perPage" onchange="submit()"
+                                                    class="input-sm form-control" style="width: 115px;">
+                                                <option value="10"{{ request('perPage') == 10 ? ' selected' : '' }}>10
+                                                </option>
+                                                <option value="25"{{ request('perPage') == 25 ? ' selected' : '' }}>25
+                                                </option>
+                                                <option value="50"{{ request('perPage') == 50 ? ' selected' : '' }}>50
+                                                </option>
+                                                <option value="100"{{ request('perPage') == 100 ? ' selected' : '' }}>
+                                                    100
+                                                </option>
                                             </select>
                                         </div>
 
                                         <div class="form-group">
                                             <br>
                                             <div class="input-group">
-                                                <input name="keyword" type="text" value="{{ request('keyword') }}" class="input-sm form-control" placeholder="Search Here">
+                                                <input name="keyword" type="text" value="{{ request('keyword') }}"
+                                                       class="input-sm form-control" placeholder="Search Here">
                                                 <span class="input-group-btn">
                                                 <button type="submit" class="btn btn-sm btn-primary"> Go!</button>
                                             </span>
                                             </div>
-                                            <a href="{{ route('admin.categories.index') }}" class="btn btn-default btn-sm">Reset</a>
+                                            <a href="{{ route('admin.categories.index') }}"
+                                               class="btn btn-default btn-sm">Reset</a>
                                         </div>
                                     </form>
                                 </div>
@@ -83,7 +92,8 @@
                                                     @if($category->status)
                                                         <span class="badge badge-primary"><strong>Active</strong></span>
                                                     @else
-                                                        <span class="badge badge-warning"><strong>Disable</strong></span>
+                                                        <span
+                                                            class="badge badge-warning"><strong>Disable</strong></span>
                                                     @endif
                                                 </a>
                                             </td>
@@ -91,15 +101,19 @@
                                             <td>{{ date_format($category->created_at, 'd-m-Y') }}</td>
 
                                             <td>
-                                                <a href="{{ route('admin.categories.edit', $category->id) }}" title="Edit" class="btn btn-info cus_btn">
+                                                <a href="{{ route('admin.categories.edit', $category->id) }}"
+                                                   title="Edit" class="btn btn-info btn-sm">
                                                     <i class="fa fa-pencil-square-o"></i> <strong>Edit</strong>
                                                 </a>
 
-                                                <a onclick="deleteRow({{ $category->id }})" href="JavaScript:void(0)" title="Delete" class="btn btn-danger cus_btn">
+                                                <a onclick="deleteRow({{ $category->id }})" href="JavaScript:void(0)"
+                                                   title="Delete" class="btn btn-danger btn-sm">
                                                     <i class="fa fa-trash"></i> <strong>Delete</strong>
                                                 </a>
 
-                                                <form id="row-delete-form{{ $category->id }}" method="POST" action="{{ route('admin.categories.destroy', $category->id) }}" style="display: none" >
+                                                <form id="row-delete-form{{ $category->id }}" method="POST"
+                                                      action="{{ route('admin.categories.destroy', $category->id) }}"
+                                                      style="display: none">
                                                     @method('DELETE')
                                                     @csrf()
                                                 </form>
@@ -111,9 +125,11 @@
                                 </table>
                             </div>
 
-                            <div class="dataTables_info table-pagination" id="DataTables_Table_0_info" role="status" aria-live="polite">
+                            <div class="dataTables_info table-pagination" id="DataTables_Table_0_info" role="status"
+                                 aria-live="polite">
                                 <div class="m-r-lg">
-                                    Showing {{ $categories->firstItem() }} to {{ $categories->lastItem() }} of {{ $categories->total() }} entries
+                                    Showing {{ $categories->firstItem() }} to {{ $categories->lastItem() }}
+                                    of {{ $categories->total() }} entries
                                 </div>
                                 {{ $categories->appends(['perPage' => request('perPage'), 'department' => request('department'), 'subject' => request('subject'), 'keyword' => request('keyword')])->links() }}
                             </div>

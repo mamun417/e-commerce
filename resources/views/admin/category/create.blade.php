@@ -9,7 +9,7 @@
                     <a href="{{ route('admin.dashboard') }}">Categories</a>
                 </li>
                 <li class="active">
-                    <strong>All Categories</strong>
+                    <strong>Create</strong>
                 </li>
             </ol>
         </div>
@@ -21,7 +21,7 @@
 
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>All Categories</h5>
+                        <h5>Create Category</h5>
                     </div>
 
                     <div class="ibox-content">
