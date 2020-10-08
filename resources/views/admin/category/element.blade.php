@@ -16,16 +16,18 @@
     @enderror
 </div>
 
+{{--
 @foreach($parent_categories as $category)
-    @include('admin.category.options', ['category' => $category])
+    @include('admin.category.component.tree-options', ['category' => $category])
 @endforeach
+--}}
 
 <div class="form-group">
     <label>Parent Category</label>
     <select class="form-control" name="parent_id">
         <option value="0">None</option>
         @foreach($parent_categories as $category)
-            @include('admin.category.options', ['category' => $category])
+            @include('admin.category.component.tree-options', ['category' => $category])
         @endforeach
     </select>
 </div>
