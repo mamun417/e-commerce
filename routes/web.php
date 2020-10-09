@@ -35,10 +35,13 @@ Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'adm
     })->name('dashboard');
 
     //category
-    Route::get('categories/change-status/{category}', 'CategoryController@changeStatus')->name('category.status.change');
+    Route::get('categories/change-status/{category}', 'CategoryController@changeStatus')
+        ->name('categories.status.change');
     Route::resource('categories', 'CategoryController');
 
     //brand
+    Route::get('brands/change-status/{brand}', 'BrandController@changeStatus')
+        ->name('brands.status.change');
     Route::resource('brands', 'BrandController');
 
     //password

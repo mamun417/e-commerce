@@ -54,6 +54,12 @@
                     <i class="fa fa-th-large"></i> <span class="nav-label">Categories</span>
                 </a>
             </li>
+
+            <li class="">
+                <a href="{{ route('admin.brands.index') }}">
+                    <i class="fa fa-th-large"></i> <span class="nav-label">Brands</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

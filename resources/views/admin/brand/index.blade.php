@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', 'Categories')
+@section('title', 'Brands')
 
 @section('content')
 
@@ -7,7 +7,7 @@
         <div class="col-lg-10">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{ route('admin.categories.index') }}">Categories</a>
+                    <a href="{{ route('admin.brands.index') }}">Brands</a>
                 </li>
                 <li class="active">
                     <strong>Index</strong>
@@ -21,8 +21,8 @@
             <div class="col-lg-12">
                 <div class="ibox">
                     <div class="ibox-title">
-                        <h5>All Category</h5>
-                        <a href="{{ route('admin.categories.create') }}" class="btn btn-sm btn-primary pull-right">
+                        <h5>All Brand</h5>
+                        <a href="{{ route('admin.brands.create') }}" class="btn btn-sm btn-primary pull-right">
                             <i class="fa fa-plus"></i> <strong>Create</strong>
                         </a>
                     </div>
@@ -30,7 +30,7 @@
                     <div class="ibox-content">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="{{ route('admin.categories.index') }}" method="get"
+                                <form action="{{ route('admin.brands.index') }}" method="get"
                                       class="form-inline" role="form">
 
                                     <div class="form-group">
@@ -61,7 +61,7 @@
                                                 <button type="submit" class="btn btn-sm btn-primary"> Go!</button>
                                             </span>
                                         </div>
-                                        <a href="{{ route('admin.categories.index') }}"
+                                        <a href="{{ route('admin.brands.index') }}"
                                            class="btn btn-default btn-sm">Reset</a>
                                     </div>
                                 </form>
@@ -73,7 +73,6 @@
                                 <thead>
                                 <tr>
                                     <th class="text-left">Name</th>
-                                    <th class="text-left">Parent</th>
                                     <th>Image</th>
                                     <th>Status</th>
                                     <th>Create At</th>
@@ -82,19 +81,18 @@
                                 </thead>
 
                                 <tbody>
-                                @foreach($categories as $category)
+                                @foreach($brands as $brand)
                                     <tr>
-                                        <td class="text-left">{{ ucfirst($category->name) }}</td>
-                                        <td class="text-left">{{ isset($category->parent) ? $category->parent->name : '--' }}</td>
+                                        <td class="text-left">{{ ucfirst($brand->name) }}</td>
                                         <td>
-                                            <img src="{{ getImageUrl($category->image) }}"
-                                                 alt="{{ $category->name }}" class="cus_thumbnail">
+                                            <img src="{{ getImageUrl($brand->image) }}"
+                                                 alt="{{ $brand->name }}" class="cus_thumbnail">
                                         </td>
 
                                         <td>
-                                            <a href="{{ route('admin.categories.status.change', $category->id) }}"
+                                            <a href="{{ route('admin.brands.status.change', $brand->id) }}"
                                                title="Change publication status">
-                                                @if($category->status)
+                                                @if($brand->status)
                                                     <span class="badge badge-primary"><strong>Active</strong></span>
                                                 @else
                                                     <span
@@ -103,21 +101,21 @@
                                             </a>
                                         </td>
 
-                                        <td>{{ date_format($category->created_at, 'd-m-Y') }}</td>
+                                        <td>{{ date_format($brand->created_at, 'd-m-Y') }}</td>
 
                                         <td>
-                                            <a href="{{ route('admin.categories.edit', $category->id) }}"
+                                            <a href="{{ route('admin.brands.edit', $brand->id) }}"
                                                title="Edit" class="btn btn-info btn-sm">
                                                 <i class="fa fa-pencil-square-o"></i> <strong>Edit</strong>
                                             </a>
 
-                                            <a onclick="deleteRow({{ $category->id }})" href="JavaScript:void(0)"
+                                            <a onclick="deleteRow({{ $brand->id }})" href="JavaScript:void(0)"
                                                title="Delete" class="btn btn-danger btn-sm">
                                                 <i class="fa fa-trash"></i> <strong>Delete</strong>
                                             </a>
 
-                                            <form id="row-delete-form{{ $category->id }}" method="POST"
-                                                  action="{{ route('admin.categories.destroy', $category->id) }}"
+                                            <form id="row-delete-form{{ $brand->id }}" method="POST"
+                                                  action="{{ route('admin.brands.destroy', $brand->id) }}"
                                                   style="display: none">
                                                 @method('DELETE')
                                                 @csrf()
@@ -129,17 +127,17 @@
                             </table>
                         </div>
 
-                        @if (count($categories))
+                        @if (count($brands))
                             <div class="dataTables_info table-pagination" id="DataTables_Table_0_info" role="status"
                                  aria-live="polite">
                                 <div class="m-r-lg">
-                                    Showing {{ $categories->firstItem() }} to {{ $categories->lastItem() }}
-                                    of {{ $categories->total() }} entries
+                                    Showing {{ $brands->firstItem() }} to {{ $brands->lastItem() }}
+                                    of {{ $brands->total() }} entries
                                 </div>
-                                {{ $categories->appends(['perPage' => request('perPage'), 'department' => request('department'), 'subject' => request('subject'), 'keyword' => request('keyword')])->links() }}
+                                {{ $brands->appends(['perPage' => request('perPage'), 'department' => request('department'), 'subject' => request('subject'), 'keyword' => request('keyword')])->links() }}
                             </div>
                         @else
-                            <div class="text-center">No categories found</div>
+                            <div class="text-center">No brands found</div>
                         @endif
                     </div>
                 </div>

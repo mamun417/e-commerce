@@ -4,7 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static latest()
+ * @method static create(array $request_data)
+ * @property mixed image
+ * @property mixed status
+ */
 class Brand extends Model
 {
-    protected $fillable = ['name', 'image', 'image_url'];
+    const ACTIVE = '1';
+    const INACTIVE = '0';
+    const IMAGE_PATH = 'brand';
+
+    protected $fillable = ['status', 'name', 'slug', 'image'];
+
+    public function scopeActive($query)
+    {
+        return $query->where('status', self::ACTIVE);
+    }
 }
