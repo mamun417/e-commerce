@@ -14,7 +14,17 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::latest()->with('parent')->paginate(10);
+        $perPage = request()->perPage ?: 10;
+        $keyword = request()->keyword;
+
+        $categories = Category::latest()->with('parent');
+
+        if ($keyword){
+            $categories = $categories->where('name', 'like', '%'.request()->keyword.'%');
+        }
+
+        $categories = $categories->paginate($perPage);
+
         return view('admin.category.index', compact('categories'));
     }
 

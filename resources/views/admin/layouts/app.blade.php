@@ -24,7 +24,7 @@
     @stack('extra-links')
 
 </head>
-<body>
+<body class="fixed-sidebar">
 
 <div id="wrapper">
     @include('admin.element.sidebar')

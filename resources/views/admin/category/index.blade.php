@@ -39,11 +39,14 @@
                                             <div>Records Per Page</div>
                                             <select name="perPage" id="perPage" onchange="submit()"
                                                     class="input-sm form-control" style="width: 115px;">
-                                                <option value="10"{{ request('perPage') == 10 ? ' selected' : '' }}>10
+                                                <option value="10"{{ request('perPage') == 10 ? ' selected' : '' }}>
+                                                    10
                                                 </option>
-                                                <option value="25"{{ request('perPage') == 25 ? ' selected' : '' }}>25
+                                                <option value="25"{{ request('perPage') == 25 ? ' selected' : '' }}>
+                                                    25
                                                 </option>
-                                                <option value="50"{{ request('perPage') == 50 ? ' selected' : '' }}>50
+                                                <option value="50"{{ request('perPage') == 50 ? ' selected' : '' }}>
+                                                    50
                                                 </option>
                                                 <option value="100"{{ request('perPage') == 100 ? ' selected' : '' }}>
                                                     100
@@ -72,7 +75,7 @@
                                     <thead>
                                     <tr>
                                         <th class="text-left">Name</th>
-                                        <th>Parent</th>
+                                        <th class="text-left">Parent</th>
                                         <th>Image</th>
                                         <th>Status</th>
                                         <th>Create At</th>
@@ -84,7 +87,7 @@
                                     @foreach($categories as $category)
                                         <tr>
                                             <td class="text-left">{{ ucfirst($category->name) }}</td>
-                                            <td>{{ isset($category->parent) ? $category->parent->name : '--' }}</td>
+                                            <td class="text-left">{{ isset($category->parent) ? $category->parent->name : '--' }}</td>
                                             <td>{{ $category->image }}</td>
 
                                             <td>
