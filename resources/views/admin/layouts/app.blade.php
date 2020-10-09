@@ -31,13 +31,9 @@
 </div>
 
 <div id="page-wrapper" class="gray-bg">
-
     @include('admin.element.header')
-
     @yield('content')
-
     @include('admin.element.footer')
-
 </div>
 
 <script src="{{ asset('backend/js/jquery-3.1.1.min.js') }}"></script>

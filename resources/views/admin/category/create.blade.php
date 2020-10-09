@@ -27,7 +27,8 @@
                     <div class="ibox-content">
                         <div class="row">
                             <div class="col-sm-6">
-                                <form role="form" action="{{ route('admin.categories.store') }}" method="post">
+                                <form role="form" action="{{ route('admin.categories.store') }}" method="post"
+                                      enctype="multipart/form-data">
                                     @csrf
                                     @include('admin.category.element')
                                 </form>

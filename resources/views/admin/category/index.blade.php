@@ -88,10 +88,14 @@
                                         <tr>
                                             <td class="text-left">{{ ucfirst($category->name) }}</td>
                                             <td class="text-left">{{ isset($category->parent) ? $category->parent->name : '--' }}</td>
-                                            <td>{{ $category->image }}</td>
+                                            <td>
+                                                <img src="{{ getImageUrl($category->image) }}"
+                                                     alt="{{ $category->name }}" class="cus_thumbnail">
+                                            </td>
 
                                             <td>
-                                                <a href="{{ route('admin.category.status.change', $category->id) }}" title="Change publication status">
+                                                <a href="{{ route('admin.category.status.change', $category->id) }}"
+                                                   title="Change publication status">
                                                     @if($category->status)
                                                         <span class="badge badge-primary"><strong>Active</strong></span>
                                                     @else

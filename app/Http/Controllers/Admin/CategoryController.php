@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\Helper\CategoryHelper;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Handler\FileHandler;
 use App\Http\Requests\Category\CreateCategoryRequest;
 use App\Http\Requests\Category\UpdateCategoryRequest;
 use App\Models\Category;
@@ -19,8 +20,8 @@ class CategoryController extends Controller
 
         $categories = Category::latest()->with('parent');
 
-        if ($keyword){
-            $categories = $categories->where('name', 'like', '%'.request()->keyword.'%');
+        if ($keyword) {
+            $categories = $categories->where('name', 'like', '%' . request()->keyword . '%');
         }
 
         $categories = $categories->paginate($perPage);
@@ -39,6 +40,11 @@ class CategoryController extends Controller
         $request_data = $request->only(['name', 'slug', 'parent_id', 'img']);
 
         $request_data['slug'] = Str::slug($request->slug);
+
+        if ($request->hasFile('img')) {
+            $image_path = FileHandler::upload('img', 'category');
+            $request_data['image'] = $image_path;
+        }
 
         Category::create($request_data);
 
@@ -63,6 +69,12 @@ class CategoryController extends Controller
 
         $request_data['slug'] = Str::slug($request->slug);
 
+        if ($request->hasFile('img')) {
+            $image_path = FileHandler::upload('img', 'category');
+            FileHandler::delete($category->image);
+            $request_data['image'] = $image_path;
+        }
+
         $category->update($request_data);
 
         return redirect()->route('admin.categories.index')->with('success', 'Category has been updated successful.');
@@ -71,6 +83,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
+        FileHandler::delete($category->image);
         return back()->with('success', 'Category has been deleted successful.');
     }
 

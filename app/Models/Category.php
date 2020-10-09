@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed parent_id
  * @property mixed parent
  * @property mixed id
+ * @property mixed image
  */
 class Category extends Model
 {
@@ -17,7 +18,7 @@ class Category extends Model
     const ACTIVE_CATEGORY = '1';
     const DEACTIVATE_CATEGORY = '0';
 
-    protected $fillable = ['status', 'name', 'slug', 'parent_id', 'image', 'image_url'];
+    protected $fillable = ['status', 'name', 'slug', 'parent_id', 'image'];
 
     public function scopeParentCategory($query)
     {
