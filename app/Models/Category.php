@@ -11,12 +11,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed parent
  * @property mixed id
  * @property mixed image
+ * @property mixed status
  */
 class Category extends Model
 {
     const PARENT_CATEGORY = '0';
     const ACTIVE_CATEGORY = '1';
     const DEACTIVATE_CATEGORY = '0';
+    const IMAGE_PATH = 'category';
 
     protected $fillable = ['status', 'name', 'slug', 'parent_id', 'image'];
 

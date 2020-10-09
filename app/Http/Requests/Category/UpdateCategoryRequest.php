@@ -4,6 +4,10 @@ namespace App\Http\Requests\Category;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @property mixed slug
+ * @property mixed category
+ */
 class UpdateCategoryRequest extends FormRequest
 {
     /**

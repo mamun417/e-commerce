@@ -8,7 +8,6 @@ use App\Http\Controllers\Handler\FileHandler;
 use App\Http\Requests\Category\CreateCategoryRequest;
 use App\Http\Requests\Category\UpdateCategoryRequest;
 use App\Models\Category;
-use Illuminate\Http\Request;
 use Str;
 
 class CategoryController extends Controller
@@ -42,7 +41,7 @@ class CategoryController extends Controller
         $request_data['slug'] = Str::slug($request->slug);
 
         if ($request->hasFile('img')) {
-            $image_path = FileHandler::upload('img', 'category');
+            $image_path = FileHandler::upload('img', Category::IMAGE_PATH);
             $request_data['image'] = $image_path;
         }
 
@@ -70,7 +69,7 @@ class CategoryController extends Controller
         $request_data['slug'] = Str::slug($request->slug);
 
         if ($request->hasFile('img')) {
-            $image_path = FileHandler::upload('img', 'category');
+            $image_path = FileHandler::upload('img', Category::IMAGE_PATH);
             FileHandler::delete($category->image);
             $request_data['image'] = $image_path;
         }
@@ -84,7 +83,7 @@ class CategoryController extends Controller
     {
         $category->delete();
         FileHandler::delete($category->image);
-        return back()->with('success', 'Category has been deleted successful.');
+        return redirect()->route('admin.categories.index')->with('success', 'Category has been deleted successful.');
     }
 
     public function changeStatus(Category $category)
