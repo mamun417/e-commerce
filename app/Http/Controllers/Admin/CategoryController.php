@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Admin\Helper\CategoryHelper;
+use App\Http\Controllers\Helper\CategoryHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Handler\FileHandler;
 use App\Http\Requests\Category\CreateCategoryRequest;

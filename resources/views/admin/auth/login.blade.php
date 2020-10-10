@@ -5,7 +5,7 @@
         <div class="ibox-content shadow">
 
             <div style="text-align: center">
-                <img alt="image" src="{{ asset('panel/assets/images/logo.png') }}" width="166"/>
+                <img src="{{ asset('frontend/images/logo.png') }}" alt="" class="img-fluid">
             </div>
 
             <h3 class="font-bold">Login</h3>
@@ -14,7 +14,7 @@
 
                 <div class="form-group">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                           name="email" value="" required autocomplete="email" autofocus
+                           name="email" value="admin@gmail.com" required autocomplete="email" autofocus
                            placeholder="Email">
                     @error('email')
                     <span class="help-block m-b-none text-danger">{{ $message }}</span>

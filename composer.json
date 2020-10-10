@@ -44,7 +44,7 @@
             "database/factories"
         ],
         "files": [
-            "app/Helper/Common.php"
+            "app/Common/Common.php"
         ]
     },
     "autoload-dev": {
