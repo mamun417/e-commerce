@@ -15,7 +15,7 @@
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false">
                         <span class="clear">
                             <span class="block m-t-xs">
-                                <strong class="font-bold">System Adminstrator</strong>
+                                <strong class="font-bold">System Administrator</strong>
                                 <b class="caret"></b>
                             </span>
                         </span>
@@ -37,9 +37,6 @@
                             </form>
                         </li>
                     </ul>
-                </div>
-                <div class="logo-element">
-                    <img alt="image" src="{{ asset('panel/assets/images/logo_small2.png') }}" width="28px">
                 </div>
             </li>
 

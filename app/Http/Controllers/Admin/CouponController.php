@@ -17,7 +17,12 @@ class CouponController extends Controller
         $coupons = Coupon::latest();
 
         if ($keyword) {
-            $coupons = $coupons->where('coupon', 'like', '%' . request()->keyword . '%');
+            $keyword = '%' . request()->keyword . '%';
+
+            $coupons = $coupons->where('coupon', 'like', $keyword)
+                ->orWhere('amount', 'like', $keyword)
+                ->orWhere('amount_type', 'like', $keyword)
+                ->orWhere('expire_date', 'like', $keyword);
         }
 
         $coupons = $coupons->paginate($perPage);

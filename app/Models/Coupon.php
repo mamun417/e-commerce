@@ -11,7 +11,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Coupon extends Model
 {
-    const AMOUNT_TYPES = ['fixed', 'percent'];
+    const AMOUNT_FIX = 1;
+    const AMOUNT_PERCENT = 0;
+    const AMOUNT_TYPES = [self::AMOUNT_FIX => 'Fixed', self::AMOUNT_PERCENT => 'Percent'];
 
     protected $fillable = [
         'status', 'coupon', 'amount', 'amount_type', 'expire_date', 'user_ids'
