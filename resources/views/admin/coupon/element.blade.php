@@ -25,8 +25,10 @@
 
         @php($check_selected_amount_type = isset($update) ? $coupon->amount_type : old('amount_type'))
 
-        @foreach([1,2] as $type)
-            <option {{ $check_selected_amount_type == $type ? 'selected' : ''}} value="{{ $type }}">None</option>
+        @foreach(\App\Models\Coupon::AMOUNT_TYPES as $type)
+            <option {{ $check_selected_amount_type == $type ? 'selected' : ''}} value="{{ $type }}">
+                {{ ucfirst($type) }}
+            </option>
         @endforeach
     </select>
 

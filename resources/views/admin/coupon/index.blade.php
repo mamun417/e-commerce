@@ -88,7 +88,7 @@
                                     <tr>
                                         <td class="text-left">{{ $coupon->coupon }}</td>
                                         <td>{{ $coupon->amount }}</td>
-                                        <td>{{ $coupon->amount_type }}</td>
+                                        <td>{{ ucfirst($coupon->amount_type) }}</td>
                                         <td>{{ $coupon->user_ids }}</td>
 
                                         <td>
