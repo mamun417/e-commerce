@@ -60,6 +60,12 @@
                     <i class="fa fa-th-large"></i> <span class="nav-label">Brands</span>
                 </a>
             </li>
+
+            <li class="">
+                <a href="{{ route('admin.coupons.index') }}">
+                    <i class="fa fa-th-large"></i> <span class="nav-label">Coupons</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

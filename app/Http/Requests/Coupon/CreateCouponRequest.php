@@ -1,14 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Brand;
+namespace App\Http\Requests\Coupon;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-/**
- * @property mixed brand
- * @property mixed slug
- */
-class UpdateBrandRequest extends FormRequest
+class CreateCouponRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,11 +23,11 @@ class UpdateBrandRequest extends FormRequest
      */
     public function rules()
     {
-        $brand_id = $this->brand->id;
-
         return [
-            'name' => 'required|max:255|unique:brands,name,' . $brand_id,
-            'slug' => 'required|max:255|unique:brands,slug,' . $brand_id,
+            'coupon' => 'required|max:255|unique:coupons',
+            'amount' => 'required|numeric',
+            'amount_type' => 'required',
+            'expire_date' => 'nullable|date'
         ];
     }
 }

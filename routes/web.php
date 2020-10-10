@@ -44,6 +44,10 @@ Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'adm
         ->name('brands.status.change');
     Route::resource('brands', 'BrandController');
 
+    Route::get('coupons/change-status/{coupon}', 'CouponController@changeStatus')
+        ->name('coupons.status.change');
+    Route::resource('coupons', 'CouponController');
+
     //password
     Route::get('password-change', 'AdminController@changePassword')->name('password.change');
     Route::post('password-update', 'AdminController@updatePassword')->name('password.update');

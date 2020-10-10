@@ -1,15 +1,15 @@
 @extends('admin.layouts.app')
-@section('title', 'Edit Brand')
+@section('title', 'Create Coupon')
 
 @section('content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
             <ol class="breadcrumb">
                 <li>
-                    <a href="{{ route('admin.brands.index') }}">Brands</a>
+                    <a href="{{ route('admin.coupons.index') }}">Coupons</a>
                 </li>
                 <li class="active">
-                    <strong>Edit</strong>
+                    <strong>Create</strong>
                 </li>
             </ol>
         </div>
@@ -21,17 +21,16 @@
 
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Edit Brand</h5>
+                        <h5>Create Coupon</h5>
                     </div>
 
                     <div class="ibox-content">
                         <div class="row">
                             <div class="col-sm-6">
-                                <form role="form" action="{{ route('admin.brands.update', $brand->id) }}"
-                                      method="post" enctype="multipart/form-data">
+                                <form role="form" action="{{ route('admin.coupons.store') }}" method="post"
+                                      enctype="multipart/form-data">
                                     @csrf
-                                    @method('PUT')
-                                    @include('admin.brand.element', ['update' => true])
+                                    @include('admin.coupon.element')
                                 </form>
                             </div>
                         </div>
