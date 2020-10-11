@@ -24,8 +24,9 @@ class NewsLetterController extends Controller
         return view('admin.newsletter.index', compact('newsletters'));
     }
 
-    public function destroy(NewsLetter $newsLetter)
+    public function destroy(NewsLetter $newsletter)
     {
-
+        $newsletter->delete();
+        return back()->with('success', 'Newsletter has been deleted successful.');
     }
 }

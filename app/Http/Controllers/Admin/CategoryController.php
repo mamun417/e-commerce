@@ -83,7 +83,7 @@ class CategoryController extends Controller
     {
         $category->delete();
         FileHandler::delete($category->image);
-        return redirect()->route('admin.categories.index')->with('success', 'Category has been deleted successful.');
+        return back()->with('success', 'Category has been deleted successful.');
     }
 
     public function changeStatus(Category $category)

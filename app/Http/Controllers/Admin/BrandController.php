@@ -75,7 +75,7 @@ class BrandController extends Controller
     {
         $brand->delete();
         FileHandler::delete($brand->image);
-        return redirect()->route('admin.brands.index')->with('success', 'Brand has been deleted successful.');
+        return back()->with('success', 'Brand has been deleted successful.');
     }
 
     public function changeStatus(Brand $brand)
