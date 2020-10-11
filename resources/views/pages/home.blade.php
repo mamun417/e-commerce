@@ -96,7 +96,8 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div class="deals_timer d-flex flex-row align-items-center justify-content-start">
+                                        <div
+                                            class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Hurry Up</div>
                                                 <div class="deals_timer_subtitle">Offer ends in:</div>
@@ -141,7 +142,8 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div class="deals_timer d-flex flex-row align-items-center justify-content-start">
+                                        <div
+                                            class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Hurry Up</div>
                                                 <div class="deals_timer_subtitle">Offer ends in:</div>
@@ -186,7 +188,8 @@
                                             </div>
                                             <div class="available_bar"><span style="width:17%"></span></div>
                                         </div>
-                                        <div class="deals_timer d-flex flex-row align-items-center justify-content-start">
+                                        <div
+                                            class="deals_timer d-flex flex-row align-items-center justify-content-start">
                                             <div class="deals_timer_title_container">
                                                 <div class="deals_timer_title">Hurry Up</div>
                                                 <div class="deals_timer_subtitle">Offer ends in:</div>
@@ -256,8 +259,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -287,8 +292,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
@@ -318,8 +325,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -349,8 +358,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -380,8 +391,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -411,8 +424,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -442,8 +457,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -473,8 +490,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -504,8 +523,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -535,8 +556,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -566,8 +589,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -597,8 +622,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -628,8 +655,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -659,8 +688,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -690,8 +721,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -721,8 +754,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -761,8 +796,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -792,8 +829,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
@@ -823,8 +862,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -854,8 +895,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -885,8 +928,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -916,8 +961,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -947,8 +994,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -978,8 +1027,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1009,8 +1060,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1040,8 +1093,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1071,8 +1126,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1102,8 +1159,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1133,8 +1192,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1164,8 +1225,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1195,8 +1258,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1226,8 +1291,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1266,8 +1333,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1297,8 +1366,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button active">Add to Cart</button>
                                                 </div>
@@ -1328,8 +1399,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1359,8 +1432,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1390,8 +1465,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1421,8 +1498,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1452,8 +1531,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1483,8 +1564,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1514,8 +1597,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1545,8 +1630,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1576,8 +1663,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1607,8 +1696,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1638,8 +1729,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1669,8 +1762,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1700,8 +1795,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1731,8 +1828,10 @@
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color"
                                                                style="background:#b19c83">
-                                                        <input type="radio" name="product_color" style="background:#000000">
-                                                        <input type="radio" name="product_color" style="background:#999999">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#000000">
+                                                        <input type="radio" name="product_color"
+                                                               style="background:#999999">
                                                     </div>
                                                     <button class="product_cart_button">Add to Cart</button>
                                                 </div>
@@ -1782,7 +1881,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img
                                             src="{{ asset('frontend/images/popular_1.png')}}" alt=""></div>
                                     <div class="popular_category_text">Smartphones & Tablets</div>
@@ -1791,7 +1891,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img
                                             src="{{ asset('frontend/images/popular_2.png')}}" alt=""></div>
                                     <div class="popular_category_text">Computers & Laptops</div>
@@ -1800,7 +1901,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img
                                             src="{{ asset('frontend/images/popular_3.png')}}" alt=""></div>
                                     <div class="popular_category_text">Gadgets</div>
@@ -1809,7 +1911,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img
                                             src="{{ asset('frontend/images/popular_4.png')}}" alt=""></div>
                                     <div class="popular_category_text">Video Games & Consoles</div>
@@ -1818,7 +1921,8 @@
 
                             <!-- Popular Categories Item -->
                             <div class="owl-item">
-                                <div class="popular_category d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image"><img
                                             src="{{ asset('frontend/images/popular_5.png')}}" alt=""></div>
                                     <div class="popular_category_text">Accessories</div>
@@ -1851,10 +1955,12 @@
                                     <div class="banner_2_content">
                                         <div class="banner_2_category">Laptops</div>
                                         <div class="banner_2_title">MacBook Air 13</div>
-                                        <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit.
                                             Maecenas fermentum laoreet.
                                         </div>
-                                        <div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i>
+                                        <div class="rating_r rating_r_4 banner_2_rating">
+                                            <i></i><i></i><i></i><i></i><i></i>
                                         </div>
                                         <div class="button banner_2_button"><a href="#">Explore</a></div>
                                     </div>
@@ -1881,10 +1987,12 @@
                                     <div class="banner_2_content">
                                         <div class="banner_2_category">Laptops</div>
                                         <div class="banner_2_title">MacBook Air 13</div>
-                                        <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit.
                                             Maecenas fermentum laoreet.
                                         </div>
-                                        <div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i>
+                                        <div class="rating_r rating_r_4 banner_2_rating">
+                                            <i></i><i></i><i></i><i></i><i></i>
                                         </div>
                                         <div class="button banner_2_button"><a href="#">Explore</a></div>
                                     </div>
@@ -1911,10 +2019,12 @@
                                     <div class="banner_2_content">
                                         <div class="banner_2_category">Laptops</div>
                                         <div class="banner_2_title">MacBook Air 13</div>
-                                        <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit.
                                             Maecenas fermentum laoreet.
                                         </div>
-                                        <div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i>
+                                        <div class="rating_r rating_r_4 banner_2_rating">
+                                            <i></i><i></i><i></i><i></i><i></i>
                                         </div>
                                         <div class="button banner_2_button"><a href="#">Explore</a></div>
                                     </div>
@@ -3623,13 +3733,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_1.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_1.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3645,12 +3757,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_2.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_2.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Samsung J730F...</a></div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="bestsellers_name"><a href="product.html">Samsung J730F...</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3666,12 +3781,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_3.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_3.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Nomi Black White</a></div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="bestsellers_name"><a href="product.html">Nomi Black White</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3687,13 +3805,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_4.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_4.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Samsung Charm Gold</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3709,12 +3829,14 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_5.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_5.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Beoplay H7</a></div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3730,13 +3852,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_6.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_6.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Huawei MediaPad T3</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3752,13 +3876,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_1.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_1.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3774,13 +3900,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_2.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_2.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3796,13 +3924,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_3.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_3.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3818,13 +3948,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_4.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_4.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3840,13 +3972,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_5.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_5.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3862,13 +3996,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_6.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_6.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3893,13 +4029,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_1.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_1.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3915,13 +4053,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_2.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_2.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3937,13 +4077,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_3.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_3.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3959,13 +4101,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_4.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_4.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -3981,13 +4125,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_5.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_5.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4003,13 +4149,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_6.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_6.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4025,13 +4173,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_1.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_1.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4047,13 +4197,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_2.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_2.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4069,13 +4221,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_3.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_3.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4091,13 +4245,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_4.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_4.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4113,13 +4269,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_5.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_5.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4142,7 +4300,8 @@
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4167,13 +4326,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_1.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_1.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4189,13 +4350,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_2.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_2.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4211,13 +4374,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_3.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_3.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4233,145 +4398,15 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_4.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_4.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
-                                            </div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_5.png')}}"
-                                                                            alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
-                                            </div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_6.png')}}"
-                                                                            alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
-                                            </div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_1.png')}}"
-                                                                            alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
-                                            </div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item discount">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_2.png')}}"
-                                                                            alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
-                                            </div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_3.png')}}"
-                                                                            alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
-                                            </div>
-                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-                                    <ul class="bestsellers_marks">
-                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
-                                        <li class="bestsellers_mark bestsellers_new">new</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Best Sellers Item -->
-                                <div class="bestsellers_item">
-                                    <div
-                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_4.png')}}"
-                                                                            alt=""></div>
-                                        <div class="bestsellers_content">
-                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
-                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
-                                            </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4387,13 +4422,15 @@
                                 <div class="bestsellers_item discount">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_5.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_5.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4409,13 +4446,159 @@
                                 <div class="bestsellers_item">
                                     <div
                                         class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-                                        <div class="bestsellers_image"><img src="{{ asset('frontend/images/best_6.png')}}"
-                                                                            alt=""></div>
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_6.png')}}"
+                                                alt=""></div>
                                         <div class="bestsellers_content">
                                             <div class="bestsellers_category"><a href="#">Headphones</a></div>
                                             <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
                                             </div>
-                                            <div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
+                                            </div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_1.png')}}"
+                                                alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
+                                            </div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_2.png')}}"
+                                                alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
+                                            </div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_3.png')}}"
+                                                alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
+                                            </div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_4.png')}}"
+                                                alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
+                                            </div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item discount">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_5.png')}}"
+                                                alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
+                                            </div>
+                                            <div class="bestsellers_price discount">$225<span>$300</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+                                    <ul class="bestsellers_marks">
+                                        <li class="bestsellers_mark bestsellers_discount">-25%</li>
+                                        <li class="bestsellers_mark bestsellers_new">new</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Best Sellers Item -->
+                                <div class="bestsellers_item">
+                                    <div
+                                        class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+                                        <div class="bestsellers_image"><img
+                                                src="{{ asset('frontend/images/best_6.png')}}"
+                                                alt=""></div>
+                                        <div class="bestsellers_content">
+                                            <div class="bestsellers_category"><a href="#">Headphones</a></div>
+                                            <div class="bestsellers_name"><a href="product.html">Xiaomi Redmi Note 4</a>
+                                            </div>
+                                            <div class="rating_r rating_r_4 bestsellers_rating">
+                                                <i></i><i></i><i></i><i></i><i></i>
                                             </div>
                                             <div class="bestsellers_price discount">$225<span>$300</span></div>
                                         </div>
@@ -4503,7 +4686,8 @@
                 <div class="col-lg-3">
                     <div class="trends_container">
                         <h2 class="trends_title">Trends 2018</h2>
-                        <div class="trends_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing Donec et.</p></div>
+                        <div class="trends_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing Donec et.</p>
+                        </div>
                         <div class="trends_slider_nav">
                             <div class="trends_prev trends_nav"><i class="fas fa-angle-left ml-auto"></i></div>
                             <div class="trends_next trends_nav"><i class="fas fa-angle-right ml-auto"></i></div>
@@ -4522,7 +4706,8 @@
                             <!-- Trends Slider Item -->
                             <div class="owl-item">
                                 <div class="trends_item is_new">
-                                    <div class="trends_image d-flex flex-column align-items-center justify-content-center">
+                                    <div
+                                        class="trends_image d-flex flex-column align-items-center justify-content-center">
                                         <img src="{{ asset('frontend/images/trends_1.jpg')}}" alt=""></div>
                                     <div class="trends_content">
                                         <div class="trends_category"><a href="#">Smartphones</a></div>
@@ -4542,7 +4727,8 @@
                             <!-- Trends Slider Item -->
                             <div class="owl-item">
                                 <div class="trends_item">
-                                    <div class="trends_image d-flex flex-column align-items-center justify-content-center">
+                                    <div
+                                        class="trends_image d-flex flex-column align-items-center justify-content-center">
                                         <img src="{{ asset('frontend/images/trends_2.jpg')}}" alt=""></div>
                                     <div class="trends_content">
                                         <div class="trends_category"><a href="#">Smartphones</a></div>
@@ -4562,7 +4748,8 @@
                             <!-- Trends Slider Item -->
                             <div class="owl-item">
                                 <div class="trends_item is_new">
-                                    <div class="trends_image d-flex flex-column align-items-center justify-content-center">
+                                    <div
+                                        class="trends_image d-flex flex-column align-items-center justify-content-center">
                                         <img src="{{ asset('frontend/images/trends_3.jpg')}}" alt=""></div>
                                     <div class="trends_content">
                                         <div class="trends_category"><a href="#">Smartphones</a></div>
@@ -4582,7 +4769,8 @@
                             <!-- Trends Slider Item -->
                             <div class="owl-item">
                                 <div class="trends_item is_new">
-                                    <div class="trends_image d-flex flex-column align-items-center justify-content-center">
+                                    <div
+                                        class="trends_image d-flex flex-column align-items-center justify-content-center">
                                         <img src="{{ asset('frontend/images/trends_1.jpg')}}" alt=""></div>
                                     <div class="trends_content">
                                         <div class="trends_category"><a href="#">Smartphones</a></div>
@@ -4602,7 +4790,8 @@
                             <!-- Trends Slider Item -->
                             <div class="owl-item">
                                 <div class="trends_item">
-                                    <div class="trends_image d-flex flex-column align-items-center justify-content-center">
+                                    <div
+                                        class="trends_image d-flex flex-column align-items-center justify-content-center">
                                         <img src="{{ asset('frontend/images/trends_2.jpg')}}" alt=""></div>
                                     <div class="trends_content">
                                         <div class="trends_category"><a href="#">Smartphones</a></div>
@@ -4622,7 +4811,8 @@
                             <!-- Trends Slider Item -->
                             <div class="owl-item">
                                 <div class="trends_item is_new">
-                                    <div class="trends_image d-flex flex-column align-items-center justify-content-center">
+                                    <div
+                                        class="trends_image d-flex flex-column align-items-center justify-content-center">
                                         <img src="{{ asset('frontend/images/trends_3.jpg')}}" alt=""></div>
                                     <div class="trends_content">
                                         <div class="trends_category"><a href="#">Smartphones</a></div>
@@ -4677,7 +4867,8 @@
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="review_time">2 day ago</div>
                                         </div>
-                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit.
                                                 Maecenas fermentum laoreet.</p></div>
                                     </div>
                                 </div>
@@ -4697,7 +4888,8 @@
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="review_time">2 day ago</div>
                                         </div>
-                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit.
                                                 Maecenas fermentum laoreet.</p></div>
                                     </div>
                                 </div>
@@ -4717,7 +4909,8 @@
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="review_time">2 day ago</div>
                                         </div>
-                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit.
                                                 Maecenas fermentum laoreet.</p></div>
                                     </div>
                                 </div>
@@ -4737,7 +4930,8 @@
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="review_time">2 day ago</div>
                                         </div>
-                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit.
                                                 Maecenas fermentum laoreet.</p></div>
                                     </div>
                                 </div>
@@ -4757,7 +4951,8 @@
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="review_time">2 day ago</div>
                                         </div>
-                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit.
                                                 Maecenas fermentum laoreet.</p></div>
                                     </div>
                                 </div>
@@ -4777,7 +4972,8 @@
                                                 <i></i><i></i><i></i><i></i><i></i></div>
                                             <div class="review_time">2 day ago</div>
                                         </div>
-                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        <div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit.
                                                 Maecenas fermentum laoreet.</p></div>
                                     </div>
                                 </div>
@@ -4814,7 +5010,8 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_1.jpg')}}" alt="">
+                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_1.jpg')}}"
+                                                                   alt="">
                                     </div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">$225<span>$300</span></div>
@@ -4831,7 +5028,8 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_2.jpg')}}" alt="">
+                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_2.jpg')}}"
+                                                                   alt="">
                                     </div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">$379</div>
@@ -4848,7 +5046,8 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_3.jpg')}}" alt="">
+                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_3.jpg')}}"
+                                                                   alt="">
                                     </div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">$225</div>
@@ -4865,7 +5064,8 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_4.jpg')}}" alt="">
+                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_4.jpg')}}"
+                                                                   alt="">
                                     </div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">$379</div>
@@ -4882,7 +5082,8 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_5.jpg')}}" alt="">
+                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_5.jpg')}}"
+                                                                   alt="">
                                     </div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">$225<span>$300</span></div>
@@ -4899,7 +5100,8 @@
                             <div class="owl-item">
                                 <div
                                     class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_6.jpg')}}" alt="">
+                                    <div class="viewed_image"><img src="{{ asset('frontend/images/view_6.jpg')}}"
+                                                                   alt="">
                                     </div>
                                     <div class="viewed_content text-center">
                                         <div class="viewed_price">$375</div>
@@ -4987,12 +5189,19 @@
                             <div class="newsletter_text"><p>...and receive %20 coupon for first shopping.</p></div>
                         </div>
                         <div class="newsletter_content clearfix">
-                            <form action="#" class="newsletter_form">
-                                <input type="email" class="newsletter_input" required="required"
-                                       placeholder="Enter your email address">
-                                <button class="newsletter_button">Subscribe</button>
+                            <form action="{{ route('newsletter.store') }}" method="post" class="newsletter_form">
+                                @csrf
+
+                                <input type="email" name="email" class="newsletter_input" value="{{ old('email') }}"
+                                       required="required" placeholder="Enter your email address">
+
+                                @error('email')
+                                <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                                @enderror
+
+                                <button type="submit" class="newsletter_button">Subscribe</button>
                             </form>
-                            <div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>
+                            {{--<div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>--}}
                         </div>
                     </div>
                 </div>

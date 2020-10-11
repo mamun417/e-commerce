@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ config('app.name', 'Laravel blog') }} | @yield('title')</title>
+    <title>@yield('title', config('app.name')) | {{ config('app.name', 'Laravel blog') }}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="OneTech shop project">
@@ -33,7 +33,7 @@
 <script src="{{ asset('frontend/plugins/greensock/TimelineMax.min.js')}}"></script>
 <script src="{{ asset('frontend/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
 <script src="{{ asset('frontend/plugins/greensock/animation.gsap.min.js')}}"></script>
-<script src="{{ asset('frontend/plugins/greensock/ScrollToPlugin.min.jsplugins/greensock/ScrollToPlugin.min.js')}}"></script>
+<script src="{{ asset('frontend/plugins/greensock/ScrollToPlugin.min.js') }}"></script>
 <script src="{{ asset('frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
 <script src="{{ asset('frontend/plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{ asset('frontend/plugins/easing/easing.js')}}"></script>

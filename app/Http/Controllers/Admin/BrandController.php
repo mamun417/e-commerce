@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Handler\FileHandler;
-use App\Http\Requests\Brand\CreateBrandRequest;
+use App\Http\Requests\Brand\StoreBrandRequest;
 use App\Http\Requests\Brand\UpdateBrandRequest;
 use App\Models\Brand;
 use Illuminate\Http\Request;
@@ -33,7 +33,7 @@ class BrandController extends Controller
         return view('admin.brand.create');
     }
 
-    public function store(CreateBrandRequest $request)
+    public function store(StoreBrandRequest $request)
     {
         $request_data = $request->only(['name', 'slug', 'img']);
 

@@ -18,7 +18,7 @@ class CreateCouponsTable extends Migration
             $table->boolean('status')->default(1);
             $table->string('coupon');
             $table->integer('amount');
-            $table->string('amount_type');
+            $table->string('amount_type')->comment('1 = Fixed and 0 = Percent');
             $table->string('user_ids')->nullable();
             $table->dateTime('expire_date')->nullable();
             $table->timestamps();

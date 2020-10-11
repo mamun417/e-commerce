@@ -18,4 +18,9 @@ class Coupon extends Model
     protected $fillable = [
         'status', 'coupon', 'amount', 'amount_type', 'expire_date', 'user_ids'
     ];
+
+    public static function getAmountTypeName($type)
+    {
+        return self::AMOUNT_TYPES[$type];
+    }
 }

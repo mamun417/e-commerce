@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 /**
  * @property mixed slug
  */
-class CreateBrandRequest extends FormRequest
+class StoreBrandRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

@@ -88,7 +88,9 @@
                                     <tr>
                                         <td class="text-left">{{ $coupon->coupon }}</td>
                                         <td>{{ $coupon->amount }}</td>
-                                        <td>{{ ucfirst($coupon->amount_type) }}</td>
+                                        <td>
+                                            {{ \App\Models\Coupon::getAmountTypeName($coupon->amount_type) }}
+                                        </td>
                                         <td>{{ $coupon->user_ids }}</td>
 
                                         <td>
@@ -104,7 +106,7 @@
                                         </td>
 
                                         <td>
-                                            {{ $coupon->expire ? date_format($coupon->expire, 'd-m-Y') : ''}}
+                                            {{ $coupon->expire ? cus_date($coupon->expire) : ''}}
                                         </td>
 
                                         <td>{{ cus_date($coupon->created_at) }}</td>

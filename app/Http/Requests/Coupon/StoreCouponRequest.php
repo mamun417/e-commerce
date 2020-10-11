@@ -4,7 +4,7 @@ namespace App\Http\Requests\Coupon;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateCouponRequest extends FormRequest
+class StoreCouponRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

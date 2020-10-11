@@ -3,13 +3,13 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+//newsletter
+Route::post('newsletter/store', 'NewsLetterController@store')->name('newsletter.store');
+
 
 
 

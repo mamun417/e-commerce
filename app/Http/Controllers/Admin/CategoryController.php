@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Helper\CategoryHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Handler\FileHandler;
-use App\Http\Requests\Category\CreateCategoryRequest;
+use App\Http\Requests\Category\StoreCategoryRequest;
 use App\Http\Requests\Category\UpdateCategoryRequest;
 use App\Models\Category;
 use Str;
@@ -34,7 +34,7 @@ class CategoryController extends Controller
         return view('admin.category.create', compact('parent_categories'));
     }
 
-    public function store(CreateCategoryRequest $request)
+    public function store(StoreCategoryRequest $request)
     {
         $request_data = $request->only(['name', 'slug', 'parent_id', 'img']);
 
