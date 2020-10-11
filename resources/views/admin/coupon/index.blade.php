@@ -142,7 +142,7 @@
                                     Showing {{ $coupons->firstItem() }} to {{ $coupons->lastItem() }}
                                     of {{ $coupons->total() }} entries
                                 </div>
-                                {{ $coupons->appends(['perPage' => request('perPage'), 'department' => request('department'), 'subject' => request('subject'), 'keyword' => request('keyword')])->links() }}
+                                {{ $coupons->appends(['perPage' => request('perPage'), 'keyword' => request('keyword')])->links() }}
                             </div>
                         @else
                             <div class="text-center">No coupons found</div>

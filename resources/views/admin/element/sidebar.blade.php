@@ -63,6 +63,12 @@
                     <i class="fa fa-th-large"></i> <span class="nav-label">Coupons</span>
                 </a>
             </li>
+
+            <li class="{{ getActiveClassByController('NewsLetterController') }}">
+                <a href="{{ route('admin.newsletters.index') }}">
+                    <i class="fa fa-th-large"></i> <span class="nav-label">Newsletters</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

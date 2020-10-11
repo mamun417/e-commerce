@@ -136,7 +136,7 @@
                                     Showing {{ $categories->firstItem() }} to {{ $categories->lastItem() }}
                                     of {{ $categories->total() }} entries
                                 </div>
-                                {{ $categories->appends(['perPage' => request('perPage'), 'department' => request('department'), 'subject' => request('subject'), 'keyword' => request('keyword')])->links() }}
+                                {{ $categories->appends(['perPage' => request('perPage'), 'keyword' => request('keyword')])->links() }}
                             </div>
                         @else
                             <div class="text-center">No categories found</div>

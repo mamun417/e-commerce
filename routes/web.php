@@ -11,9 +11,6 @@ Auth::routes();
 Route::post('newsletter/store', 'NewsLetterController@store')->name('newsletter.store');
 
 
-
-
-
 //admin authentication
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
@@ -44,9 +41,13 @@ Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'adm
         ->name('brands.status.change');
     Route::resource('brands', 'BrandController');
 
+    //coupon
     Route::get('coupons/change-status/{coupon}', 'CouponController@changeStatus')
         ->name('coupons.status.change');
     Route::resource('coupons', 'CouponController');
+
+    //newsletter
+    Route::resource('newsletters', 'NewsLetterController')->only(['index', 'destroy']);
 
     //password
     Route::get('password-change', 'AdminController@changePassword')->name('password.change');
