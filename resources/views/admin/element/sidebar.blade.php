@@ -40,25 +40,25 @@
                 </div>
             </li>
 
-            <li class="">
+            <li class="{{ getActiveClassByRoute('admin.dashboard') }}">
                 <a href="{{ route('admin.dashboard') }}">
                     <i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span>
                 </a>
             </li>
 
-            <li class="">
+            <li class="{{ getActiveClassByController('CategoryController') }}">
                 <a href="{{ route('admin.categories.index') }}">
                     <i class="fa fa-th-large"></i> <span class="nav-label">Categories</span>
                 </a>
             </li>
 
-            <li class="">
+            <li class="{{ getActiveClassByController('BrandController') }}">
                 <a href="{{ route('admin.brands.index') }}">
                     <i class="fa fa-th-large"></i> <span class="nav-label">Brands</span>
                 </a>
             </li>
 
-            <li class="">
+            <li class="{{ getActiveClassByController('CouponController') }}">
                 <a href="{{ route('admin.coupons.index') }}">
                     <i class="fa fa-th-large"></i> <span class="nav-label">Coupons</span>
                 </a>

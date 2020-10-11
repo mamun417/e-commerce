@@ -101,7 +101,7 @@
                                             </a>
                                         </td>
 
-                                        <td>{{ date_format($brand->created_at, 'd-m-Y') }}</td>
+                                        <td>{{ cus_date($brand->created_at) }}</td>
 
                                         <td>
                                             <a href="{{ route('admin.brands.edit', $brand->id) }}"

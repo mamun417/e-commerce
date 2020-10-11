@@ -107,7 +107,7 @@
                                             {{ $coupon->expire ? date_format($coupon->expire, 'd-m-Y') : ''}}
                                         </td>
 
-                                        <td>{{ date_format($coupon->created_at, 'd-m-Y') }}</td>
+                                        <td>{{ cus_date($coupon->created_at) }}</td>
 
                                         <td>
                                             <a href="{{ route('admin.coupons.edit', $coupon->id) }}"

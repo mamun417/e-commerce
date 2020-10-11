@@ -103,7 +103,7 @@
                                             </a>
                                         </td>
 
-                                        <td>{{ date_format($category->created_at, 'd-m-Y') }}</td>
+                                        <td>{{ cus_date($category->created_at) }}</td>
 
                                         <td>
                                             <a href="{{ route('admin.categories.edit', $category->id) }}"
