@@ -46,4 +46,9 @@ class Category extends Model
     {
         return $this->parent_id == Category::PARENT_CATEGORY;
     }
+
+    public static function getParentCategories()
+    {
+        return Category::latest()->with('children')->parentCategory()->get();
+    }
 }

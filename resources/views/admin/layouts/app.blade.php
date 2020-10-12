@@ -20,6 +20,8 @@
     <link href="{{ asset('backend/css/custom_style.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/js/plugins/time-circles/TimeCircles.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/plugins/jasny/jasny-bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/plugins/summernote/summernote.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/plugins/summernote/summernote-bs3.css') }}" rel="stylesheet">
 
     @stack('extra-links')
 
@@ -51,6 +53,7 @@
 <script src="{{ asset('backend/js/plugins/time-circles/TimeCircles.js') }}"></script>
 <script src="{{ asset('backend/js/plugins/summernote/summernote.min.js')}}"></script>
 <script src="{{ asset('backend/js/plugins/jasny/jasny-bootstrap.min.js') }}"></script>
+<script src="{{ asset('backend/js/plugins/summernote/summernote.min.js') }}"></script>
 
 <script>
 

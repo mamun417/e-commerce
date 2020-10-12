@@ -30,7 +30,7 @@ class CategoryController extends Controller
 
     public function create()
     {
-        $parent_categories = Category::latest()->with('children')->parentCategory()->get();
+        $parent_categories = Category::getParentCategories();
         return view('admin.category.create', compact('parent_categories'));
     }
 
@@ -52,10 +52,7 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        $parent_categories = Category::latest()
-            ->parentCategory()
-            ->with('children')
-            ->get();
+        $parent_categories = Category::getParentCategories();
 
         $parent_categories = CategoryHelper::removeCategoryById($parent_categories, $category->id);
 

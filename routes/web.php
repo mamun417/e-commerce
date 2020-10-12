@@ -41,6 +41,11 @@ Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'adm
         ->name('brands.status.change');
     Route::resource('brands', 'BrandController');
 
+    //product
+    Route::get('products/change-status/{product}', 'ProductController@changeStatus')
+        ->name('products.status.change');
+    Route::resource('products', 'ProductController');
+
     //coupon
     Route::get('coupons/change-status/{coupon}', 'CouponController@changeStatus')
         ->name('coupons.status.change');
