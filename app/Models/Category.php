@@ -18,7 +18,7 @@ class Category extends Model
     const PARENT_CATEGORY = '0';
     const IMAGE_PATH = 'category';
     const ACTIVE = '1';
-    const INACTIVE = '0';
+    const DISABLE = '0';
 
     protected $fillable = ['status', 'name', 'slug', 'parent_id', 'image'];
 
@@ -29,7 +29,7 @@ class Category extends Model
 
     public function scopeParentCategory($query)
     {
-        return $query->where('parent_id', 0);
+        return $query->where('parent_id', self::PARENT_CATEGORY);
     }
 
     public function parent()
@@ -47,8 +47,14 @@ class Category extends Model
         return $this->parent_id == Category::PARENT_CATEGORY;
     }
 
-    public static function getParentCategories()
+    public static function getParentCategories($disable = true)
     {
-        return Category::latest()->with('children')->parentCategory()->get();
+        $paren_categories = Category::latest()->with('children')->parentCategory();
+
+        if (!$disable) {
+            $paren_categories = $paren_categories->active();
+        }
+
+        return $paren_categories->get();
     }
 }

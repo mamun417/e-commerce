@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Product\StoreProductRequest;
+use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -17,13 +19,16 @@ class ProductController extends Controller
 
     public function create()
     {
-        $parent_categories = Category::getParentCategories();
-        return view('admin.product.create', compact('parent_categories'));
+        $parent_categories = Category::getParentCategories(false);
+
+        $brands = Brand::getBrands();
+
+        return view('admin.product.create', compact('parent_categories', 'brands'));
     }
 
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     public function show(Product $product)

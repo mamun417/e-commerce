@@ -88,7 +88,7 @@
                                         <td class="text-left">{{ isset($category->parent) ? $category->parent->name : '--' }}</td>
                                         <td>
                                             <img src="{{ getImageUrl($category->image) }}"
-                                                 alt="{{ $category->name }}" class="cus_thumbnail">
+                                                 alt="{{ $category->name }}" class="cus_thumbnail img-thumbnail">
                                         </td>
 
                                         <td>

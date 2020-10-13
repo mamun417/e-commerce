@@ -257,7 +257,7 @@ th.trash-table.sorting_desc::after {
     background-color: #ec4758 !important;
 }
 
-#tokenize-select .tokenize > .tokens-container > .token {
+#tokenize_section .tokenize > .tokens-container > .token {
     border-color: #1ab394;
     background-color: #1ab394;
     color: #fff;
@@ -310,4 +310,13 @@ th.trash-table.sorting_desc::after {
 
 .ibox-content {
     padding: 20px;
+}
+
+.checkbox-inline + .checkbox-inline,
+.radio-inline + .radio-inline {
+    margin-left: 0;
+}
+
+.checkbox-inline, .radio-inline {
+    margin: 0px 10px 10px 0;
 }
