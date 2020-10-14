@@ -154,27 +154,27 @@
 
     <div class="form-group">
         <label class="checkbox-inline i-checks">
-            <input name="main_slider" type="checkbox" value="option1"> Main Slider
+            <input name="main_slider" type="checkbox" value="1"> Main Slider
         </label>
 
         <label class="checkbox-inline i-checks">
-            <input name="hot_deal" type="checkbox" value="option2"> Hot Deal
+            <input name="hot_deal" type="checkbox" value="1"> Hot Deal
         </label>
 
         <label class="checkbox-inline i-checks">
-            <input name="best_rated" type="checkbox" value="option3"> Best Rated
+            <input name="best_rated" type="checkbox" value="1"> Best Rated
         </label>
 
         <label class="checkbox-inline i-checks">
-            <input name="mid_slider" type="checkbox" value="option3"> Mid Slider
+            <input name="mid_slider" type="checkbox" value="1"> Mid Slider
         </label>
 
         <label class="checkbox-inline i-checks">
-            <input name="hot_new" type="checkbox" value="option3"> Hot New
+            <input name="hot_new" type="checkbox" value="1"> Hot New
         </label>
 
         <label class="checkbox-inline i-checks">
-            <input name="trend" type="checkbox" value="option3"> Trend
+            <input name="trend" type="checkbox" value="1"> Trend
         </label>
     </div>
 

@@ -13,7 +13,11 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $per_page = request()->perPage ?: 10;
+        $keyword = request()->keyword;
+
+        $products = Product::latest()->paginate($per_page);
+
         return view('admin.product.index', compact('products'));
     }
 
@@ -28,7 +32,14 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
-        dd($request->all());
+        $request['color'] = implode(',', $request->color);
+        $request['size'] = implode(',', $request->size);
+
+        $request_data = $request->only([...(new Product)->getFillable()]);
+
+        Product::create($request_data);
+
+        return redirect()->route('admin.products.index')->with('success', 'Product has been crated successful.');
     }
 
     public function show(Product $product)

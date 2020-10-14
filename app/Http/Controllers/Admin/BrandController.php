@@ -14,7 +14,7 @@ class BrandController extends Controller
 {
     public function index()
     {
-        $perPage = request()->perPage ?: 10;
+        $per_page = request()->perPage ?: 10;
         $keyword = request()->keyword;
 
         $brands = Brand::latest();
@@ -23,7 +23,7 @@ class BrandController extends Controller
             $brands = $brands->where('name', 'like', '%' . request()->keyword . '%');
         }
 
-        $brands = $brands->paginate($perPage);
+        $brands = $brands->paginate($per_page);
 
         return view('admin.brand.index', compact('brands'));
     }

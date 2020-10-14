@@ -10,7 +10,7 @@ class NewsLetterController extends Controller
 {
     public function index()
     {
-        $perPage = request()->perPage ?: 10;
+        $per_page = request()->perPage ?: 10;
         $keyword = request()->keyword;
 
         $newsletters = NewsLetter::latest();
@@ -19,7 +19,7 @@ class NewsLetterController extends Controller
             $newsletters = $newsletters->where('email', 'like', '%' . request()->keyword . '%');
         }
 
-        $newsletters = $newsletters->paginate($perPage);
+        $newsletters = $newsletters->paginate($per_page);
 
         return view('admin.newsletter.index', compact('newsletters'));
     }

@@ -11,7 +11,7 @@ class CouponController extends Controller
 {
     public function index()
     {
-        $perPage = request()->perPage ?: 10;
+        $per_page = request()->perPage ?: 10;
         $keyword = request()->keyword;
 
         $coupons = Coupon::latest();
@@ -25,7 +25,7 @@ class CouponController extends Controller
                 ->orWhere('expire_date', 'like', $keyword);
         }
 
-        $coupons = $coupons->paginate($perPage);
+        $coupons = $coupons->paginate($per_page);
 
         return view('admin.coupon.index', compact('coupons'));
     }
