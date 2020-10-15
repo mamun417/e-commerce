@@ -36,3 +36,12 @@ function getActiveClassByUrl($url)
 {
     return Request::is($url) ? 'active' : '';
 }
+
+function slug($text) {
+    return preg_replace('/\s+/u', '-', strtolower(trim($text)));
+}
+
+function numberToWords($number) {
+    $inWords = new NumberFormatter('en', NumberFormatter::SPELLOUT);
+    return $inWords->format($number);
+}

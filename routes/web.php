@@ -14,8 +14,6 @@ Route::post('newsletter/store', 'NewsLetterController@store')->name('newsletter.
 //admin authentication
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
-    // Route::get('/', 'Auth\LoginController@showLoginForm');
-
     Route::get('/', function () {
         return redirect()->route('admin.login');
     });

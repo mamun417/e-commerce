@@ -10,11 +10,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Product extends Model
 {
+    const IMAGE_PATH = 'product';
+
     protected $fillable = [
-        'name', 'category_id', 'quantity', 'selling_price',
+        'status', 'name', 'category_id', 'quantity', 'selling_price',
         'discount_price', 'description', 'slug', 'brand_id',
         'color', 'size', 'video_link', 'img_one', 'main_slider',
-        'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend'
+        'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend', 'image_one', 'image_two', 'image_three'
     ];
 
     public function getFillable()

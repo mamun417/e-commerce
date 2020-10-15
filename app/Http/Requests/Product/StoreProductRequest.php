@@ -4,6 +4,9 @@ namespace App\Http\Requests\Product;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * @property mixed name
+ */
 class StoreProductRequest extends FormRequest
 {
     /**
@@ -25,7 +28,6 @@ class StoreProductRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255|unique:products',
-            'slug' => 'sometimes|max:255|unique:products',
             'category_id' => 'required',
             'quantity' => 'required|numeric',
             'selling_price' => 'required|numeric',

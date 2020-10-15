@@ -1,8 +1,8 @@
-<div class="col-sm-6">
+<div class="col-sm-4">
     <div class="form-group">
         <label>Name</label><span class="required-star"> *</span>
         <input name="name" value="{{ isset($update) ? $product->name : old('name') }}" type="text"
-               placeholder="Enter product name" class="form-control">
+               placeholder="Enter product name" class="form-control" required>
 
         @error('name')
         <span class="help-block m-b-none text-danger">{{ $message }}</span>
@@ -11,7 +11,7 @@
 
     <div class="form-group">
         <label>Category</label><span class="required-star"> *</span>
-        <select class="form-control" name="category_id">
+        <select class="form-control" name="category_id" required>
             <option value="">None</option>
             @foreach($parent_categories as $parent_category)
                 @include('admin.category.component.tree-options', ['parent_category' => $parent_category])
@@ -26,17 +26,19 @@
     <div class="form-group">
         <label>Quantity</label><span class="required-star"> *</span>
         <input name="quantity" value="{{ isset($update) ? $product->name : old('name') }}" type="text"
-               placeholder="Enter product quantity" class="form-control">
+               placeholder="Enter product quantity" class="form-control" required>
 
         @error('quantity')
         <span class="help-block m-b-none text-danger">{{ $message }}</span>
         @enderror
     </div>
+</div>
 
+<div class="col-sm-4">
     <div class="form-group">
         <label>Selling Price</label><span class="required-star"> *</span>
         <input name="selling_price" value="{{ isset($update) ? $product->slug : old('slug') }}" type="number"
-               placeholder="Enter product selling price" class="form-control">
+               placeholder="Enter product selling price" class="form-control" required>
 
         @error('selling_price')
         <span class="help-block m-b-none text-danger">{{ $message }}</span>
@@ -54,27 +56,6 @@
     </div>
 
     <div class="form-group">
-        <label>Description</label>
-        <textarea name="description" class="summernote form-control"></textarea>
-
-        @error('description')
-        <span class="help-block m-b-none text-danger">{{ $message }}</span>
-        @enderror
-    </div>
-</div>
-
-<div class="col-sm-6">
-    <div class="form-group">
-        <label>Slug</label>
-        <input name="slug" value="{{ isset($update) ? $product->slug : old('slug') }}" type="text"
-               placeholder="Enter product slug" class="form-control">
-
-        @error('slug')
-        <span class="help-block m-b-none text-danger">{{ $message }}</span>
-        @enderror
-    </div>
-
-    <div class="form-group">
         <label>Brand</label>
         <select class="form-control" name="brand_id">
             <option>None</option>
@@ -87,7 +68,9 @@
         <span class="help-block m-b-none text-danger">{{ $message }}</span>
         @enderror
     </div>
+</div>
 
+<div class="col-sm-4">
     <div class="form-group" id="tokenize_section">
         <label>Color</label>
         <select name="color[]" class="color" multiple>
@@ -127,10 +110,23 @@
         <span class="help-block m-b-none text-danger">{{ $message }}</span>
         @enderror
     </div>
+</div>
 
+<div class="col-sm-12">
+    <div class="form-group">
+        <label>Description</label>
+        <textarea name="description" class="summernote form-control"></textarea>
+
+        @error('description')
+        <span class="help-block m-b-none text-danger">{{ $message }}</span>
+        @enderror
+    </div>
+</div>
+
+<div class="col-sm-6">
     @foreach ([1, 2, 3] as $user)
         <div class="form-group">
-            <label>Image</label>
+            <label>Image @if($loop->first) (Main Thumbnail) @endif</label>
             <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                 <div class="form-control" data-trigger="fileinput">
                     <i class="glyphicon glyphicon-file fileinput-exists"></i>
@@ -139,7 +135,7 @@
                 <span class="input-group-addon btn btn-default btn-file">
                 <span class="fileinput-new">Select file</span>
                 <span class="fileinput-exists">Change</span>
-                    <input type="file" name="img_one"/>
+                    <input type="file" name="img[]" accept="image/*"/>
                 </span>
 
                 <a href="#" class="input-group-addon btn btn-default fileinput-exists"
@@ -151,31 +147,36 @@
             </div>
         </div>
     @endforeach
+</div>
 
+<div class="col-sm-6">
     <div class="form-group">
-        <label class="checkbox-inline i-checks">
-            <input name="main_slider" type="checkbox" value="1"> Main Slider
-        </label>
+        <label>Type</label>
+        <div class="">
+            <label class="checkbox-inline i-checks">
+                <input name="main_slider" type="checkbox" value="1"> Main Slider
+            </label>
 
-        <label class="checkbox-inline i-checks">
-            <input name="hot_deal" type="checkbox" value="1"> Hot Deal
-        </label>
+            <label class="checkbox-inline i-checks">
+                <input name="hot_deal" type="checkbox" value="1"> Hot Deal
+            </label>
 
-        <label class="checkbox-inline i-checks">
-            <input name="best_rated" type="checkbox" value="1"> Best Rated
-        </label>
+            <label class="checkbox-inline i-checks">
+                <input name="best_rated" type="checkbox" value="1"> Best Rated
+            </label>
 
-        <label class="checkbox-inline i-checks">
-            <input name="mid_slider" type="checkbox" value="1"> Mid Slider
-        </label>
+            <label class="checkbox-inline i-checks">
+                <input name="mid_slider" type="checkbox" value="1"> Mid Slider
+            </label>
 
-        <label class="checkbox-inline i-checks">
-            <input name="hot_new" type="checkbox" value="1"> Hot New
-        </label>
+            <label class="checkbox-inline i-checks">
+                <input name="hot_new" type="checkbox" value="1"> Hot New
+            </label>
 
-        <label class="checkbox-inline i-checks">
-            <input name="trend" type="checkbox" value="1"> Trend
-        </label>
+            <label class="checkbox-inline i-checks">
+                <input name="trend" type="checkbox" value="1"> Trend
+            </label>
+        </div>
     </div>
 
     <div class="form-group m-b-none">

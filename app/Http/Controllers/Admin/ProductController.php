@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Handler\FileHandler;
 use App\Http\Requests\Product\StoreProductRequest;
 use App\Models\Brand;
 use App\Models\Category;
@@ -32,10 +33,20 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
-        $request['color'] = implode(',', $request->color);
-        $request['size'] = implode(',', $request->size);
+        $request_data = $request->only((new Product)->getFillable());
 
-        $request_data = $request->only([...(new Product)->getFillable()]);
+        $request_data['slug'] = slug($request->name);
+        $request_data['color'] = implode(',', $request->color ?? []);
+        $request_data['size'] = implode(',', $request->size ?? []);
+
+        foreach ($request->img as $key => $img) {
+            $img_input = 'img.' . $key;
+
+            if ($request->hasFile($img_input)) {
+                $image_path = FileHandler::upload($img_input, Product::IMAGE_PATH);
+                $request_data['image_' . numberToWords(++$key)] = $image_path;
+            }
+        }
 
         Product::create($request_data);
 
@@ -59,6 +70,8 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        //FileHandler::delete($product->image);
+        return back()->with('success', 'Product has been deleted successful.');
     }
 }
