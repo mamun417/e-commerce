@@ -1,4 +1,4 @@
-@php($check_selected_id = isset($update) ? $category->parent_id : old('category'))
+@php($check_selected_id = isset($update) ? $category->parent_id : old($input_name))
 
 @if ($parent_category->isParent())
     <option value="{{ $parent_category->id }}" {{ $check_selected_id == $parent_category->id ? 'selected' : '' }}>

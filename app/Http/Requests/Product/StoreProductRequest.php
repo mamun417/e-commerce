@@ -32,7 +32,15 @@ class StoreProductRequest extends FormRequest
             'quantity' => 'required|numeric',
             'selling_price' => 'required|numeric',
             'discount_price' => 'nullable|numeric',
-            'video_link' => 'sometimes|max:255'
+            'video_link' => 'sometimes|max:255',
+            'img.*' => 'mimes:jpg,jpeg,png,bmp|max:1024'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'img.*.mimes' => 'Only jpeg, png, jpg and bmp images are allowed'
         ];
     }
 }

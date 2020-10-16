@@ -17,7 +17,7 @@ class ProductController extends Controller
         $per_page = request()->perPage ?: 10;
         $keyword = request()->keyword;
 
-        $products = Product::latest()->paginate($per_page);
+        $products = Product::latest()->with('category', 'brand')->paginate($per_page);
 
         return view('admin.product.index', compact('products'));
     }
@@ -33,13 +33,18 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
-        $request_data = $request->only((new Product)->getFillable());
+        $request_data = $request->only([
+            'name', 'category_id', 'quantity', 'selling_price',
+            'discount_price', 'description', 'brand_id',
+            'color', 'size', 'video_link', 'main_slider',
+            'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend'
+        ]);
 
         $request_data['slug'] = slug($request->name);
         $request_data['color'] = implode(',', $request->color ?? []);
         $request_data['size'] = implode(',', $request->size ?? []);
 
-        foreach ($request->img as $key => $img) {
+        foreach ($request->img ?? [] as $key => $img) {
             $img_input = 'img.' . $key;
 
             if ($request->hasFile($img_input)) {
@@ -71,7 +76,17 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-        //FileHandler::delete($product->image);
+
+        foreach (['image_one', 'image_two', 'image_three'] as $image) {
+            FileHandler::delete($product->$image);
+        }
+
         return back()->with('success', 'Product has been deleted successful.');
+    }
+
+    public function changeStatus(Product $product)
+    {
+        $product->update(['status' => !$product->status]);
+        return back()->with('success', 'Product status has been updated successful.');
     }
 }

@@ -73,22 +73,31 @@
                                 <thead>
                                 <tr>
                                     <th class="text-left">Name</th>
-                                    <th class="text-left">Parent</th>
+                                    <th class="text-left">Category</th>
+                                    <th class="text-left">Brand</th>
+                                    <th class="">Quantity</th>
                                     <th>Image</th>
                                     <th>Status</th>
                                     <th>Create At</th>
-                                    <th class="text-center">Actions</th>
+                                    <th class="text-center" width="20%">Actions</th>
                                 </tr>
                                 </thead>
 
                                 <tbody>
                                 @foreach($products as $product)
                                     <tr>
-                                        <td class="text-left">{{ ucfirst($product->name) }}</td>
-                                        <td class="text-left">{{ isset($product->parent) ? $product->parent->name : '--' }}</td>
+                                        <td class="text-left">
+                                            <span title="{{ ucfirst($product->name) }}">
+                                                {{ Str::limit(ucfirst($product->name), 35) }}
+                                            </span>
+                                        </td>
+                                        <td class="text-left">{{ ucfirst($product->category->name) }}</td>
+                                        <td class="text-left">{{ ucfirst($product->brand->name ?? '') }}</td>
+                                        <td>{{ ucfirst($product->quantity) }}</td>
+
                                         <td>
-                                            <img src="{{ getImageUrl($product->image) }}"
-                                                 alt="{{ $product->name }}" class="cus_thumbnail">
+                                            <img src="{{ getImageUrl($product->image_one) }}"
+                                                 alt="{{ $product->name }}" class="cus_thumbnail img-thumbnail">
                                         </td>
 
                                         <td>
@@ -107,12 +116,17 @@
 
                                         <td>
                                             <a href="{{ route('admin.products.edit', $product->id) }}"
-                                               title="Edit" class="btn btn-info btn-sm">
+                                               title="Edit" class="btn btn-info btn-xs">
+                                                <i class="fa fa-eye"></i> <strong>View</strong>
+                                            </a>
+
+                                            <a href="{{ route('admin.products.edit', $product->id) }}"
+                                               title="Edit" class="btn btn-info btn-xs">
                                                 <i class="fa fa-pencil-square-o"></i> <strong>Edit</strong>
                                             </a>
 
                                             <a onclick="deleteRow({{ $product->id }})" href="JavaScript:void(0)"
-                                               title="Delete" class="btn btn-danger btn-sm">
+                                               title="Delete" class="btn btn-danger btn-xs">
                                                 <i class="fa fa-trash"></i> <strong>Delete</strong>
                                             </a>
 

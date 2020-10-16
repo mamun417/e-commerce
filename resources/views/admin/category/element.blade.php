@@ -27,7 +27,12 @@
     <select class="form-control" name="parent_id">
         <option value="0">None</option>
         @foreach($parent_categories as $parent_category)
-            @include('admin.category.component.tree-options', ['parent_category' => $parent_category])
+            @include('admin.category.component.tree-options',
+                [
+                    'parent_category' => $parent_category,
+                    'input_name' => 'parent_id'
+                ]
+            )
         @endforeach
     </select>
 </div>
@@ -57,5 +62,6 @@
 <div class="form-group m-b-none">
     <a href="{{ route('admin.categories.index') }}"
        class="btn btn-sm btn-danger"><strong>Cancel</strong></a>
-    <button class="btn btn-sm btn-primary" type="submit"><strong>{{ isset($update) ? 'Update' : 'Submit' }}</strong></button>
+    <button class="btn btn-sm btn-primary" type="submit"><strong>{{ isset($update) ? 'Update' : 'Submit' }}</strong>
+    </button>
 </div>
