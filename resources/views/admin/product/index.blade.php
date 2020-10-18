@@ -75,6 +75,7 @@
                                     <th class="text-left">Name</th>
                                     <th class="text-left">Category</th>
                                     <th class="text-left">Brand</th>
+                                    <th>Price</th>
                                     <th class="">Quantity</th>
                                     <th>Image</th>
                                     <th>Status</th>
@@ -93,11 +94,12 @@
                                         </td>
                                         <td class="text-left">{{ ucfirst($product->category->name) }}</td>
                                         <td class="text-left">{{ ucfirst($product->brand->name ?? '') }}</td>
+                                        <td>{{ $product->selling_price }} TK</td>
                                         <td>{{ ucfirst($product->quantity) }}</td>
 
                                         <td>
                                             <img src="{{ getImageUrl($product->image_one) }}"
-                                                 alt="{{ $product->name }}" class="cus_thumbnail img-thumbnail">
+                                                 alt="{{ $product->name }}" class="img-md img-thumbnail">
                                         </td>
 
                                         <td>
@@ -115,10 +117,10 @@
                                         <td>{{ cus_date($product->created_at) }}</td>
 
                                         <td>
-                                            <a href="{{ route('admin.products.edit', $product->id) }}"
-                                               title="Edit" class="btn btn-info btn-xs">
+                                            <button data-toggle="modal" data-target="#productViewModal"
+                                               title="View" class="btn btn-info btn-xs">
                                                 <i class="fa fa-eye"></i> <strong>View</strong>
-                                            </a>
+                                            </button>
 
                                             <a href="{{ route('admin.products.edit', $product->id) }}"
                                                title="Edit" class="btn btn-info btn-xs">
@@ -160,4 +162,15 @@
             </div>
         </div>
     </div>
+
+    @include('admin.product.view-modal', ['product' => $products[0]])
+
 @endsection()
+
+@section('custom-js')
+    <script>
+        $(function () {
+            $('#productViewModal').modal('show')
+        })
+    </script>
+@endsection

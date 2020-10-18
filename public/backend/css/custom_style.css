@@ -8,10 +8,9 @@ html, body {
     padding: 2px 10px !important;
 }
 
-.cus_thumbnail {
-    width: 60px !important;
-    height: 55px !important;
-    border-radius: 5px;
+.img-md {
+    height: 45px;
+    width: 45px;
 }
 
 .pagination > .active > a, .pagination > .active > span,
@@ -319,4 +318,13 @@ th.trash-table.sorting_desc::after {
 
 .checkbox-inline, .radio-inline {
     margin: 0px 10px 10px 0;
+}
+
+.view-product-modal {
+    overflow: auto;
+    height: 48rem;
+}
+
+.inmodal .modal-title {
+    font-size: 20px;
 }

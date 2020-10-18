@@ -21,7 +21,8 @@ class FileHandler extends Controller
         self::createDirectory("$root_path/$path");
 
         $image = request()->file($input_name);
-        $image_name = time() . '-' . preg_replace('/\s+/', '-', $image->getClientOriginalName());
+        $image_name = strtolower(preg_replace('/\s+/', '-', $image->getClientOriginalName()));
+        $image_name = time() . '-' . $image_name;
         $image_path = "$root_path/$path/$image_name";
 
         $resized_image = Image::make($image)->stream();

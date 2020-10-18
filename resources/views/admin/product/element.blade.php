@@ -1,3 +1,8 @@
+@push('extra-links')
+    <link href="{{ asset('backend/css/plugins/summernote/summernote.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/plugins/summernote/summernote-bs3.css') }}" rel="stylesheet">
+@endpush
+
 <div class="col-sm-4">
     <div class="form-group">
         <label>Name</label><span class="required-star"> *</span>
