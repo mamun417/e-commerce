@@ -29,4 +29,37 @@ class Product extends Model
     {
         return $this->belongsTo(Brand::class);
     }
+
+    public static function getProductTypes($product)
+    {
+        $types = collect([
+            'main_slider' => $product->main_slider,
+            'hot_deal' => $product->hot_deal,
+            'best_rated' => $product->best_rated,
+            'mid_slider' => $product->mid_slider,
+            'hot_new' => $product->hot_new,
+            'trend' => $product->trend
+        ]);
+
+        return $types->filter(function ($value, $type) {
+            return $value;
+        })->toArray();
+    }
+
+    public static function getTypes()
+    {
+        return [
+            'main_slider' => 'Main Slider',
+            'hot_deal' => 'Hot Deal',
+            'best_rated' => 'Best Rated',
+            'mid_slider' => 'Mid Slider',
+            'hot_new' => 'Hot New',
+            'trend' => 'Trend'
+        ];
+    }
+
+    public static function getImagesColumns()
+    {
+        return ['image_one', 'image_two', 'image_three'];
+    }
 }

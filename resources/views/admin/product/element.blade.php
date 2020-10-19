@@ -138,7 +138,7 @@
 </div>
 
 <div class="col-sm-6">
-    @foreach ([1, 2, 3] as $key => $user)
+    @foreach (\App\Models\Product::getImagesColumns() as $key => $image)
         <div class="form-group">
             <label>Image @if($loop->first) (Main Thumbnail) @endif</label>
             <div class="fileinput fileinput-new input-group" data-provides="fileinput">

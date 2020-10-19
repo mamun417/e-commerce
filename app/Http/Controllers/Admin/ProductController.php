@@ -60,7 +60,9 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        //
+        $product_types = Product::getProductTypes($product);
+
+        return response()->view('admin.product.product-info', compact('product', 'product_types'));
     }
 
     public function edit(Product $product)

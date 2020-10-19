@@ -117,8 +117,8 @@
                                         <td>{{ cus_date($product->created_at) }}</td>
 
                                         <td>
-                                            <button data-toggle="modal" data-target="#productViewModal"
-                                               title="View" class="btn btn-info btn-xs">
+                                            <button onclick="showProduct({{ $product->id }})"
+                                                    title="View" class="btn btn-info btn-xs">
                                                 <i class="fa fa-eye"></i> <strong>View</strong>
                                             </button>
 
@@ -169,8 +169,19 @@
 
 @section('custom-js')
     <script>
-        $(function () {
+        function showProduct(id) {
+            axios.get('{{ route('admin.products.show', '') }}/' + id)
+                .then(function (response) {
+                    $('.view-product-modal').html(response.data)
+                    $('#productViewModal').modal('show')
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+        }
+
+        /*$(function () {
             $('#productViewModal').modal('show')
-        })
+        })*/
     </script>
 @endsection

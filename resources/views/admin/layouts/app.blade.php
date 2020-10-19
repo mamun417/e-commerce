@@ -49,6 +49,7 @@
 <script src="{{ asset('backend/js/extra-plugin/tokenize2/tokenize2.min.js') }}"></script>
 <script src="{{ asset('backend/js/plugins/jasny/jasny-bootstrap.min.js') }}"></script>
 <script src="{{ asset('backend/js/plugins/summernote/summernote.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script>
 
