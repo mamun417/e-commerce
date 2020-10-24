@@ -90,7 +90,9 @@
                                         </td>
 
                                         <td>
-                                            <a href="{{ route('admin.brands.status.change', $brand->id) }}"
+                                            <a onclick="changeStatus(this)" id="{{ $brand->id }}"
+                                               route="{{ route('admin.brands.status.change', '') }}"
+                                               href="javascript:void(0)"
                                                title="Change publication status">
                                                 @if($brand->status)
                                                     <span class="badge badge-primary"><strong>Active</strong></span>

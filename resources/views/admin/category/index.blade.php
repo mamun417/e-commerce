@@ -92,7 +92,9 @@
                                         </td>
 
                                         <td>
-                                            <a href="{{ route('admin.categories.status.change', $category->id) }}"
+                                            <a onclick="changeStatus(this)" id="{{ $category->id }}"
+                                               route="{{ route('admin.categories.status.change', '') }}"
+                                               href="javascript:void(0)"
                                                title="Change publication status">
                                                 @if($category->status)
                                                     <span class="badge badge-primary"><strong>Active</strong></span>

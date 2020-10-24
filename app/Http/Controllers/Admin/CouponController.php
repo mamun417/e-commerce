@@ -67,6 +67,6 @@ class CouponController extends Controller
     public function changeStatus(Coupon $coupon)
     {
         $coupon->update(['status' => !$coupon->status]);
-        return back()->with('success', 'Coupon status has been updated successful.');
+        return response()->json(['status' => true]);
     }
 }

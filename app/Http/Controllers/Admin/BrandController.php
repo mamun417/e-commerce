@@ -81,6 +81,6 @@ class BrandController extends Controller
     public function changeStatus(Brand $brand)
     {
         $brand->update(['status' => !$brand->status]);
-        return back()->with('success', 'Brand status has been updated successful.');
+        return response()->json(['status' => true]);
     }
 }

@@ -104,6 +104,7 @@
 
                                         <td>
                                             <a onclick="changeStatus(this)" id="{{ $product->id }}"
+                                               route="{{ route('admin.products.status.change', '') }}"
                                                href="javascript:void(0)"
                                                title="Change publication status">
                                                 @if($product->status)
@@ -169,29 +170,6 @@
 
 @section('custom-js')
     <script>
-        function changeStatus(e) {
-
-            let id = $(e).attr('id')
-
-            axios.get('{{ route('admin.products.status.change', '') }}/' + id)
-                .then(function (response) {
-                    let statusBtn = $(e).find('span');
-
-                    if ($(statusBtn).hasClass('badge-primary')) {
-                        $(statusBtn).removeClass('badge-primary').addClass('badge-warning')
-                        $(statusBtn).find('strong').html('Disable')
-                    } else {
-                        $(statusBtn).removeClass('badge-warning').addClass('badge-primary')
-                        $(statusBtn).find('strong').html('Active')
-                    }
-
-                    toastr.success('Status has been updated successful.');
-                })
-                .catch(function (error) {
-                    toastr.error('Status could not be update.');
-                })
-        }
-
         function showProduct(id) {
             axios.get('{{ route('admin.products.show', '') }}/' + id)
                 .then(function (response) {

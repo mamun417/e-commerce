@@ -94,7 +94,9 @@
                                         <td>{{ $coupon->user_ids }}</td>
 
                                         <td>
-                                            <a href="{{ route('admin.coupons.status.change', $coupon->id) }}"
+                                            <a onclick="changeStatus(this)" id="{{ $coupon->id }}"
+                                               route="{{ route('admin.coupons.status.change', '') }}"
+                                               href="javascript:void(0)"
                                                title="Change publication status">
                                                 @if($coupon->status)
                                                     <span class="badge badge-primary"><strong>Active</strong></span>

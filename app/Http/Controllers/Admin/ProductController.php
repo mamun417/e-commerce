@@ -90,7 +90,5 @@ class ProductController extends Controller
     {
         $product->update(['status' => !$product->status]);
         return response()->json(['status' => true]);
-
-        //return back()->with('success', 'Product status has been updated successful.');
     }
 }

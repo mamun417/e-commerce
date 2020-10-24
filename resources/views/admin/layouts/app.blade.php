@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset('panel/assets/images/favicon.png') }}" sizes="192x192" />
-    <link rel="apple-touch-icon" href="{{ asset('backend/img/favicon.png') }}" />
+    <link rel="icon" href="{{ asset('panel/assets/images/favicon.png') }}" sizes="192x192"/>
+    <link rel="apple-touch-icon" href="{{ asset('backend/img/favicon.png') }}"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', config('app.name')) | {{ config('app.name', 'Laravel blog') }}</title>
 
@@ -54,7 +54,7 @@
 <script>
 
     /*summernote*/
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.summernote').summernote();
 
         $('.i-checks').iCheck({
@@ -66,8 +66,8 @@
     $(function () {
         @foreach(['success', 'warning', 'error', 'info'] as $item)
             @if(session($item))
-                toastr['{{ $item }}']('{{ session($item) }}');
-            @endif
+            toastr['{{ $item }}']('{{ session($item) }}');
+        @endif
         @endforeach
     });
 
@@ -83,8 +83,33 @@
             confirmButtonText: "Yes, delete it!",
             closeOnConfirm: true
         }, function () {
-            document.getElementById('row-delete-form'+rowId).submit();
+            document.getElementById('row-delete-form' + rowId).submit();
         });
+    }
+
+    // change publication status
+    function changeStatus(e) {
+
+        let id = $(e).attr('id'),
+            route = $(e).attr('route')
+
+        axios.get(route + '/' + id)
+            .then(function (response) {
+                let statusBtn = $(e).find('span');
+
+                if ($(statusBtn).hasClass('badge-primary')) {
+                    $(statusBtn).removeClass('badge-primary').addClass('badge-warning')
+                    $(statusBtn).find('strong').html('Disable')
+                } else {
+                    $(statusBtn).removeClass('badge-warning').addClass('badge-primary')
+                    $(statusBtn).find('strong').html('Active')
+                }
+
+                toastr.success('Status has been updated successful.');
+            })
+            .catch(function (error) {
+                toastr.error('Status could not be update.');
+            })
     }
 </script>
 

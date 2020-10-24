@@ -86,6 +86,6 @@ class CategoryController extends Controller
     public function changeStatus(Category $category)
     {
         $category->update(['status' => !$category->status]);
-        return back()->with('success', 'Category status has been updated successful.');
+        return response()->json(['status' => true]);
     }
 }
