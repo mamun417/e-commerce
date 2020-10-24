@@ -184,7 +184,7 @@
                         $(statusBtn).removeClass('badge-warning').addClass('badge-primary')
                         $(statusBtn).find('strong').html('Active')
                     }
-pr
+
                     toastr.success('Status has been updated successful.');
                 })
                 .catch(function (error) {
