@@ -114,7 +114,8 @@
                     <div class="form-group m-b-none">
                         <div>
                             @foreach(\App\Models\Product::getTypes() as $type_name => $display_name)
-                                <label class="checkbox-inline i-checks {{ array_key_exists($type_name, $product_types) ? 'text-primary' : '' }}">
+                                <label
+                                    class="checkbox-inline i-checks {{ array_key_exists($type_name, $product_types) ? 'text-primary' : '' }}">
                                     <i class="fa fa-check"></i>
                                     {{ $display_name }}
                                 </label>

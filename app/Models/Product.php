@@ -30,6 +30,11 @@ class Product extends Model
         return $this->belongsTo(Brand::class);
     }
 
+    /**
+     * Get product types (which selected for the product)
+     * @param $product
+     * @return array
+     */
     public static function getProductTypes($product)
     {
         $types = collect([
@@ -46,6 +51,10 @@ class Product extends Model
         })->toArray();
     }
 
+    /**
+     * Get product model types list
+     * @return string[]
+     */
     public static function getTypes()
     {
         return [

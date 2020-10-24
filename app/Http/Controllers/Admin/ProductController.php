@@ -89,6 +89,8 @@ class ProductController extends Controller
     public function changeStatus(Product $product)
     {
         $product->update(['status' => !$product->status]);
-        return back()->with('success', 'Product status has been updated successful.');
+        return response()->json(['status' => true]);
+
+        //return back()->with('success', 'Product status has been updated successful.');
     }
 }
