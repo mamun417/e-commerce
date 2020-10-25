@@ -16,7 +16,7 @@ class Product extends Model
     protected $fillable = [
         'status', 'name', 'category_id', 'quantity', 'selling_price',
         'discount_price', 'description', 'slug', 'brand_id',
-        'color', 'size', 'video_link', 'img_one', 'main_slider',
+        'color', 'size', 'video_link', 'main_slider',
         'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend', 'image_one', 'image_two', 'image_three'
     ];
 

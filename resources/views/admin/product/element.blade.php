@@ -192,7 +192,7 @@
     </div>
 
     <div class="form-group m-b-none">
-        <a href="{{ route('admin.categories.index') }}"
+        <a href="{{ route('admin.products.index') }}"
            class="btn btn-sm btn-danger"><strong>Cancel</strong></a>
         <button class="btn btn-sm btn-primary" type="submit"><strong>{{ isset($update) ? 'Update' : 'Submit' }}</strong>
         </button>

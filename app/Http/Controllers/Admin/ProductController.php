@@ -34,12 +34,8 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
-        $request_data = $request->only([
-            'name', 'category_id', 'quantity', 'selling_price',
-            'discount_price', 'description', 'brand_id',
-            'color', 'size', 'video_link', 'main_slider',
-            'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend'
-        ]);
+        $product_model = new Product();
+        $request_data = $request->only($product_model->fillable);
 
         $request_data['slug'] = slug($request->name);
         $request_data['color'] = implode(',', $request->color ?? []);
@@ -72,12 +68,39 @@ class ProductController extends Controller
 
         $brands = Brand::getBrands();
 
-        return view('admin.product.edit', compact('product','parent_categories', 'brands'));
+        return view('admin.product.edit', compact('product', 'parent_categories', 'brands'));
     }
 
     public function update(UpdateProductRequest $request, Product $product)
     {
-        dd($request->all());
+        $product_model = new Product();
+        $request_data = $request->only($product_model->fillable);
+
+        $request_data['slug'] = slug($request->name);
+        $request_data['color'] = implode(',', $request->color ?? []);
+        $request_data['size'] = implode(',', $request->size ?? []);
+
+        foreach (Product::getTypes() as $type_name => $display_name) {
+            $request_data[$type_name] = $request->$type_name ?? 0;
+        }
+
+        foreach ($request->img ?? [] as $key => $img) {
+            $img_input = 'img.' . $key;
+
+            if ($request->hasFile($img_input)) {
+                $image_path = FileHandler::upload($img_input, Product::IMAGE_PATH);
+
+                $img_key = ++$key;
+
+                $request_data['image_' . numberToWords($img_key)] = $image_path;
+
+                FileHandler::delete($product['image_' . numberToWords($img_key)]);
+            }
+        }
+
+        $product->update($request_data);
+
+        return redirect()->route('admin.products.index')->with('success', 'Product has been updated successful.');
     }
 
     public function destroy(Product $product)
