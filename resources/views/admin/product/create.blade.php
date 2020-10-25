@@ -26,11 +26,11 @@
 
                     <div class="ibox-content">
                         <div class="row">
-                                <form role="form" action="{{ route('admin.products.store') }}" method="post"
-                                      enctype="multipart/form-data">
-                                    @csrf
-                                    @include('admin.product.element')
-                                </form>
+                            <form role="form" action="{{ route('admin.products.store') }}" method="post"
+                                  enctype="multipart/form-data">
+                                @csrf
+                                @include('admin.product.element')
+                            </form>
                         </div>
                     </div>
                 </div>

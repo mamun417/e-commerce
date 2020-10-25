@@ -22,6 +22,7 @@
                 @include('admin.category.component.tree-options',
                     [
                         'parent_category' => $parent_category,
+                        'selected_item_cat_id' => isset($update) ? $product->category_id : 0,
                         'input_name' => 'category_id'
                     ]
                 )
@@ -47,7 +48,8 @@
 <div class="col-sm-4">
     <div class="form-group">
         <label>Selling Price</label><span class="required-star"> *</span>
-        <input name="selling_price" value="{{ isset($update) ? $product->selling_price : old('selling_price') }}" type="number"
+        <input name="selling_price" value="{{ isset($update) ? $product->selling_price : old('selling_price') }}"
+               type="number"
                placeholder="Enter product selling price" class="form-control" required>
 
         @error('selling_price')
@@ -57,7 +59,8 @@
 
     <div class="form-group">
         <label>Discount Price</label>
-        <input name="discount_price" value="{{ isset($update) ? $product->discount_price : old('discount_price') }}" type="number"
+        <input name="discount_price" value="{{ isset($update) ? $product->discount_price : old('discount_price') }}"
+               type="number"
                placeholder="Enter product discount price" class="form-control">
 
         @error('discount_price')
@@ -69,8 +72,9 @@
         <label>Brand</label>
         <select class="form-control" name="brand_id">
             <option value="">None</option>
+            @php($check_selected_id = isset($update) ? $product->brand_id : old('brand_id'))
             @foreach($brands as $brand)
-                <option value="{{ $brand->id }}" {{ old('brand_id') == $brand->id ? 'selected' : '' }}>
+                <option value="{{ $brand->id }}" {{ $check_selected_id == $brand->id ? 'selected' : '' }}>
                     {{ $brand->name }}
                 </option>
             @endforeach
@@ -86,8 +90,10 @@
     <div class="form-group" id="tokenize_section">
         <label>Color</label>
         <select name="color[]" class="color" multiple>
-            @if (old('color'))
-                @foreach(old('color') as $color)
+            @if (old('color') || isset($update))
+                @php($colors = isset($update) ? explode(',', $product->color) : old('color'))
+
+                @foreach($colors as $color)
                     <option value="{{ $color }}" selected>{{ $color }}</option>
                 @endforeach
             @endif
@@ -101,8 +107,11 @@
     <div class="form-group" id="tokenize_section">
         <label>Size</label>
         <select name="size[]" class="size" multiple>
-            @if (old('size'))
-                @foreach(old('size') as $size)
+
+            @if (old('size') || isset($update))
+                @php($sizes = isset($update) ? explode(',', $product->size) : old('size'))
+
+                @foreach($sizes as $size)
                     <option value="{{ $size }}" selected>{{ $size }}</option>
                 @endforeach
             @endif
@@ -167,35 +176,18 @@
     <div class="form-group">
         <label>Type</label>
         <div class="">
-            <label class="checkbox-inline i-checks">
-                <input name="main_slider" type="checkbox" value="1" {{ old('main_slider') ? 'checked' : '' }}>
-                Main Slider
-            </label>
-
-            <label class="checkbox-inline i-checks">
-                <input name="hot_deal" type="checkbox" value="1" {{ old('hot_deal') ? 'checked' : '' }}>
-                Hot Deal
-            </label>
-
-            <label class="checkbox-inline i-checks">
-                <input name="best_rated" type="checkbox" value="1" {{ old('best_rated') ? 'checked' : '' }}>
-                Best Rated
-            </label>
-
-            <label class="checkbox-inline i-checks">
-                <input name="mid_slider" type="checkbox" value="1" {{ old('mid_slider') ? 'checked' : '' }}>
-                Mid Slider
-            </label>
-
-            <label class="checkbox-inline i-checks">
-                <input name="hot_new" type="checkbox" value="1" {{ old('hot_new') ? 'checked' : '' }}>
-                Hot New
-            </label>
-
-            <label class="checkbox-inline i-checks">
-                <input name="trend" type="checkbox" value="1" {{ old('trend') ? 'checked' : '' }}>
-                Trend
-            </label>
+            @foreach(\App\Models\Product::getTypes() as $type_name => $display_name)
+                <label class="checkbox-inline i-checks">
+                    <input name="{{ $type_name }}" type="checkbox" value="1"
+                        {{
+                            (isset($update) ?
+                            array_key_exists($type_name, \App\Models\Product::getProductTypes($product))
+                            : old($type_name)) ? 'checked' : ''
+                        }}
+                    >
+                    {{ $display_name }}
+                </label>
+            @endforeach
         </div>
     </div>
 

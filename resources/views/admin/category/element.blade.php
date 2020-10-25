@@ -30,6 +30,7 @@
             @include('admin.category.component.tree-options',
                 [
                     'parent_category' => $parent_category,
+                    'selected_item_cat_id' => isset($update) ? $category->parent_id : 0,
                     'input_name' => 'parent_id'
                 ]
             )

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Handler\FileHandler;
 use App\Http\Requests\Product\StoreProductRequest;
+use App\Http\Requests\Product\UpdateProductRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
@@ -67,12 +68,16 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        //
+        $parent_categories = Category::getParentCategories(false);
+
+        $brands = Brand::getBrands();
+
+        return view('admin.product.edit', compact('product','parent_categories', 'brands'));
     }
 
-    public function update(Request $request, Product $product)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        dd($request->all());
     }
 
     public function destroy(Product $product)

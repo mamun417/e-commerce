@@ -119,7 +119,7 @@
 
                                         <td>
                                             <button onclick="showProduct({{ $product->id }})"
-                                                    title="View" class="btn btn-info btn-xs">
+                                                    title="View" class="btn btn-success btn-xs">
                                                 <i class="fa fa-eye"></i> <strong>View</strong>
                                             </button>
 
