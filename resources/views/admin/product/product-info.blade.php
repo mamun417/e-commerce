@@ -55,13 +55,16 @@
                 <p>{!! $product->description !!}</p>
             </div>
 
-            <div class="social-body">
+            <div class="social-body product-view-image">
                 <h4>Images</h4>
-                @foreach(\App\Models\Product::getImagesColumns() as $key => $image)
-                    <span style="vertical-align: top">{{ ++$key.'.'  }}</span>
-                    <img alt="image" class="img-rounded img-lg m-r-sm"
-                         src="{{ getImageUrl($product->$image) }}">
-                @endforeach
+                <div class="row">
+                    @foreach(\App\Models\Product::getImagesColumns() as $key => $image)
+                        <div class="col-sm-4">
+                            <img alt="image" class="img-rounded img-thumbnail"
+                                 src="{{ getImageUrl($product->$image) }}">
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -70,33 +73,9 @@
         <div class="vertical-container light-timeline no-margins">
             <div class="vertical-timeline-block">
                 <div class="vertical-timeline-content float-e-margins">
-                    <h4>Size</h4>
-                    @if ($product->size)
-                        @php
-                            $size = explode(',', $product->size)
-                        @endphp
-
-                        @foreach($size as $item)
-                            <button class="btn btn-xs btn-primary">
-                                <strong>{{ $item }}</strong>
-                            </button>
-                        @endforeach
-                    @else
-                        No size found
-                    @endif
-
-                </div>
-            </div>
-
-            <div class="vertical-timeline-block">
-                <div class="vertical-timeline-content float-e-margins">
                     <h4>Color</h4>
                     @if ($product->color)
-                        @php
-                            $color = explode(',', $product->color)
-                        @endphp
-
-                        @foreach($color as $item)
+                        @foreach(json_decode($product->color, true) as $item)
                             <button class="btn btn-xs btn-primary">
                                 <strong>{{ $item }}</strong>
                             </button>
@@ -104,7 +83,21 @@
                     @else
                         No color found
                     @endif
+                </div>
+            </div>
 
+            <div class="vertical-timeline-block">
+                <div class="vertical-timeline-content float-e-margins">
+                    <h4>Size</h4>
+                    @if ($product->size)
+                        @foreach(json_decode($product->size, true) as $item)
+                            <button class="btn btn-xs btn-primary">
+                                <strong>{{ $item }}</strong>
+                            </button>
+                        @endforeach
+                    @else
+                        No size found
+                    @endif
                 </div>
             </div>
 

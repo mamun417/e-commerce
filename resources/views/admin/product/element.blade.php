@@ -91,7 +91,7 @@
         <label>Color</label>
         <select name="color[]" class="color" multiple>
             @if (old('color') || isset($update))
-                @php($colors = isset($update) ? explode(',', $product->color) : old('color'))
+                @php($colors = isset($update) ? (json_decode($product->color, true) ?? []) : old('color'))
 
                 @foreach($colors as $color)
                     <option value="{{ $color }}" selected>{{ $color }}</option>
@@ -107,9 +107,8 @@
     <div class="form-group" id="tokenize_section">
         <label>Size</label>
         <select name="size[]" class="size" multiple>
-
             @if (old('size') || isset($update))
-                @php($sizes = isset($update) ? explode(',', $product->size) : old('size'))
+                @php($sizes = isset($update) ? (json_decode($product->size, true) ?? []) : old('size'))
 
                 @foreach($sizes as $size)
                     <option value="{{ $size }}" selected>{{ $size }}</option>

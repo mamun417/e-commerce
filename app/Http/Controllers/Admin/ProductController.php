@@ -38,8 +38,8 @@ class ProductController extends Controller
         $request_data = $request->only($product_model->fillable);
 
         $request_data['slug'] = slug($request->name);
-        $request_data['color'] = implode(',', $request->color ?? []);
-        $request_data['size'] = implode(',', $request->size ?? []);
+        $request_data['color'] = isset($request->color) ? json_encode($request->color) : '';
+        $request_data['size'] = isset($request->size) ? json_encode($request->size) : '';
 
         foreach ($request->img ?? [] as $key => $img) {
             $img_input = 'img.' . $key;
@@ -77,8 +77,8 @@ class ProductController extends Controller
         $request_data = $request->only($product_model->fillable);
 
         $request_data['slug'] = slug($request->name);
-        $request_data['color'] = implode(',', $request->color ?? []);
-        $request_data['size'] = implode(',', $request->size ?? []);
+        $request_data['color'] = isset($request->color) ? json_encode($request->color) : '';
+        $request_data['size'] = isset($request->size) ? json_encode($request->size) : '';
 
         foreach (Product::getTypes() as $type_name => $display_name) {
             $request_data[$type_name] = $request->$type_name ?? 0;

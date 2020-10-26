@@ -244,12 +244,13 @@ th.trash-table.sorting_desc::after {
     margin-right: 5px;
 }
 
-.social-feed-box {
-    min-height: 473px;
-}
-
 .sweet-alert button.cancel {
     background-color: #ec4758 !important;
+}
+
+.product-view-image img {
+    height: 12rem;
+    width: 100%;
 }
 
 .sweet-alert button.cancel:hover {
