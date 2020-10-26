@@ -1,6 +1,16 @@
 @extends('admin.layouts.app')
 @section('title', 'Products')
 
+@push('extra-links')
+    <link href="{{ asset('backend/js/extra-plugin/lightbox-gallery/css/lightgallery.css') }}" rel="stylesheet">
+@endpush
+
+@push('extra-scripts')
+    <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="{{ asset('backend/js/extra-plugin/lightbox-gallery/js/lightgallery-all.min.js') }}"></script>
+@endpush
+
 @section('content')
 
     <div class="row wrapper border-bottom white-bg page-heading">
@@ -98,8 +108,18 @@
                                         <td>{{ ucfirst($product->quantity) }}</td>
 
                                         <td>
-                                            <img src="{{ getImageUrl($product->image_one) }}"
-                                                 alt="{{ $product->name }}" class="img-md img-thumbnail">
+                                            <div class="lightgallery">
+
+                                                @foreach(\App\Models\Product::getImagesColumns() as $image)
+                                                    <a class="{{ $loop->first ? '' : 'hidden' }}"
+                                                       href="{{ getImageUrl($product->$image) }}">
+
+                                                        <img src="{{ getImageUrl($product->$image) }}"
+                                                             alt="{{ $product->name }}"
+                                                             class="{{ $loop->first ? 'img-md img-thumbnail' : '' }}">
+                                                    </a>
+                                                @endforeach
+                                            </div>
                                         </td>
 
                                         <td>
@@ -170,6 +190,10 @@
 
 @section('custom-js')
     <script>
+        $(function () {
+            $(".lightgallery").lightGallery();
+        });
+
         function showProduct(id) {
             axios.get('{{ route('admin.products.show', '') }}/' + id)
                 .then(function (response) {

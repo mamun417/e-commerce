@@ -249,8 +249,12 @@ th.trash-table.sorting_desc::after {
 }
 
 .product-view-image img {
-    height: 12rem;
+    height: 15rem;
     width: 100%;
+}
+
+body.fixed-sidebar .navbar-static-side, body.canvas-menu .navbar-static-side {
+    z-index: 999!important;
 }
 
 .sweet-alert button.cancel:hover {

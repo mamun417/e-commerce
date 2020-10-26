@@ -51,6 +51,8 @@
 <script src="{{ asset('backend/js/plugins/summernote/summernote.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+@stack('extra-scripts')
+
 <script>
 
     /*summernote*/
