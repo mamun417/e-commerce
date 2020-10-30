@@ -1,9 +1,9 @@
 <?php
 
-function getImageUrl($image)
+function getImageUrl($image_path)
 {
-    return isset($image) ?
-        Storage::disk('public')->url($image)
+    return isset($image_path) ?
+        Storage::disk('public')->url($image_path)
         : url(asset('backend/img/no-image.png'));
 }
 

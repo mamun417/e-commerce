@@ -10,6 +10,8 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+use Storage;
 
 class ProductController extends Controller
 {
@@ -34,8 +36,35 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
+        $description = $request->input('description');
+        $dom = new \DomDocument();
+        $dom->loadHtml($description, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+        $images = $dom->getElementsByTagName('img');
+
+        foreach ($images as $k => $img) {
+            $data = $img->getAttribute('src');
+
+            list($type, $data) = explode(';', $data);
+            list(, $extension) = explode('/', $type);
+            list(, $data) = explode(',', $data);
+
+            $image_name = time() . $k . '.' . $extension;
+
+            $make_image = Image::make($data)->stream();
+            $root_path = config('ecommerce.upload_path');
+            $path = "$root_path/" . Product::IMAGE_PATH . "/$image_name";
+            Storage::disk('public')->put($path, $make_image);
+
+            $img->setAttribute('src', "/storage/$path");
+        }
+
         $product_model = new Product();
         $request_data = $request->only($product_model->fillable);
+
+        $request_data['description'] = $dom->saveHTML();
+
+        // dd($request_data);
 
         $request_data['slug'] = slug($request->name);
         $request_data['color'] = isset($request->color) ? json_encode($request->color) : '';
