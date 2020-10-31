@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static create(array $request_data)
  * @method static latest()
  * @property mixed status
+ * @property mixed description
  */
 class Product extends Model
 {

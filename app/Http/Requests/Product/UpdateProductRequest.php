@@ -9,6 +9,7 @@ use Illuminate\Foundation\Http\FormRequest;
  * @property mixed name
  * @property mixed color
  * @property mixed size
+ * @property mixed description
  */
 class UpdateProductRequest extends FormRequest
 {

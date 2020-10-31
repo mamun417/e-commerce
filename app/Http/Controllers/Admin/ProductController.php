@@ -36,18 +36,14 @@ class ProductController extends Controller
 
     public function store(StoreProductRequest $request)
     {
-        $description = $request->input('description');
-
         $product_model = new Product();
         $request_data = $request->only($product_model->fillable);
-
-        $request_data['description'] =  FileHandler::uploadEditorImage($description);
-
-        // dd($request_data);
 
         $request_data['slug'] = slug($request->name);
         $request_data['color'] = isset($request->color) ? json_encode($request->color) : '';
         $request_data['size'] = isset($request->size) ? json_encode($request->size) : '';
+
+        // $request_data['description'] = FileHandler::uploadEditorImage($request->description);
 
         foreach ($request->img ?? [] as $key => $img) {
             $img_input = 'img.' . $key;
@@ -87,6 +83,12 @@ class ProductController extends Controller
         $request_data['slug'] = slug($request->name);
         $request_data['color'] = isset($request->color) ? json_encode($request->color) : '';
         $request_data['size'] = isset($request->size) ? json_encode($request->size) : '';
+
+        /*$product->description = $request->description;
+        if ($product->isDirty('description')) {
+            $request_data['description'] = FileHandler::uploadEditorImage($request->description);
+            dd('is dirty');
+        }*/
 
         foreach (Product::getTypes() as $type_name => $display_name) {
             $request_data[$type_name] = $request->$type_name ?? 0;
