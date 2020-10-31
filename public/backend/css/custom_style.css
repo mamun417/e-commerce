@@ -333,3 +333,6 @@ body.fixed-sidebar .navbar-static-side, body.canvas-menu .navbar-static-side {
 .inmodal .modal-title {
     font-size: 20px;
 }
+#productViewModal img {
+    max-width: 100%!important;
+}
