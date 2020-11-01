@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 7.28.3.
+ * Generated for Laravel 7.28.4.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2523,7 +2523,7 @@
          * Begin broadcasting an event.
          *
          * @param mixed|null $event
-         * @return \Illuminate\Broadcasting\PendingBroadcast|void
+         * @return \Illuminate\Broadcasting\PendingBroadcast
          * @static
          */
         public static function event($event = null)
@@ -12758,7 +12758,7 @@
          * Create a signed route URL for a named route.
          *
          * @param string $name
-         * @param array $parameters
+         * @param mixed $parameters
          * @param \DateTimeInterface|\DateInterval|int|null $expiration
          * @param bool $absolute
          * @return string
@@ -14117,7 +14117,71 @@
 
 }
 
-        namespace Facade\Ignition\Facades {
+        namespace Intervention\Image\Facades {
+            /**
+     *
+     *
+     */
+        class Image {
+                    /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self
+         * @static
+         */
+        public static function configure($config = [])
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
+        }
+                    /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image
+         * @static
+         */
+        public static function make($data)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
+        }
+                    /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image
+         * @static
+         */
+        public static function canvas($width, $height, $background = null)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
+        }
+                    /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image
+         * @static
+         */
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
+        }
+
+    }
+
+}
+
+    namespace Facade\Ignition\Facades {
             /**
      * Class Flare.
      *
@@ -14865,7 +14929,7 @@ namespace  {
                 /**
              * Paginate the given query.
              *
-             * @param int|null $per_page
+             * @param int|null $perPage
              * @param array $columns
              * @param string $pageName
              * @param int|null $page
@@ -14873,26 +14937,26 @@ namespace  {
              * @throws \InvalidArgumentException
              * @static
              */
-            public static function paginate($per_page = null, $columns = [], $pageName = 'page', $page = null)
+            public static function paginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->paginate($per_page, $columns, $pageName, $page);
+                                return $instance->paginate($perPage, $columns, $pageName, $page);
             }
 
                 /**
              * Paginate the given query into a simple paginator.
              *
-             * @param int|null $per_page
+             * @param int|null $perPage
              * @param array $columns
              * @param string $pageName
              * @param int|null $page
              * @return \Illuminate\Contracts\Pagination\Paginator
              * @static
              */
-            public static function simplePaginate($per_page = null, $columns = [], $pageName = 'page', $page = null)
+            public static function simplePaginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->simplePaginate($per_page, $columns, $pageName, $page);
+                                return $instance->simplePaginate($perPage, $columns, $pageName, $page);
             }
 
                 /**
@@ -16802,44 +16866,44 @@ namespace  {
              * Set the limit and offset for a given page.
              *
              * @param int $page
-             * @param int $per_page
+             * @param int $perPage
              * @return \Illuminate\Database\Query\Builder
              * @static
              */
-            public static function forPage($page, $per_page = 15)
+            public static function forPage($page, $perPage = 15)
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
-                                return $instance->forPage($page, $per_page);
+                                return $instance->forPage($page, $perPage);
             }
 
                 /**
              * Constrain the query to the previous "page" of results before a given ID.
              *
-             * @param int $per_page
+             * @param int $perPage
              * @param int|null $lastId
              * @param string $column
              * @return \Illuminate\Database\Query\Builder
              * @static
              */
-            public static function forPageBeforeId($per_page = 15, $lastId = 0, $column = 'id')
+            public static function forPageBeforeId($perPage = 15, $lastId = 0, $column = 'id')
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
-                                return $instance->forPageBeforeId($per_page, $lastId, $column);
+                                return $instance->forPageBeforeId($perPage, $lastId, $column);
             }
 
                 /**
              * Constrain the query to the next "page" of results after a given ID.
              *
-             * @param int $per_page
+             * @param int $perPage
              * @param int|null $lastId
              * @param string $column
              * @return \Illuminate\Database\Query\Builder
              * @static
              */
-            public static function forPageAfterId($per_page = 15, $lastId = 0, $column = 'id')
+            public static function forPageAfterId($perPage = 15, $lastId = 0, $column = 'id')
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
-                                return $instance->forPageAfterId($per_page, $lastId, $column);
+                                return $instance->forPageAfterId($perPage, $lastId, $column);
             }
 
                 /**
@@ -17424,7 +17488,12 @@ namespace  {
             class Str extends \Illuminate\Support\Str {}
             class URL extends \Illuminate\Support\Facades\URL {}
             class Validator extends \Illuminate\Support\Facades\Validator {}
-            class View extends \Illuminate\Support\Facades\View {}
+
+    /**
+     * @method with(string $string, $count)
+     */
+    class View extends \Illuminate\Support\Facades\View {}
+            class Image extends \Intervention\Image\Facades\Image {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
 
 }
