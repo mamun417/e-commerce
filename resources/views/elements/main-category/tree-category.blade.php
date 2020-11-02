@@ -7,7 +7,7 @@
         <a href="#">{{ $category->name }}<i class="fas fa-chevron-right"></i></a>
         <ul>
             @foreach($category->children as $category)
-                @include('components.main-category.tree-category')
+                @include('elements.main-category.tree-category')
             @endforeach
         </ul>
     </li>

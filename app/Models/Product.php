@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static create(array $request_data)
  * @method static latest()
+ * @method static whereMainSlider(int $int)
  * @property mixed status
  * @property mixed description
  */
 class Product extends Model
 {
     const IMAGE_PATH = 'product';
+    const ACTIVE = '1';
 
     protected $fillable = [
         'status', 'name', 'category_id', 'quantity', 'selling_price',
@@ -29,6 +31,11 @@ class Product extends Model
     public function brand()
     {
         return $this->belongsTo(Brand::class);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('status', self::ACTIVE);
     }
 
     /**

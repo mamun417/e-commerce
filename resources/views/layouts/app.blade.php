@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/plugins/slick-1.8.0/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/cus_style.css') }}">
 </head>
 
 <body>
