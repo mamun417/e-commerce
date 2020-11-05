@@ -86,7 +86,7 @@
                                         <td class="text-left">{{ ucfirst($brand->name) }}</td>
                                         <td>
                                             <img src="{{ getImageUrl($brand->image) }}"
-                                                 alt="{{ $brand->name }}" class="cus_thumbnail img-thumbnail">
+                                                 alt="{{ $brand->name }}">
                                         </td>
 
                                         <td>

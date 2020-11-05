@@ -102,9 +102,12 @@
                                                 {{ Str::limit(ucfirst($product->name), 35) }}
                                             </span>
                                         </td>
-                                        <td class="text-left">{{ ucfirst($product->category->name) }}</td>
-                                        <td class="text-left">{{ ucfirst($product->brand->name ?? '') }}</td>
-                                        <td>{{ $product->selling_price }} TK</td>
+                                        <td class="text-left">{{ ucfirst(@$product->category->name) }}</td>
+                                        <td class="text-left">{{ ucfirst(@$product->brand->name ?? '') }}</td>
+                                        <td class="text-left">
+                                            <p>Regular: {{ $product->selling_price }} TK</p>
+                                            <p>Discount: {{ $product->discount_price }} TK</p>
+                                        </td>
                                         <td>{{ ucfirst($product->quantity) }}</td>
 
                                         <td>
@@ -116,7 +119,7 @@
 
                                                         <img src="{{ getImageUrl($product->$image) }}"
                                                              alt="{{ $product->name }}"
-                                                             class="{{ $loop->first ? 'img-md img-thumbnail' : '' }}">
+                                                             class="{{ $loop->first ? 'img-md' : '' }}">
                                                     </a>
                                                 @endforeach
                                             </div>
