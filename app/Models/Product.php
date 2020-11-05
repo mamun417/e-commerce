@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static create(array $request_data)
  * @method static latest()
  * @method static whereMainSlider(int $int)
+ * @method static active()
  * @property mixed status
  * @property mixed description
  */
