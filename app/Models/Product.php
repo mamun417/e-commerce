@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static active()
  * @property mixed status
  * @property mixed description
+ * @property mixed discount_price
+ * @property mixed selling_price
  */
 class Product extends Model
 {
@@ -23,6 +25,17 @@ class Product extends Model
         'color', 'size', 'video_link', 'main_slider',
         'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend', 'image_one', 'image_two', 'image_three'
     ];
+
+    protected $appends = ['discount_percent'];
+
+    public function getDiscountPercentAttribute()
+    {
+        if ($this->discount_price) {
+            return intval(($this->selling_price - $this->discount_price) / $this->selling_price * 100);
+        }
+
+        return false;
+    }
 
     public function category()
     {

@@ -284,6 +284,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="product_fav"><i class="fas fa-heart"></i></div>
+
+                                                @if($product->discount_price)
+                                                    <ul class="product_marks">
+                                                        <li class="product_mark product_discount">-{{ $product->discount_percent }}%</li>
+                                                        {{--<li class="product_mark product_new">new</li>--}}
+                                                    </ul>
+                                                @endif
                                             </div>
                                         </div>
                                     @endforeach
@@ -398,7 +405,6 @@
 
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
