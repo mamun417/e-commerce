@@ -130,7 +130,7 @@
                     <div class="main_nav_content d-flex flex-row">
 
                         <!-- Categories Menu -->
-                        @include('elements.main-category.category')
+                        @include('components.main-category.category')
 
                         <!-- Main Nav Menu -->
                         <div class="main_nav_menu ml-auto">

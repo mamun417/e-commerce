@@ -63,6 +63,21 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <div>Select Type</div>
+                                        <select name="type" id="perPage" onchange="submit()"
+                                                class="input-sm form-control">
+                                            <option value="">All</option>
+
+                                            @foreach(\App\Models\Product::getTypes() as $type_name => $display_name)
+                                                <option value="{{ $type_name }}"
+                                                    {{ request('type') == $type_name ? ' selected' : '' }}>
+                                                    {{ $display_name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
                                         <br>
                                         <div class="input-group">
                                             <input name="keyword" type="text" value="{{ request('keyword') }}"
@@ -176,7 +191,13 @@
                                     Showing {{ $products->firstItem() }} to {{ $products->lastItem() }}
                                     of {{ $products->total() }} entries
                                 </div>
-                                {{ $products->appends(['perPage' => request('perPage'), 'keyword' => request('keyword')])->links() }}
+                                {{
+                                    $products->appends([
+                                        'perPage' => request('perPage'),
+                                        'type' => request('type'),
+                                        'keyword' => request('keyword')
+                                    ])->links()
+                                }}
                             </div>
                         @else
                             <div class="text-center">No products found</div>

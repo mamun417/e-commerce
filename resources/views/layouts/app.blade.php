@@ -22,9 +22,9 @@
 <body>
 
 <div class="super_container">
-    @include('elements.header')
+    @include('components.header')
     @yield('content')
-    @include('elements.footer')
+    @include('components.footer')
 </div>
 
 <script src="{{ asset('frontend/js/jquery-3.3.1.min.js')}}"></script>
