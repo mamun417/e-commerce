@@ -38,7 +38,7 @@ class CategoryController extends Controller
     {
         $request_data = $request->only(['name', 'slug', 'parent_id', 'img']);
 
-        $request_data['slug'] = Str::slug($request->slug);
+        $request_data['slug'] = slug($request->slug);
 
         if ($request->hasFile('img')) {
             $image_path = FileHandler::upload('img', Category::IMAGE_PATH);
@@ -63,7 +63,7 @@ class CategoryController extends Controller
     {
         $request_data = $request->only(['name', 'slug', 'parent_id', 'img']);
 
-        $request_data['slug'] = Str::slug($request->slug);
+        $request_data['slug'] = slug($request->slug);
 
         if ($request->hasFile('img')) {
             $image_path = FileHandler::upload('img', Category::IMAGE_PATH);

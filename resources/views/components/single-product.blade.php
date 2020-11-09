@@ -27,7 +27,7 @@
 
             <div class="product_extras">
                 <div class="product_color">
-                    @foreach(json_decode($product->color) as $color)
+                    @foreach(json_decode($product->color) ?? [] as $color)
                         @php($extra_style = $color == 'white' ? 'border: 1px solid #ddd' : '')
                         <input type="radio" name="product_color"
                                style="background:{{ $color }}; {{ $extra_style }}">

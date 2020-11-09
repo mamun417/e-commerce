@@ -30,8 +30,7 @@ class UpdateCategoryRequest extends FormRequest
         $category_id = $this->category->id;
 
         return [
-            'name' => 'required|max:255|unique:categories,name,'. $category_id,
-            'slug' => 'required|max:255|unique:categories,slug,'. $category_id,
+            'name' => 'required|max:255|unique:categories,name,'. $category_id
         ];
     }
 }
