@@ -87,7 +87,7 @@
                         </div>
 
                         @foreach(['hot_new', 'best_rated', 'trend'] as $item)
-                            <div class="product_panel panel active">
+                            <div class="product_panel panel {{ $loop->first ? 'active' : '' }}">
                                 <div class="featured_slider slider">
                                     @foreach($products[$item] as $product)
                                         @include('components.single-product')

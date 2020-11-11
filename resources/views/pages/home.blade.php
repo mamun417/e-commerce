@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('components.banner')
+    @include('components.home.banner')
     <!-- Characteristics -->
     <div class="characteristics">
         <div class="container">
@@ -62,7 +62,7 @@
     </div>
 
     <!-- Deals of the week -->
-    @include('components.hot-deal')
+    @include('components.home.hot-deal')
 
     <!-- Popular Categories -->
     <div class="popular_categories">

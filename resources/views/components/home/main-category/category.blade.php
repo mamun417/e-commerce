@@ -6,7 +6,7 @@
 
     <ul class="cat_menu">
         @foreach($parent_categories as $category)
-            @include('components.main-category.tree-category')
+            @include('components.home.main-category.tree-category')
         @endforeach
     </ul>
 </div>
