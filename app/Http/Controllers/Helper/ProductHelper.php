@@ -10,19 +10,10 @@ class ProductHelper extends Controller
 {
     public static function filterProductByType($products, $type, $limit = 8)
     {
-        if (is_array($products)) {
-            $products = collect($products);
-        }
+        $products = is_array($products) ? collect($products) : $products;
 
-        $products = $products->filter(function ($product, $key) use ($type, $limit) {
-
-            if ($key + 1 > $limit) {
-                return false;
-            }
-
-            return $product[$type];
+        return $products->filter(function ($product, $key) use ($type, $limit) {
+            return $key + 1 > $limit ? false : $product[$type];
         });
-
-        return $products;
     }
 }

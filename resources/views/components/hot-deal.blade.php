@@ -10,18 +10,24 @@
                         <div class="owl-carousel owl-theme deals_slider">
                             @foreach($products['hot_deal'] as $product)
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="{{ asset('frontend/images/deals.png')}}" alt="">
+                                    <div class="deals_image"><img src="{{ getImageUrl($product->image_one) }}" alt="">
                                     </div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_category">
-                                                <a href="javascript:void(0)">TK {{ $product->category->name }}</a>
+                                                <a href="javascript:void(0)">{{ $product->category->name }}</a>
                                             </div>
-                                            <div class="deals_item_price_a ml-auto">{{ $product->selling_price }}</div>
+                                            @if ($product->discount_price)
+                                                <div class="deals_item_price_a ml-auto">
+                                                    TK {{ $product->selling_price }}
+                                                </div>
+                                            @endif
                                         </div>
                                         <div class="deals_info_line d-flex flex-row justify-content-start">
                                             <div class="deals_item_name">{{ $product->name }}</div>
-                                            <div class="deals_item_price ml-auto">TK {{ @$product->discount_price }}</div>
+                                            <div class="deals_item_price ml-auto">
+                                                TK {{ $product->discount_price ?? $product->selling_price }}
+                                            </div>
                                         </div>
                                         <div class="available">
                                             <div class="available_line d-flex flex-row justify-content-start">
@@ -80,33 +86,15 @@
                             <div class="tabs_line"><span></span></div>
                         </div>
 
-                        <!-- Hot New -->
-                        <div class="product_panel panel active">
-                            <div class="featured_slider slider">
-                                @foreach($products['hot_new'] as $product)
-                                    @include('components.single-product')
-                                @endforeach
+                        @foreach(['hot_new', 'best_rated', 'trend'] as $item)
+                            <div class="product_panel panel active">
+                                <div class="featured_slider slider">
+                                    @foreach($products[$item] as $product)
+                                        @include('components.single-product')
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Best Rated -->
-                        <div class="product_panel panel">
-                            <div class="featured_slider slider">
-                                @foreach($products['best_rated'] as $product)
-                                    @include('components.single-product')
-                                @endforeach
-                            </div>
-                        </div>
-
-                        <!-- Trend -->
-                        <div class="product_panel panel">
-                            <div class="featured_slider slider">
-                                @foreach($products['trend'] as $product)
-                                    @include('components.single-product')
-                                @endforeach
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
             </div>
