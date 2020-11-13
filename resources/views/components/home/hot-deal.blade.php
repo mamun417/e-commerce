@@ -31,10 +31,10 @@
                                         </div>
                                         <div class="available">
                                             <div class="available_line d-flex flex-row justify-content-start">
-                                                <div class="available_title">Available: <span>6</span></div>
+                                                <div class="available_title">Available: <span>{{ $product->quantity }}</span></div>
                                                 <div class="sold_title ml-auto">Already sold: <span>28</span></div>
                                             </div>
-                                            <div class="available_bar"><span style="width:17%"></span></div>
+                                            <div class="available_bar"><span style="width:{{ $product->quantity/100 }}%"></span></div>
                                         </div>
                                         <div
                                             class="deals_timer d-flex flex-row align-items-center justify-content-start">

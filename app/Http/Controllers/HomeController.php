@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $all_products = Product::with('category')->active()->latest()->get();
+        $all_products = Product::with('category', 'brand')->active()->latest()->get();
 
         $types = [
             'hot_deal' => 3,
@@ -19,6 +19,7 @@ class HomeController extends Controller
             'best_rated' => 8,
             'trend' => 8,
             'main_slider' => 1,
+            'mid_slider' => 3,
         ];
 
         $products = [];
