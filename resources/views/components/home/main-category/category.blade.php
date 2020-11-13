@@ -5,6 +5,7 @@
     </div>
 
     <ul class="cat_menu">
+        {{--using view composer--}}
         @foreach($parent_categories as $category)
             @include('components.home.main-category.tree-category')
         @endforeach

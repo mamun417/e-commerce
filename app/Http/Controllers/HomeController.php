@@ -13,10 +13,28 @@ class HomeController extends Controller
     {
         $all_products = Product::with('category')->active()->latest()->get();
 
-        $products['hot_deal'] = ProductHelper::filterProductByType($all_products, 'hot_deal', 3);
-        $products['hot_new'] = ProductHelper::filterProductByType($all_products, 'hot_new', 8);
-        $products['best_rated'] = ProductHelper::filterProductByType($all_products, 'best_rated', 8);
-        $products['trend'] = ProductHelper::filterProductByType($all_products, 'trend', 8);
+        $types = [
+            'hot_deal' => 3,
+            'hot_new' => 8,
+            'best_rated' => 8,
+            'trend' => 8,
+            'main_slider' => 1,
+        ];
+
+        $products = [];
+        foreach ($all_products as $product) {
+
+            foreach ($types as $type => $limit) {
+
+                if ($product[$type] && (@count($products[$type]) < $limit)) {
+                    if ($limit == 1) {
+                        $products[$type] = $product;
+                    } else {
+                        $products[$type][] = $product;
+                    }
+                }
+            }
+        }
 
         $brands = Brand::getBrands(false);
 

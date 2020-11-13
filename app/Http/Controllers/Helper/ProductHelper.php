@@ -12,8 +12,14 @@ class ProductHelper extends Controller
     {
         $products = is_array($products) ? collect($products) : $products;
 
-        return $products->filter(function ($product, $key) use ($type, $limit) {
-            return $key + 1 > $limit ? false : $product[$type];
+        return $products->filter(function ($product) use ($type, $limit) {
+            if ($limit) {
+                $limit = $limit-1;
+                info($limit);
+                return $product[$type];
+            } else {
+                return false;
+            }
         });
     }
 }

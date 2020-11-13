@@ -1,3 +1,4 @@
+@php($slider_product = $products['main_slider'])
 <!-- Banner -->
 <div class="banner">
     <div class="banner_background"

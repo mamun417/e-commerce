@@ -26,11 +26,7 @@ class Brand extends Model
     public static function getBrands($disable = true)
     {
         $brands = Brand::latest();
-
-        if (!$disable) {
-            $brands = $brands->active();
-        }
-
+        $brands = !$disable ? $brands->active() : $brands;
         return $brands->get();
     }
 }
