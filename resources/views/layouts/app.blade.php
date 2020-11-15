@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/cus_style.css') }}">
+
+    @stack('extra-links')
 </head>
 
 <body>

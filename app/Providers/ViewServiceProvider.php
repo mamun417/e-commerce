@@ -27,7 +27,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('pages.home', function ($view) {
+        View::composer('components.header', function ($view) {
             $parent_categories = Category::getParentCategories();
             $view->with('parent_categories', $parent_categories);
         });

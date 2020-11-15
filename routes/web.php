@@ -19,8 +19,6 @@ Route::post('newsletter/store', 'NewsLetterController@store')->name('newsletter.
  **********************************/
 
 
-
-
 /**********************************
  * start admin routes
  **********************************/
@@ -35,7 +33,12 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], fu
 });
 
 // admin
-Route::group(['middleware' => ['auth:admin'], 'as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin'], function () {
+Route::group([
+    'middleware' => ['auth:admin'],
+    'as' => 'admin.',
+    'prefix' => 'admin',
+    'namespace' => 'Admin'
+], function () {
 
     // dashboard
     Route::get('dashboard', function () {
