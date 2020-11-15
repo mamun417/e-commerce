@@ -34,9 +34,23 @@
                             </ul>
                         </div>
                         <div class="top_bar_user">
-                            <div class="user_icon"><img src="{{ asset('frontend/images/user.svg')}}" alt=""></div>
-                            <div><a href="#">Register</a></div>
-                            <div><a href="{{ route('login') }}">Sign in</a></div>
+                            @auth
+                                <div>
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();$('#logout-form').submit()">
+                                        Logout
+                                    </a>
+                                </div>
+                                <form id="logout-form" method="POST"
+                                      action="{{ route('logout') }}"
+                                      class="hidden">
+                                    @csrf()
+                                </form>
+                            @else
+                                <div class="user_icon"><img src="{{ asset('frontend/images/user.svg')}}" alt=""></div>
+                                <div><a href="#">Register</a></div>
+                                <div><a href="{{ route('login') }}">Sign in</a></div>
+                            @endauth
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 // newsletter
 Route::post('newsletter/store', 'NewsLetterController@store')->name('newsletter.store');

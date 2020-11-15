@@ -9,6 +9,7 @@
             padding: 20px;
             border-radius: 25px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid #f2f2f2;
         }
     </style>
 @endpush
@@ -75,7 +76,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Full Name</label>
                                 <input type="text" class="form-control" aria-describedby="emailHelp"
-                                       placeholder="Enter Your Full Name " name="name" required="">
+                                       placeholder="Enter Your Full Name " name="name" value="{{ old('name') }}" required>
 
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -88,7 +89,7 @@
                                 <label for="exampleInputEmail1">Phone</label>
                                 <input type="text" class="form-control @error('phone') is-invalid @enderror"
                                        name="phone" value="{{ old('phone') }}" aria-describedby="emailHelp"
-                                       placeholder="Enter Your Phone " required="">
+                                       placeholder="Enter Your Phone" value="{{ old('phone') }}" required>
 
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
@@ -101,7 +102,7 @@
                                 <label for="exampleInputEmail1">Email</label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
                                        name="email" value="{{ old('email') }}" aria-describedby="emailHelp"
-                                       placeholder="Enter Your Email " required="">
+                                       placeholder="Enter Your Email" required>
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -109,7 +110,6 @@
                                 </span>
                                 @enderror
                             </div>
-
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Password</label>

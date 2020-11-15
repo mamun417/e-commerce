@@ -50,14 +50,6 @@
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
-body {
-    font-family: 'Rubik', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    background: #FFFFFF;
-    color: #000000;
-}
-
 div {
     display: block;
     position: relative;
@@ -3562,10 +3554,10 @@ select option {
 
 .footer .logo {
     top: auto;
-    -webkit-transform: transform: none;
+    /*-webkit-transform: transform: none;
     -moz-transform: transform: none;
     -ms-transform: transform: none;
-    -o-transform: transform: none;
+    -o-transform: transform: none;*/
     transform: none;
 }
 
