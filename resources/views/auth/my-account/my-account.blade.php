@@ -132,4 +132,66 @@
         </div>
         <div class="panel"></div>
     </div>
+
+    <div class="contact_form">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 card">
+                    <table class="table table-response">
+                        <thead>
+                        <tr>
+                            <th>Payment Type</th>
+                            <th>Payment ID</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Status Code</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach([12,2121, 21] as $row)
+                            <tr>
+                                <td>fds sdfsd</td>
+                                <td>fds sdfsd</td>
+                                <td>fds sdfsd</td>
+                                <td>fds sdfsd</td>
+                                <td>fds sdfsd</td>
+                                <td>fds sdfsd</td>
+                                <td>
+                                    <a href="" class="btn btn-sm btn-info"> View</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-4">
+                    <div class="card">
+                        <img src="{{ asset('public/frontend/images/kaziariyan.png') }}" class="card-img-top"
+                             style="height: 90px; width: 90px; margin-left: 34%;">
+
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                {{ auth()->user()->name }}
+                            </h5>
+                        </div>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="">Change Password</a>
+                            </li>
+                            <li class="list-group-item">Edit Profile</li>
+                            <li class="list-group-item"><a href=""> Return Order</a>
+                            </li>
+                        </ul>
+
+                        <div class="card-body">
+                            <a href="" class="btn btn-danger btn-sm btn-block">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

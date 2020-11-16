@@ -11,6 +11,9 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
 
+// profile
+Route::get('my-account', 'UserController@profile')->name('user.profile');
+
 // newsletter
 Route::post('newsletter/store', 'NewsLetterController@store')->name('newsletter.store');
 
