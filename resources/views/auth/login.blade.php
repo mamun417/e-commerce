@@ -1,4 +1,5 @@
 @extends('auth.layouts.app')
+@section('title', 'Sign In')
 
 @section('content')
     <div class="contact_form">

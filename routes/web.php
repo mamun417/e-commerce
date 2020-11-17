@@ -11,8 +11,16 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
 
-// profile
-Route::get('my-account', 'UserController@profile')->name('user.profile');
+Route::group(['middleware' => ['auth'], 'as' => 'user.'], function () {
+
+    // profile
+    Route::get('my-account', 'UserController@profile')->name('profile');
+
+    // password
+    Route::get('change-password', 'UserController@changePassword')->name('change-password');
+    Route::post('update-password', 'UserController@updatePassword')->name('update-password');
+});
+
 
 // newsletter
 Route::post('newsletter/store', 'NewsLetterController@store')->name('newsletter.store');

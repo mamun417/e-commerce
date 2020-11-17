@@ -32,28 +32,31 @@
 
                                     <div class="form-group">
                                         <label>Old Password</label><span class="required-star"> *</span>
-                                        <input name="old_password" type="password" placeholder="Enter old password" class="form-control">
+                                        <input name="old_password" type="password" placeholder="Enter old password"
+                                               class="form-control">
 
                                         @error('old_password')
-                                            <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                                        <span class="help-block m-b-none text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
 
                                     <div class="form-group">
                                         <label>New Password</label><span class="required-star"> *</span>
-                                        <input name="password" type="password" placeholder="Enter new password" class="form-control">
+                                        <input name="password" type="password" placeholder="Enter new password"
+                                               class="form-control">
 
                                         @error('password')
-                                            <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                                        <span class="help-block m-b-none text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
 
                                     <div class="form-group">
                                         <label>Confirm Password</label><span class="required-star"> *</span>
-                                        <input name="password_confirmation" type="password" placeholder="Enter confirm password" class="form-control">
+                                        <input name="password_confirmation" type="password"
+                                               placeholder="Enter confirm password" class="form-control">
 
                                         @error('confirm_password')
-                                            <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                                        <span class="help-block m-b-none text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
 

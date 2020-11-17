@@ -1717,10 +1717,14 @@ button:hover {
 
 .contact_form_container {
     padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 1px 20px 1px rgba(0,0,0,0.1);
 }
 
 .contact_form_inner {
     padding: 0 15px;
+}
+
+.table td, .table th {
+    vertical-align: middle !important;
 }
