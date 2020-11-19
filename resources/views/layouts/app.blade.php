@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/responsive.css') }}">
     <link href="{{ asset('backend/css/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/cus_style.css') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
 
     @stack('extra-links')
 </head>

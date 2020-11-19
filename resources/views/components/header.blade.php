@@ -23,19 +23,14 @@
                                         <li><a href="#">Japanese</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-                                    <ul>
-                                        <li><a href="#">EUR Euro</a></li>
-                                        <li><a href="#">GBP British Pound</a></li>
-                                        <li><a href="#">JPY Japanese Yen</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                         </div>
                         <div class="top_bar_user">
                             @auth
                                 <div>
+                                    <div class="user_icon"><img src="{{ asset('frontend/images/user.svg')}}" alt=""></div>
+                                    <div><a href="{{ route('user.profile') }}">My Profile</a></div>
+
                                     <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();$('#logout-form').submit()">
                                         Logout
