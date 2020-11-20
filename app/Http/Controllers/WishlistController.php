@@ -9,9 +9,21 @@ use Session;
 
 class WishlistController extends Controller
 {
+    public function index()
+    {
+        $wish_list_products = Cart::instance('wishlist')->content();
+        return view('pages.wishlist', compact('wish_list_products'));
+    }
+
     public function add($id)
     {
         $product = Product::findOrFail($id);
+
+        $exits = Cart::instance('wishlist')->search(function ($cartItem) use ($product) {
+            return $cartItem->id === $product->id;
+        });
+
+        if (count($exits)) return back()->with('warning', 'Product already added in your wishlist.');
 
         $data = [
             'id' => $product->id,
@@ -24,13 +36,8 @@ class WishlistController extends Controller
             ]
         ];
 
-        try {
-            Cart::instance('cart')->add($data);
-            Session::flash('success', 'Product add to cart successfully.');
-        } catch (\Exception $e) {
-            Session::flash('error', 'There is a problem, Please try again later.');
-        }
+        Cart::instance('wishlist')->add($data);
 
-        return back();
+        return back()->with('success', 'Product add to wishlist successfully.');
     }
 }
