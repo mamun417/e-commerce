@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static latest()
  * @method static whereMainSlider(int $int)
  * @method static active()
+ * @method static findOrFail($id)
  * @property mixed status
  * @property mixed description
  * @property mixed discount_price
@@ -23,7 +24,7 @@ class Product extends Model
         'status', 'name', 'category_id', 'quantity', 'selling_price',
         'discount_price', 'description', 'slug', 'brand_id',
         'color', 'size', 'video_link', 'main_slider',
-        'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend', 'image_one', 'image_two', 'image_three'
+        'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend', 'buyone_getone', 'image_one', 'image_two', 'image_three'
     ];
 
     protected $appends = ['discount_percent'];
@@ -53,24 +54,20 @@ class Product extends Model
     }
 
     /**
-     * Get product types (which selected for the product)
+     * Get specific product types
      * @param $product
      * @return array
      */
     public static function getProductTypes($product)
     {
-        $types = collect([
-            'main_slider' => $product->main_slider,
-            'hot_deal' => $product->hot_deal,
-            'best_rated' => $product->best_rated,
-            'mid_slider' => $product->mid_slider,
-            'hot_new' => $product->hot_new,
-            'trend' => $product->trend
-        ]);
+        $types = [
+            'main_slider', 'hot_deal', 'best_rated',
+            'mid_slider', 'hot_new', 'trend', 'buyone_getone'
+        ];
 
-        return $types->filter(function ($value, $type) {
-            return $value;
-        })->toArray();
+        return array_filter($types, function ($type) use ($product) {
+            return $product[$type];
+        });
     }
 
     /**
@@ -85,7 +82,8 @@ class Product extends Model
             'best_rated' => 'Best Rated',
             'mid_slider' => 'Mid Slider',
             'hot_new' => 'Hot New',
-            'trend' => 'Trend'
+            'trend' => 'Trend',
+            'buyone_getone' => 'Buy One Get One'
         ];
     }
 

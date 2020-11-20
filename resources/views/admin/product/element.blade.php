@@ -175,12 +175,15 @@
     <div class="form-group">
         <label>Type</label>
         <div class="">
+
+            @php($product_types = \App\Models\Product::getProductTypes($product))
+
             @foreach(\App\Models\Product::getTypes() as $type_name => $display_name)
                 <label class="checkbox-inline i-checks">
                     <input name="{{ $type_name }}" type="checkbox" value="1"
                         {{
-                            (isset($update) ?
-                            array_key_exists($type_name, \App\Models\Product::getProductTypes($product))
+                            (isset($update)
+                            ? in_array($type_name, $product_types)
                             : old($type_name)) ? 'checked' : ''
                         }}
                     >

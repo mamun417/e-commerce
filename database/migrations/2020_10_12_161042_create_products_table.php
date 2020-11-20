@@ -34,6 +34,7 @@ class CreateProductsTable extends Migration
             $table->boolean('mid_slider')->default(0);
             $table->boolean('hot_new')->default(0);
             $table->boolean('trend')->default(0);
+            $table->boolean('buyone_getone')->default(0);
             $table->string('image_one')->nullable();
             $table->string('image_two')->nullable();
             $table->string('image_three')->nullable();

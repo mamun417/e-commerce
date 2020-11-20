@@ -11,6 +11,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
 
+Route::get('wishlist/{id}', 'WishlistController@add')->name('wishlist.add');
+
 Route::group(['middleware' => ['auth'], 'as' => 'user.'], function () {
 
     // profile

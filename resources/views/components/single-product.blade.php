@@ -36,7 +36,12 @@
                 <button class="product_cart_button">Add to Cart</button>
             </div>
         </div>
-        <div class="product_fav"><i class="fas fa-heart"></i></div>
+
+        <a href="{{ route('wishlist.add', $product->id) }}">
+            <div class="product_fav">
+                <i class="fas fa-heart"></i>
+            </div>
+        </a>
 
         @if($product->discount_price)
             <ul class="product_marks">

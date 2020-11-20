@@ -3,15 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Handler\FileHandler;
+use App\Http\Controllers\Partial\Handler\FileHandler;
 use App\Http\Requests\Product\StoreProductRequest;
 use App\Http\Requests\Product\UpdateProductRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Http\Request;
-use Intervention\Image\Facades\Image;
-use Storage;
 
 class ProductController extends Controller
 {
@@ -61,9 +58,7 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        $product_types = Product::getProductTypes($product);
-
-        return response()->view('admin.product.product-info', compact('product', 'product_types'));
+        return response()->view('admin.product.product-info', compact('product'));
     }
 
     public function edit(Product $product)
