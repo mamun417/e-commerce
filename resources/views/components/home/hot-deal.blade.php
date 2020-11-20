@@ -10,7 +10,9 @@
                         <div class="owl-carousel owl-theme deals_slider">
                             @foreach($products['hot_deal'] as $product)
                                 <div class="owl-item deals_item">
-                                    <div class="deals_image"><img src="{{ getImageUrl($product->image_one) }}" alt="">
+                                    <div class="deals_image">
+                                        <img src="{{ getImageUrl($product->image_one) }}" alt="{{ $product->name }}"
+                                        style="height: 310px; width: 310px">
                                     </div>
                                     <div class="deals_content">
                                         <div class="deals_info_line d-flex flex-row justify-content-start">

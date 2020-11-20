@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Helper\CategoryHelper;
+use App\Http\Controllers\Partial\Helper\CategoryHelper;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Handler\FileHandler;
+use App\Http\Controllers\Partial\Handler\FileHandler;
 use App\Http\Requests\Category\StoreCategoryRequest;
 use App\Http\Requests\Category\UpdateCategoryRequest;
 use App\Models\Category;

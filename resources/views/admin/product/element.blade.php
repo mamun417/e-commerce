@@ -176,7 +176,7 @@
         <label>Type</label>
         <div class="">
 
-            @php($product_types = \App\Models\Product::getProductTypes($product))
+            @php($product_types = isset($update) ? \App\Models\Product::getProductTypes($product) : [])
 
             @foreach(\App\Models\Product::getTypes() as $type_name => $display_name)
                 <label class="checkbox-inline i-checks">

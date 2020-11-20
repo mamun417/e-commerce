@@ -2047,9 +2047,11 @@ select option {
     padding-right: 40px;
 }
 
+/*
 .popular_categories_slider .owl-item:nth-child(even) {
     background: #eff6fa;
 }
+*/
 
 .popular_category_image img {
     max-height: 100%;

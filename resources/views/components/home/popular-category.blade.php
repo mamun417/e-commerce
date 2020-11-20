@@ -24,9 +24,10 @@
                             <div class="owl-item">
                                 <div
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
-                                    <div class="popular_category_image"><img
-                                            src="{{ asset('frontend/images/popular_1.png')}}" alt=""></div>
-                                    <div class="popular_category_text">Smartphones & Tablets</div>
+                                    <div class="popular_category_image">
+                                        <img src="{{ getImageUrl($category->image) }}" alt="{{ $category->name }}"
+                                            style="height: 9rem;"></div>
+                                    <div class="popular_category_text">{{ $category->name }}</div>
                                 </div>
                             </div>
                         @endforeach

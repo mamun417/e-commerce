@@ -4,7 +4,7 @@
 
         <div class="product_image d-flex flex-column align-items-center justify-content-center">
             <img src="{{ getImageUrl($product->image_one) }}"
-                 alt="{{ $product->name }}">
+                 alt="{{ $product->name }}" style="height: 115px">
         </div>
 
         <div class="product_content">
