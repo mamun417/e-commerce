@@ -11,7 +11,7 @@ class WishlistController extends Controller
 {
     public function index()
     {
-        $wish_list_products = Cart::instance('wishlist')->content();
+        $wish_list_products = Cart::instance('wishlist')->content()->reverse();
         return view('pages.wishlist', compact('wish_list_products'));
     }
 
@@ -39,5 +39,11 @@ class WishlistController extends Controller
         Cart::instance('wishlist')->add($data);
 
         return back()->with('success', 'Product add to wishlist successfully.');
+    }
+
+    public function remove($rowId)
+    {
+        Cart::instance('wishlist')->remove($rowId);
+        return back()->with('success', 'Product remove from wishlist successfully.');
     }
 }

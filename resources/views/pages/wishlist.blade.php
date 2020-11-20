@@ -41,7 +41,9 @@
                                             <div class="cart_item_total cart_info_col">
                                                 <div class="cart_item_title">Action</div>
                                                 <div class="cart_item_text">
-                                                    <button class="btn btn-sm btn-danger">Remove</button>
+                                                    <a href="{{ route('wishlist.remove', $product->rowId) }}"
+                                                       class="btn btn-sm btn-danger">Remove</a>
+
                                                     <button class="btn btn-sm btn-info">Move to cart</button>
                                                 </div>
                                             </div>
