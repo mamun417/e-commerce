@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static latest()
  * @method static whereMainSlider(int $int)
  * @method static active()
- * @method static findOrFail($id)
+ * @method static whereSlug($slug)
  * @property mixed status
  * @property mixed description
  * @property mixed discount_price

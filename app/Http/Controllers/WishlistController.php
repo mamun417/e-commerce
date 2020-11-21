@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Partial\Helper\CartHelper;
 use App\Models\Product;
 use Cart;
-use Illuminate\Http\Request;
-use Session;
 
 class WishlistController extends Controller
 {
@@ -15,21 +14,19 @@ class WishlistController extends Controller
         return view('pages.wishlist', compact('wish_list_products'));
     }
 
-    public function add($id)
+    public function add($slug)
     {
-        $product = Product::findOrFail($id);
+        $product = Product::whereSlug($slug)->firstOrFail();
 
-        $exits = Cart::instance('wishlist')->search(function ($cartItem) use ($product) {
-            return $cartItem->id === $product->id;
-        });
+        $exits = CartHelper::checkCartExitProduct('wishlist', $product->id);
 
-        if (count($exits)) return back()->with('warning', 'Product already added in your wishlist.');
+        if ($exits) return back()->with('error', 'Already added in your wishlist.');
 
         $data = [
             'id' => $product->id,
             'name' => $product->name,
             'qty' => 1,
-            'price' => $product->selling_price,
+            'price' => $product->discount_price ?? $product->selling_price,
             'weight' => 0,
             'options' => [
                 'image' => $product->image_one
@@ -45,5 +42,27 @@ class WishlistController extends Controller
     {
         Cart::instance('wishlist')->remove($rowId);
         return back()->with('success', 'Product remove from wishlist successfully.');
+    }
+
+    public function moveToCart($rowId)
+    {
+        $product = Cart::instance('wishlist')->get($rowId);
+
+        Cart::instance('wishlist')->remove($rowId);
+
+        $data = [
+            'id' => $product->id,
+            'name' => $product->name,
+            'qty' => 1,
+            'price' => $product->price,
+            'weight' => 0,
+            'options' => [
+                'image' => $product->options->image_one
+            ]
+        ];
+
+        Cart::add($data);
+
+        return back()->with('success', 'Product move to cart successfully.');
     }
 }

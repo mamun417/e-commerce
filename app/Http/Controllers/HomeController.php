@@ -20,6 +20,7 @@ class HomeController extends Controller
             'trend' => 8,
             'main_slider' => 1,
             'mid_slider' => 3,
+            'buyone_getone' => null,
         ];
 
         $products = [];
@@ -27,7 +28,7 @@ class HomeController extends Controller
 
             foreach ($types as $type => $limit) {
 
-                if ($product[$type] && (@count($products[$type]) < $limit)) {
+                if ($product[$type] && (is_null($limit) || (@count($products[$type]) < $limit))) {
                     if ($limit == 1) {
                         $products[$type] = $product;
                     } else {

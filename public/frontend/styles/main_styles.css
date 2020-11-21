@@ -2930,6 +2930,7 @@ select option {
 .trends_image img {
     width: auto !important;
     max-width: 100% !important;
+    height: 212px;
 }
 
 .trends_category a {
@@ -3684,4 +3685,12 @@ select option {
 
 .logos_list li:last-child {
     margin-right: 0px;
+}
+
+.trends_nav, .popular_categories_nav {
+    background: #fff;
+}
+
+.trends_nav i, .popular_categories_nav i {
+    color: #000;
 }

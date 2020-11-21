@@ -33,12 +33,15 @@
                                style="background:{{ $color }}; {{ $extra_style }}">
                     @endforeach
                 </div>
-                <button class="product_cart_button">Add to Cart</button>
+                <a  href="{{ route('cart.add', $product->slug) }}">
+                    <button class="product_cart_button">Add to Cart</button>
+                </a>
             </div>
         </div>
 
-        <a href="{{ route('wishlist.add', $product->id) }}">
-            <div class="product_fav">
+        <a href="{{ route('wishlist.add', $product->slug) }}">
+            @php($exit_cart = \App\Http\Controllers\Partial\Helper\CartHelper::checkCartExitProduct('wishlist', $product->id))
+            <div class="product_fav {{ $exit_cart ? 'active' : '' }}">
                 <i class="fas fa-heart"></i>
             </div>
         </a>

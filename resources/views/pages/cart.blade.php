@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Wishlist')
+@section('title', 'Cart')
 
 @push('extra-links')
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/cart_styles.css') }} ">
@@ -14,11 +14,10 @@
                     <div class="cart_container">
                         <div class="cart_items">
                             <ul class="cart_list">
-                                @foreach($wish_list_products as $product)
+                                @foreach($cart_products as $product)
                                     <li class="cart_item clearfix">
                                         <div class="cart_item_image">
-                                            <img src="{{ getImageUrl($product->options->image) }}"
-                                                 alt="{{ $product->name }}">
+                                            <img src="{{ getImageUrl($product->options->image) }}" alt="{{ $product->name }}">
                                         </div>
                                         <div
                                             class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
@@ -39,16 +38,18 @@
                                                 <div class="cart_item_text">TK {{ $product->price }}</div>
                                             </div>
 
+                                            <div class="cart_item_price cart_info_col">
+                                                <div class="cart_item_title">Quantity</div>
+                                                <div class="cart_item_text">{{ $product->qty }}</div>
+                                            </div>
+
                                             <div class="cart_item_total cart_info_col">
                                                 <div class="cart_item_title">Action</div>
                                                 <div class="cart_item_text">
-                                                    <a href="{{ route('wishlist.remove', $product->rowId) }}"
+                                                    <a href="{{ route('cart.remove', $product->rowId) }}"
                                                        class="btn btn-sm btn-danger">Remove</a>
 
-                                                    <a href="{{ route('wishlist.move-to-cart', $product->rowId) }}"
-                                                       class="btn btn-sm btn-info">
-                                                        Move to cart
-                                                    </a>
+                                                    <button class="btn btn-sm btn-info">Move to cart</button>
                                                 </div>
                                             </div>
                                         </div>

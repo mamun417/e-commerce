@@ -11,14 +11,18 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
 
-//Wishlist................................
+// wishlist
 Route::get('wishlist', 'WishlistController@index')->name('wishlist.index');
-Route::get('wishlist/{id}', 'WishlistController@add')->name('wishlist.add');
+Route::get('wishlist/{slug}', 'WishlistController@add')->name('wishlist.add');
 Route::get('wishlist/remove/{rowId}', 'WishlistController@remove')->name('wishlist.remove');
-//Route::get('wishlist/move-cart/{rowId}', 'WishListsController@moveToCart')->name('wishlist.move-cart');
+Route::get('wishlist/move-cart/{rowId}', 'WishlistController@moveToCart')->name('wishlist.move-to-cart');
 //Route::get('wishlist/count/product', 'WishListsController@count')->name('wishlist.count');
 //Route::get('wishlist/get/product', 'WishListsController@getWishlistProduct')->name('wishlist.get-product');
 
+// cart
+Route::get('cart', 'CartController@index')->name('cart.index');
+Route::get('cart/{slug}', 'CartController@add')->name('cart.add');
+Route::get('cart/remove/{rowId}', 'CartController@remove')->name('cart.remove');
 
 Route::group(['middleware' => ['auth'], 'as' => 'user.'], function () {
 

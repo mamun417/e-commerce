@@ -21,7 +21,6 @@
                         @endif
                     </div>
                     <div class="banner_product_name">{{ $slider_product->brand->name }}</div>
-                    <div class="banner_product_name">{{ $slider_product->brand->name }}</div>
                     <div class="button banner_button"><a href="#">Shop Now</a></div>
                 </div>
             </div>
