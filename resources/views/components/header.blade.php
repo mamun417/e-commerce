@@ -124,7 +124,7 @@
                                 <div class="cart_icon">
                                     <img src="{{ asset('frontend/images/cart.png') }}" alt="">
                                     <div class="cart_count">
-                                        <span>{{ Cart::instance('cart')->content()->count() }}</span>
+                                        <span id="cart-counter">{{ Cart::instance('cart')->content()->count() }}</span>
                                     </div>
                                 </div>
                                 <div class="cart_content">

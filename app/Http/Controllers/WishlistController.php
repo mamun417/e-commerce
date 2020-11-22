@@ -40,7 +40,7 @@ class WishlistController extends Controller
 
         return response()->json([
             'success' => true,
-            'wish_list_count' => Cart::instance('wishlist')->content()->count(),
+            'wishlist_count' => Cart::instance('wishlist')->content()->count(),
             'message' => 'Product add to wishlist successfully.'
         ], 200);
     }

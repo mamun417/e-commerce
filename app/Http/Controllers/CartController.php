@@ -32,7 +32,11 @@ class CartController extends Controller
 
         Cart::instance('cart')->add($data);
 
-        return back()->with('success', 'Product add to cart successfully.');
+        return response()->json([
+            'success' => true,
+            'cart_count' => Cart::instance('cart')->content()->count(),
+            'message' => 'Product add to cart successfully.'
+        ], 200);
     }
 
     public function remove($rowId)
