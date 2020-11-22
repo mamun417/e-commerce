@@ -106,7 +106,9 @@
                             <div class="wishlist_icon">
                                 <img src="{{ asset('frontend/images/heart.png')}}" alt="">
                                 <div class="cart_count">
-                                    <span>{{ Cart::instance('wishlist')->count() }}</span>
+                                    <span id="wish-list-counter">
+                                        {{ Cart::instance('wishlist')->content()->count() }}
+                                    </span>
                                 </div>
                             </div>
                             <div class="wishlist_content">
@@ -129,7 +131,7 @@
                                     <div class="cart_text">
                                         <a href="{{ route('cart.index') }}">Cart</a>
                                     </div>
-                                    <div class="cart_price">TK {{ Cart::total() }}</div>
+                                    <div class="cart_price">TK {{ Cart::instance('cart')->total() }}</div>
                                 </div>
                             </div>
                         </div>

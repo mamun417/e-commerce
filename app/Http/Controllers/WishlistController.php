@@ -20,7 +20,10 @@ class WishlistController extends Controller
 
         $exits = CartHelper::checkCartExitProduct('wishlist', $product->id);
 
-        if ($exits) return back()->with('error', 'Already added in your wishlist.');
+        if ($exits) return response()->json([
+            'success' => true,
+            'message' => 'Already added in your wishlist.'
+        ], 409);
 
         $data = [
             'id' => $product->id,
@@ -35,7 +38,11 @@ class WishlistController extends Controller
 
         Cart::instance('wishlist')->add($data);
 
-        return back()->with('success', 'Product add to wishlist successfully.');
+        return response()->json([
+            'success' => true,
+            'wish_list_count' => Cart::instance('wishlist')->content()->count(),
+            'message' => 'Product add to wishlist successfully.'
+        ], 200);
     }
 
     public function remove($rowId)
@@ -57,11 +64,11 @@ class WishlistController extends Controller
             'price' => $product->price,
             'weight' => 0,
             'options' => [
-                'image' => $product->options->image_one
+                'image' => $product->options['image']
             ]
         ];
 
-        Cart::add($data);
+        Cart::instance('cart')->add($data);
 
         return back()->with('success', 'Product move to cart successfully.');
     }

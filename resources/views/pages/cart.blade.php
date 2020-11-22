@@ -48,8 +48,6 @@
                                                 <div class="cart_item_text">
                                                     <a href="{{ route('cart.remove', $product->rowId) }}"
                                                        class="btn btn-sm btn-danger">Remove</a>
-
-                                                    <button class="btn btn-sm btn-info">Move to cart</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -11,7 +11,7 @@ class CartController extends Controller
 {
     public function index()
     {
-        $cart_products = Cart::content()->reverse();
+        $cart_products = Cart::instance('cart')->content()->reverse();
         return view('pages.cart', compact('cart_products'));
     }
 
@@ -30,14 +30,14 @@ class CartController extends Controller
             ]
         ];
 
-        Cart::add($data);
+        Cart::instance('cart')->add($data);
 
         return back()->with('success', 'Product add to cart successfully.');
     }
 
     public function remove($rowId)
     {
-        Cart::remove($rowId);
+        Cart::instance('cart')->remove($rowId);
         return back()->with('success', 'Product remove from cart successfully.');
     }
 }

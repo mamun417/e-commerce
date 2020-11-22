@@ -43,6 +43,7 @@
 <script src="{{ asset('frontend/plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{ asset('frontend/plugins/easing/easing.js')}}"></script>
 <script src="{{ asset('backend/js/plugins/toastr/toastr.min.js') }}"></script>
+<script src="{{ asset('frontend/js/axois.js') }}"></script>
 <script src="{{ asset('frontend/js/custom.js')}}"></script>
 
 <script>
@@ -54,6 +55,9 @@
         @endforeach
     });
 </script>
+
+@yield('script')
+
 </body>
 
 </html>
