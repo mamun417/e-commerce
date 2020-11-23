@@ -35,13 +35,27 @@ class CartController extends Controller
         return response()->json([
             'success' => true,
             'cart_count' => Cart::instance('cart')->content()->count(),
+            'cart_total' => Cart::instance('cart')->total(),
             'message' => 'Product add to cart successfully.'
         ], 200);
     }
 
     public function remove($rowId)
     {
+        $exits = CartHelper::checkCartExitProduct('cart', $rowId, 'rowId');
+
+        if (!$exits) return response()->json([
+            'success' => false,
+            'message' => 'Invalid rowId.'
+        ], 404);
+
         Cart::instance('cart')->remove($rowId);
-        return back()->with('success', 'Product remove from cart successfully.');
+
+        return response()->json([
+            'success' => true,
+            'cart_count' => Cart::instance('cart')->content()->count(),
+            'cart_total' => Cart::instance('cart')->total(),
+            'message' => 'Product remove from cart successfully.'
+        ], 200);
     }
 }

@@ -69,6 +69,7 @@
             axios.get('{{ route('cart.add', '') }}/' + productSlug)
                 .then(response => {
                     $('#cart-counter').html(response.data.cart_count)
+                    $('#cart-total').html(response.data.cart_total)
                     toastr.success(response.data.message);
                 })
                 .catch(error => {

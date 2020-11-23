@@ -49,12 +49,18 @@ class WishlistController extends Controller
     {
         $exits = CartHelper::checkCartExitProduct('wishlist', $rowId, 'rowId');
 
-        if (!$exits) {
-            return back()->with('error', 'Invalid rowId.');
-        }
+        if (!$exits) return response()->json([
+            'success' => false,
+            'message' => 'Invalid rowId.'
+        ], 404);
 
         Cart::instance('wishlist')->remove($rowId);
-        return back()->with('success', 'Product remove from wishlist successfully.');
+
+        return response()->json([
+            'success' => true,
+            'wishlist_count' => Cart::instance('wishlist')->content()->count(),
+            'message' => 'Product remove from wishlist successfully.'
+        ], 200);
     }
 
     public function moveToCart($rowId)
@@ -87,6 +93,7 @@ class WishlistController extends Controller
             'success' => true,
             'wishlist_count' => Cart::instance('wishlist')->content()->count(),
             'cart_count' => Cart::instance('cart')->content()->count(),
+            'cart_total' => Cart::instance('cart')->total(),
             'message' => 'Product move to cart successfully.'
         ], 200);
     }

@@ -131,7 +131,7 @@
                                     <div class="cart_text">
                                         <a href="{{ route('cart.index') }}">Cart</a>
                                     </div>
-                                    <div class="cart_price">TK {{ Cart::instance('cart')->total() }}</div>
+                                    <div id="cart-total" class="cart_price">TK {{ Cart::instance('cart')->total() }}</div>
                                 </div>
                             </div>
                         </div>

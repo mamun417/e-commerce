@@ -42,7 +42,9 @@
                                             <div class="cart_item_total cart_info_col">
                                                 <div class="cart_item_title">Action</div>
                                                 <div class="cart_item_text">
-                                                    <a href="{{ route('wishlist.remove', $product->rowId) }}"
+                                                    <a href="javascript:void(0)" type="button"
+                                                       onclick="removeWishlist(this)"
+                                                       data-row-id="{{ $product->rowId }}"
                                                        class="btn btn-sm btn-danger">Remove</a>
 
                                                     <a href="javascript:void(0)" type="button"
@@ -67,6 +69,25 @@
 
 @section('script')
     <script>
+
+        function removeWishlist(e) {
+
+            let rowId = $(e).data("rowId")
+
+            axios.get('{{ route('wishlist.remove', '') }}/' + rowId)
+                .then(response => {
+
+                    $(e).parents('.cart_item').fadeOut('slow') // remove dom
+
+                    $('#wish-list-counter').html(response.data.wishlist_count)
+
+                    toastr.success(response.data.message);
+                })
+                .catch(error => {
+                    toastr.error(error.response.data.message);
+                })
+        }
+
         function moveToCart(e) {
 
             let rowId = $(e).data("rowId")
@@ -74,11 +95,12 @@
             axios.get('{{ route('wishlist.move-to-cart', '') }}/' + rowId)
                 .then(response => {
 
-                    // remove dom
-                    $(e).parents('.cart_item').fadeOut('slow')
+                    $(e).parents('.cart_item').fadeOut('slow') // remove dom
 
                     $('#wish-list-counter ').html(response.data.wishlist_count)
                     $('#cart-counter').html(response.data.cart_count)
+                    $('#cart-total').html(response.data.cart_total)
+
                     toastr.success(response.data.message);
                 })
                 .catch(error => {
