@@ -45,7 +45,9 @@
                                                     <a href="{{ route('wishlist.remove', $product->rowId) }}"
                                                        class="btn btn-sm btn-danger">Remove</a>
 
-                                                    <a href="{{ route('wishlist.move-to-cart', $product->rowId) }}"
+                                                    <a href="javascript:void(0)" type="button"
+                                                       onclick="moveToCart(this)"
+                                                       data-row-id="{{ $product->rowId }}"
                                                        class="btn btn-sm btn-info">
                                                         Move to cart
                                                     </a>
@@ -61,4 +63,27 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script>
+        function moveToCart(e) {
+
+            let rowId = $(e).data("rowId")
+
+            axios.get('{{ route('wishlist.move-to-cart', '') }}/' + rowId)
+                .then(response => {
+
+                    // remove dom
+                    $(e).parents('.cart_item').fadeOut('slow')
+
+                    $('#wish-list-counter ').html(response.data.wishlist_count)
+                    $('#cart-counter').html(response.data.cart_count)
+                    toastr.success(response.data.message);
+                })
+                .catch(error => {
+                    toastr.error(error.response.data.message);
+                })
+        }
+    </script>
 @endsection

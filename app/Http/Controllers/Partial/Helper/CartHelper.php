@@ -8,10 +8,17 @@ use Illuminate\Http\Request;
 
 class CartHelper extends Controller
 {
-    public static function checkCartExitProduct($instance, $product_id)
+    /**
+     * Check product exiting with product_id/rowId
+     * @param $instance
+     * @param $id
+     * @param string $chek_with
+     * @return bool
+     */
+    public static function checkCartExitProduct($instance, $id, $chek_with = 'id')
     {
-        $products = Cart::instance($instance)->search(function ($cartItem) use ($product_id) {
-            return $cartItem->id === $product_id;
+        $products = Cart::instance($instance)->search(function ($cartItem) use ($id, $chek_with) {
+            return $cartItem->$chek_with === $id;
         });
 
         return !!count($products);
