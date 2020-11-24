@@ -96,5 +96,7 @@ class WishlistController extends Controller
             'cart_total' => Cart::instance('cart')->total(),
             'message' => 'Product move to cart successfully.'
         ], 200);
+
+        // test
     }
 }
