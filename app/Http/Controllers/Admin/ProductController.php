@@ -24,7 +24,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        $parent_categories = Category::getParentCategories(false);
+        $parent_categories = Category::getMainCategories(false);
 
         $brands = Brand::getBrands();
 
@@ -63,7 +63,7 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
-        $parent_categories = Category::getParentCategories(false);
+        $parent_categories = Category::getMainCategories(false);
 
         $brands = Brand::getBrands();
 

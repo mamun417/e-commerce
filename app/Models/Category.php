@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static create($param)
  * @method static latest()
+ * @method static find(int $int)
  * @property mixed parent_id
  * @property mixed parent
  * @property mixed id
@@ -47,7 +48,12 @@ class Category extends Model
         return $this->parent_id == Category::PARENT_CATEGORY;
     }
 
-    public static function getParentCategories($disable = true)
+    /**
+     * Get parents categories list default included disable category
+     * @param bool $disable
+     * @return mixed
+     */
+    public static function getMainCategories($disable = true)
     {
         $paren_categories = Category::latest()->with('children')->parentCategory();
 
@@ -56,5 +62,26 @@ class Category extends Model
         }
 
         return $paren_categories->get();
+    }
+
+    /**
+     * Get nested parent categories
+     * @param $category_id
+     * @return array
+     */
+    public static function getParentCategories($category_id)
+    {
+        $category = Category::find($category_id);
+
+        $parents = [];
+
+        $parent = $category->parent;
+
+        while(!is_null($parent)) {
+            $parents[] = $parent;
+            $parent = $parent->parent;
+        }
+
+        return $parents;
     }
 }

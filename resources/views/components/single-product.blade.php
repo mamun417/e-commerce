@@ -3,8 +3,10 @@
     <div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 
         <div class="product_image d-flex flex-column align-items-center justify-content-center">
-            <img src="{{ getImageUrl($product->image_one) }}"
-                 alt="{{ $product->name }}" style="height: 115px">
+            <a href="{{ route('product.show', $product->slug) }}">
+                <img src="{{ getImageUrl($product->image_one) }}"
+                     alt="{{ $product->name }}" style="height: 115px">
+            </a>
         </div>
 
         <div class="product_content">
@@ -19,7 +21,7 @@
 
             <div class="product_name">
                 <div>
-                    <a href="product.html" title="{{ $product->name }}">
+                    <a href="{{ route('product.show', $product->slug) }}" title="{{ $product->name }}">
                         {{ $product->name }}
                     </a>
                 </div>

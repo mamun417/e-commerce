@@ -11,13 +11,14 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
 
+// product
+Route::get('product/{slug}', 'ProductController@show')->name('product.show');
+
 // wishlist
 Route::get('wishlist', 'WishlistController@index')->name('wishlist.index');
 Route::get('wishlist/{slug}', 'WishlistController@add')->name('wishlist.add');
 Route::get('wishlist/remove/{rowId}', 'WishlistController@remove')->name('wishlist.remove');
 Route::get('wishlist/move-cart/{rowId}', 'WishlistController@moveToCart')->name('wishlist.move-to-cart');
-//Route::get('wishlist/count/product', 'WishListsController@count')->name('wishlist.count');
-//Route::get('wishlist/get/product', 'WishListsController@getWishlistProduct')->name('wishlist.get-product');
 
 // cart
 Route::get('cart', 'CartController@index')->name('cart.index');

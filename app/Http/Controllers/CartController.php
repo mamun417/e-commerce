@@ -26,7 +26,9 @@ class CartController extends Controller
             'price' => $product->discount_price ?? $product->selling_price,
             'weight' => 0,
             'options' => [
-                'image' => $product->image_one
+                'image' => $product->image_one,
+                'color' => '',
+                'size' => ''
             ]
         ];
 

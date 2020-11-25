@@ -1712,17 +1712,6 @@ select option {
     color: #0e8ce4;
 }
 
-.product_color {
-    visibility: hidden;
-    opacity: 0;
-    margin-top: 19px;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-
 .product_extras {
     width: 100%;
     background: #FFFFFF;
@@ -1874,15 +1863,12 @@ select option {
 
 .product_fav {
     position: absolute;
-    top: 33px;
-    right: 12px;
+    top: 6px;
     width: 36px;
     height: 36px;
     background: #FFFFFF;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    visibility: hidden;
-    opacity: 0;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;

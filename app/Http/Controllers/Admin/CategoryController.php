@@ -30,7 +30,7 @@ class CategoryController extends Controller
 
     public function create()
     {
-        $parent_categories = Category::getParentCategories();
+        $parent_categories = Category::getMainCategories();
         return view('admin.category.create', compact('parent_categories'));
     }
 
@@ -52,7 +52,7 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        $parent_categories = Category::getParentCategories();
+        $parent_categories = Category::getMainCategories();
 
         $parent_categories = CategoryHelper::removeCategoryById($parent_categories, $category->id);
 
