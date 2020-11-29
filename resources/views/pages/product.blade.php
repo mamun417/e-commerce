@@ -53,7 +53,17 @@
                                     </a>
                                 </p>
                             </div>
-                            <div class="order_info d-flex flex-row">
+
+                            <div class="product_price mt-2">
+                                @if ($product->discount_price)
+                                    TK {{ $product->discount_price }}
+                                    <span>TK <strike>{{ $product->selling_price }}</strike></span>
+                                @else
+                                    TK {{ $product->selling_price }}
+                                @endif
+                            </div>
+
+                            <div class="order_info d-flex flex-row mt-4">
                                 <form action="#">
                                     <div class="clearfix" style="z-index: 1000;">
 
@@ -70,42 +80,59 @@
                                         </div>
 
                                         <!-- Product Color -->
-                                        <ul class="product_color">
-                                            <li>
-                                                <span>Color: </span>
-                                                <div class="color_mark_container">
-                                                    <div id="selected_color" class="color_mark"></div>
-                                                </div>
-                                                <div class="color_dropdown_button"><i class="fas fa-chevron-down"></i>
-                                                </div>
+                                        @if ($product->color)
+                                            @php($colors = json_decode($product->color))
+                                            <ul class="product_color">
+                                                <li>
+                                                    <span>Color: </span>
+                                                    <div class="color_mark_container">
+                                                        <div id="selected_color" class="color_mark"
+                                                            style="background: {{ $colors[0] }}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="color_dropdown_button">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </div>
 
-                                                <ul class="color_list">
-                                                    <li>
-                                                        <div class="color_mark" style="background: #999999;"></div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="color_mark" style="background: #b19c83;"></div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="color_mark" style="background: #000000;"></div>
-                                                    </li>
+                                                    <ul class="color_list">
+                                                        @foreach ($colors as $color)
+                                                            <li style="padding-right: 49px">
+                                                                <div class="color_mark" style="background: {{ $color }};">
+                                                                </div>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        @endif
 
-                                                    @foreach (json_decode($product->color) ?? [] as $color)
-                                                        <li>
-                                                            <div class="color_mark"
-                                                                 style="background: {{ $color }};">
-                                                            </div>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                    <!-- Product Size -->
+                                        @if ($product->size)
+                                            @php($sizes = json_decode($product->size))
+                                            <ul class="product_color">
+                                                <li>
+                                                    <span>Size: </span>
+                                                    <div class="color_mark_container">
+                                                        <span>{{ strtoupper($sizes[0]) }}</span>
+                                                    </div>
+
+                                                    <div class="color_dropdown_button">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </div>
+
+                                                    <ul class="color_list">
+                                                        @foreach ($sizes as $size)
+                                                            <li> {{ strtoupper($size) }} </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        @endif
                                     </div>
 
-                                    <div class="product_price">TK {{ $product->selling_price }}</div>
                                     <div class="button_container">
-                                        <button type="button" class="button cart_button">Add to Cart</button>
-                                        <div class="product_fav"><i class="fas fa-heart"></i></div>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                        <button type="button" class="btn btn-danger">Add to Wishlist</button>
                                     </div>
 
                                 </form>

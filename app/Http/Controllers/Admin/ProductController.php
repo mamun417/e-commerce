@@ -46,7 +46,7 @@ class ProductController extends Controller
             $img_input = 'img.' . $key;
 
             if ($request->hasFile($img_input)) {
-                $image_path = FileHandler::upload($img_input, Product::IMAGE_PATH);
+                $image_path = FileHandler::upload($request->file('img'), Product::IMAGE_PATH);
                 $request_data['image_' . numberToWords(++$key)] = $image_path;
             }
         }
@@ -93,7 +93,8 @@ class ProductController extends Controller
             $img_input = 'img.' . $key;
 
             if ($request->hasFile($img_input)) {
-                $image_path = FileHandler::upload($img_input, Product::IMAGE_PATH);
+
+                $image_path = FileHandler::upload($request->file('img'), Product::IMAGE_PATH);
 
                 $img_key = ++$key;
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Handler\FileHandler;
+use App\Http\Controllers\Partial\Handler\FileHandler;
 use App\Http\Requests\Brand\StoreBrandRequest;
 use App\Http\Requests\Brand\UpdateBrandRequest;
 use App\Models\Brand;
@@ -40,7 +40,7 @@ class BrandController extends Controller
         $request_data['slug'] = Str::slug($request->slug);
 
         if ($request->hasFile('img')) {
-            $image_path = FileHandler::upload('img', Brand::IMAGE_PATH);
+            $image_path = FileHandler::upload($request->file('img'), Brand::IMAGE_PATH);
             $request_data['image'] = $image_path;
         }
 
@@ -61,7 +61,7 @@ class BrandController extends Controller
         $request_data['slug'] = Str::slug($request->slug);
 
         if ($request->hasFile('img')) {
-            $image_path = FileHandler::upload('img', Brand::IMAGE_PATH);
+            $image_path = FileHandler::upload($request->file('img'), Brand::IMAGE_PATH);
             FileHandler::delete($brand->image);
             $request_data['image'] = $image_path;
         }

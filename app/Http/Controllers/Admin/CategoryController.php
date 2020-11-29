@@ -41,7 +41,7 @@ class CategoryController extends Controller
         $request_data['slug'] = slug($request->slug);
 
         if ($request->hasFile('img')) {
-            $image_path = FileHandler::upload('img', Category::IMAGE_PATH);
+            $image_path = FileHandler::upload($request->file('img'), Category::IMAGE_PATH);
             $request_data['image'] = $image_path;
         }
 
@@ -66,7 +66,7 @@ class CategoryController extends Controller
         $request_data['slug'] = slug($request->slug);
 
         if ($request->hasFile('img')) {
-            $image_path = FileHandler::upload('img', Category::IMAGE_PATH);
+            $image_path = FileHandler::upload($request->file('img'), Category::IMAGE_PATH);
             FileHandler::delete($category->image);
             $request_data['image'] = $image_path;
         }
