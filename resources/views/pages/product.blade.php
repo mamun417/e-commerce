@@ -132,7 +132,6 @@
 
                                     <div class="button_container">
                                         <button type="button" class="btn btn-primary">Add to Cart</button>
-                                        <button type="button" class="btn btn-danger">Add to Wishlist</button>
                                     </div>
 
                                 </form>

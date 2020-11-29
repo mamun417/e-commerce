@@ -14,10 +14,21 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $per_page = request()->perPage ?: 10;
+        $per_page = request('perPage') ?? 10;
+        $type = request('type');
         $keyword = request()->keyword;
 
-        $products = Product::latest()->with('category', 'brand')->paginate($per_page);
+        $products = Product::latest()->with('category', 'brand');
+
+        if ($type) {
+            $products->where($type, true);
+        }
+
+        if ($keyword) {
+            $products->where('name', 'like', '%' . request()->keyword . '%');
+        }
+
+        $products = $products->paginate($per_page);
 
         return view('admin.product.index', compact('products'));
     }
