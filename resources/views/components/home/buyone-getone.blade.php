@@ -50,7 +50,7 @@
                                             </div>
                                         </div>
 
-                                        <a  href="{{ route('cart.add', $product->slug) }}">
+                                        <a  href="{{ route('cart.store', $product->slug) }}">
                                             <button class="product_cart_button visible" style="opacity: initial">
                                                 Add to Cart
                                             </button>

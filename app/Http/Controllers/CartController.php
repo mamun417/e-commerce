@@ -15,14 +15,18 @@ class CartController extends Controller
         return view('pages.cart', compact('cart_products'));
     }
 
-    public function add($slug)
+    public function store(Request $request, $slug)
     {
+        $request->validate([
+            'quantity' => 'required|numeric'
+        ]);
+
         $product = Product::whereSlug($slug)->firstOrFail();
 
         $data = [
             'id' => $product->id,
             'name' => $product->name,
-            'qty' => 1,
+            'qty' => $request->input('quantity') ?? 1,
             'price' => $product->discount_price ?? $product->selling_price,
             'weight' => 0,
             'options' => [
@@ -39,7 +43,7 @@ class CartController extends Controller
             'cart_count' => Cart::instance('cart')->content()->count(),
             'cart_total' => Cart::instance('cart')->total(),
             'message' => 'Product add to cart successfully.'
-        ], 200);
+        ]);
     }
 
     public function remove($rowId)

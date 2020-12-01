@@ -64,13 +64,15 @@
                             </div>
 
                             <div class="order_info d-flex flex-row mt-4">
-                                <form action="#">
+                                <form id="test" action="{{ route('cart.store', $product->slug) }}">
+
                                     <div class="clearfix" style="z-index: 1000;">
 
                                         <!-- Product Quantity -->
                                         <div class="product_quantity clearfix">
-                                            <span>Quantity: </span>
-                                            <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                                            <span>Qty: </span>
+                                            <input type="text" pattern="[0-9]*" id="quantity_input" name="quantity"
+                                                   value="1">
                                             <div class="quantity_buttons">
                                                 <div id="quantity_inc_button" class="quantity_inc quantity_control"><i
                                                         class="fas fa-chevron-up"></i></div>
@@ -87,7 +89,7 @@
                                                     <span>Color: </span>
                                                     <div class="color_mark_container">
                                                         <div id="selected_color" class="color_mark"
-                                                            style="background: {{ $colors[0] }}">
+                                                             style="background: {{ $colors[0] }}">
                                                         </div>
                                                     </div>
                                                     <div class="color_dropdown_button">
@@ -97,7 +99,8 @@
                                                     <ul class="color_list">
                                                         @foreach ($colors as $color)
                                                             <li style="padding-right: 49px">
-                                                                <div class="color_mark" style="background: {{ $color }};">
+                                                                <div class="color_mark"
+                                                                     style="background: {{ $color }};">
                                                                 </div>
                                                             </li>
                                                         @endforeach
@@ -131,9 +134,13 @@
                                     </div>
 
                                     <div class="button_container">
-                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                        <button onclick="addToCart(true)" type="button" class="btn btn-info mr-2">Buy
+                                            Now
+                                        </button>
+                                        <button onclick="addToCart()" type="button" class="btn btn-primary">Add to
+                                            Cart
+                                        </button>
                                     </div>
-
                                 </form>
                             </div>
                         </div>
@@ -191,7 +198,9 @@
                                 <div class="owl-item">
                                     <div
                                         class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="viewed_image"><img src="images/view_1.jpg" alt=""></div>
+                                        <div class="viewed_image"><img src="{{ asset('frontend/images/view_1.jpg')}}"
+                                                                       alt="">
+                                        </div>
                                         <div class="viewed_content text-center">
                                             <div class="viewed_price">$225<span>$300</span></div>
                                             <div class="viewed_name"><a href="#">Beoplay H7</a></div>
@@ -207,7 +216,9 @@
                                 <div class="owl-item">
                                     <div
                                         class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="viewed_image"><img src="images/view_2.jpg" alt=""></div>
+                                        <div class="viewed_image"><img src="{{ asset('frontend/images/view_2.jpg')}}"
+                                                                       alt="">
+                                        </div>
                                         <div class="viewed_content text-center">
                                             <div class="viewed_price">$379</div>
                                             <div class="viewed_name"><a href="#">LUNA Smartphone</a></div>
@@ -223,7 +234,9 @@
                                 <div class="owl-item">
                                     <div
                                         class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="viewed_image"><img src="images/view_3.jpg" alt=""></div>
+                                        <div class="viewed_image"><img src="{{ asset('frontend/images/view_3.jpg')}}"
+                                                                       alt="">
+                                        </div>
                                         <div class="viewed_content text-center">
                                             <div class="viewed_price">$225</div>
                                             <div class="viewed_name"><a href="#">Samsung J730F...</a></div>
@@ -239,7 +252,9 @@
                                 <div class="owl-item">
                                     <div
                                         class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="viewed_image"><img src="images/view_4.jpg" alt=""></div>
+                                        <div class="viewed_image"><img src="{{ asset('frontend/images/view_4.jpg')}}"
+                                                                       alt="">
+                                        </div>
                                         <div class="viewed_content text-center">
                                             <div class="viewed_price">$379</div>
                                             <div class="viewed_name"><a href="#">Huawei MediaPad...</a></div>
@@ -255,7 +270,9 @@
                                 <div class="owl-item">
                                     <div
                                         class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="viewed_image"><img src="images/view_5.jpg" alt=""></div>
+                                        <div class="viewed_image"><img src="{{ asset('frontend/images/view_5.jpg')}}"
+                                                                       alt="">
+                                        </div>
                                         <div class="viewed_content text-center">
                                             <div class="viewed_price">$225<span>$300</span></div>
                                             <div class="viewed_name"><a href="#">Sony PS4 Slim</a></div>
@@ -271,7 +288,9 @@
                                 <div class="owl-item">
                                     <div
                                         class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="viewed_image"><img src="images/view_6.jpg" alt=""></div>
+                                        <div class="viewed_image"><img src="{{ asset('frontend/images/view_6.jpg')}}"
+                                                                       alt="">
+                                        </div>
                                         <div class="viewed_content text-center">
                                             <div class="viewed_price">$375</div>
                                             <div class="viewed_name"><a href="#">Speedlink...</a></div>
@@ -283,15 +302,45 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <form id="test" action="{{ route('cart.store', $product->slug) }}">
+        <input type="text" name="quantity">
+    </form>
+
 @endsection
 
 @section('script')
     <script src="{{ asset('frontend/js/product_custom.js') }}"></script>
+
+    <script>
+        function addToCart(buyNow = false) {
+            let form = $('#test')
+
+            axios({
+                url: $(form).attr('action'),
+                method: 'post',
+                data: $(form).serialize()
+            })
+                .then(response => {
+                    $('#cart-counter').html(response.data.cart_count)
+                    $('#cart-total').html(response.data.cart_total)
+
+                    if (buyNow) {
+                        location.href = '{{ route('cart.index') }}'
+                    } else {
+                        toastr.success(response.data.message);
+                    }
+                })
+                .catch(error => {
+                    console.log(error)
+                    toastr.error(error.response.data.errors['quantity'][0]);
+                })
+        }
+    </script>
 @endsection

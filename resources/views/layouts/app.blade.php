@@ -45,6 +45,7 @@
 <script src="{{ asset('backend/js/plugins/toastr/toastr.min.js') }}"></script>
 <script src="{{ asset('frontend/js/axois.js') }}"></script>
 <script src="{{ asset('frontend/js/custom.js')}}"></script>
+@yield('script')
 
 <script>
     $(function () {
@@ -55,8 +56,6 @@
         @endforeach
     });
 </script>
-
-@yield('script')
 
 </body>
 

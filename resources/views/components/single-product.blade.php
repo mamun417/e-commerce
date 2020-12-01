@@ -27,16 +27,20 @@
                 </div>
             </div>
 
-            <div class="product_extras">
-                <div class="product_color">
-                    @foreach(json_decode($product->color) ?? [] as $color)
-                        @php($extra_style = $color == 'white' ? 'border: 1px solid #ddd' : '')
-                        <input type="radio" name="product_color"
-                               style="background:{{ $color }}; {{ $extra_style }}">
-                    @endforeach
-                </div>
+            <div class="product_color mt-2">
+                @foreach(json_decode($product->color) ?? [] as $color)
+                    @php($extra_style = $color == 'white' ? 'border: 1px solid #ddd' : '')
+                    <input type="radio" name="product_color"
+                           style="background:{{ $color }}; {{ $extra_style }}">
+                @endforeach
+            </div>
 
-                <button onclick="addToCart('{{ $product->slug }}')" class="product_cart_button">Add to Cart</button>
+            <div class="product_extras">
+                <a href="{{ route('product.show', $product->slug) }}">
+                    <button class="product_cart_button">
+                        Add to Cart
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -60,18 +64,6 @@
             axios.get('{{ route('wishlist.add', '') }}/' + productSlug)
                 .then(response => {
                     $('#wish-list-counter').html(response.data.wishlist_count)
-                    toastr.success(response.data.message);
-                })
-                .catch(error => {
-                    toastr.error(error.response.data.message);
-                })
-        }
-
-        function addToCart(productSlug) {
-            axios.get('{{ route('cart.add', '') }}/' + productSlug)
-                .then(response => {
-                    $('#cart-counter').html(response.data.cart_count)
-                    $('#cart-total').html(response.data.cart_total)
                     toastr.success(response.data.message);
                 })
                 .catch(error => {

@@ -22,7 +22,7 @@ Route::get('wishlist/move-cart/{rowId}', 'WishlistController@moveToCart')->name(
 
 // cart
 Route::get('cart', 'CartController@index')->name('cart.index');
-Route::get('cart/{slug}', 'CartController@add')->name('cart.add');
+Route::match(['get', 'post'], 'cart/{slug}', 'CartController@store')->name('cart.store');
 Route::get('cart/remove/{rowId}', 'CartController@remove')->name('cart.remove');
 
 Route::group(['middleware' => ['auth'], 'as' => 'user.'], function () {
