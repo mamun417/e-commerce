@@ -64,7 +64,7 @@
                             </div>
 
                             <div class="order_info d-flex flex-row mt-4">
-                                <form id="test" action="{{ route('cart.store', $product->slug) }}">
+                                <form id="add-to-cart-form" action="{{ route('cart.store', $product->slug) }}">
 
                                     <div class="clearfix" style="z-index: 1000;">
 
@@ -308,39 +308,9 @@
             </div>
         </div>
     </div>
-
-    <form id="test" action="{{ route('cart.store', $product->slug) }}">
-        <input type="text" name="quantity">
-    </form>
-
 @endsection
 
 @section('script')
     <script src="{{ asset('frontend/js/product_custom.js') }}"></script>
-
-    <script>
-        function addToCart(buyNow = false) {
-            let form = $('#test')
-
-            axios({
-                url: $(form).attr('action'),
-                method: 'post',
-                data: $(form).serialize()
-            })
-                .then(response => {
-                    $('#cart-counter').html(response.data.cart_count)
-                    $('#cart-total').html(response.data.cart_total)
-
-                    if (buyNow) {
-                        location.href = '{{ route('cart.index') }}'
-                    } else {
-                        toastr.success(response.data.message);
-                    }
-                })
-                .catch(error => {
-                    console.log(error)
-                    toastr.error(error.response.data.errors['quantity'][0]);
-                })
-        }
-    </script>
+    @include('scripts.cart-script')
 @endsection

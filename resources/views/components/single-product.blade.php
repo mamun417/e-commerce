@@ -36,11 +36,9 @@
             </div>
 
             <div class="product_extras">
-                <a href="{{ route('product.show', $product->slug) }}">
-                    <button class="product_cart_button">
-                        Add to Cart
-                    </button>
-                </a>
+                <button onclick="quickView('{{ $product->slug }}')" class="product_cart_button" type="button">
+                    Add to Cart
+                </button>
             </div>
         </div>
 
@@ -58,17 +56,3 @@
     </div>
 </div>
 
-@section('script')
-    <script>
-        function addToWishlist(productSlug) {
-            axios.get('{{ route('wishlist.add', '') }}/' + productSlug)
-                .then(response => {
-                    $('#wish-list-counter').html(response.data.wishlist_count)
-                    toastr.success(response.data.message);
-                })
-                .catch(error => {
-                    toastr.error(error.response.data.message);
-                })
-        }
-    </script>
-@endsection

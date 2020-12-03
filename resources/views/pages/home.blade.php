@@ -427,5 +427,32 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade quick-view-modal" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        @include('components.quick-view-product')
+    </div>
+
 @endsection
 
+@section('script')
+
+    @include('scripts.cart-script')
+
+    <script>
+        function quickView(slug) {
+            axios.get('{{ route('product.show', '') }}/' + slug, {
+                params: {
+                    quick_view: true
+                }
+            })
+                .then(function (response) {
+                    $('.quick-view-modal').modal('show').html(response.data)
+                })
+                .catch(function (error) {
+                    toastr.error(error.response.data.message);
+                })
+        }
+    </script>
+@endsection

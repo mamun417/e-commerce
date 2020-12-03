@@ -10,6 +10,9 @@ class ProductController extends Controller
     public function show($slug)
     {
         $product = Product::whereSlug($slug)->firstOrFail();
-        return view('pages.product', compact('product'));
+
+        $view = request('quick_view') ? 'components.quick-view-product' : 'pages.product';
+
+        return view($view, compact('product'));
     }
 }
