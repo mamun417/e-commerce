@@ -15,7 +15,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email or Phone</label>
                                 <input type="text" class="form-control @error('email') is-invalid @enderror"
-                                       name="email" value="{{ old('email') }}" aria-describedby="emailHelp" required="">
+                                       name="email" value="mamun@obosor.com" aria-describedby="emailHelp" required="">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -26,7 +26,7 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Password</label>
                                 <input type="password" class="form-control @error('password') is-invalid @enderror"
-                                       aria-describedby="emailHelp" name="password" required="">
+                                       aria-describedby="emailHelp" name="password" required="" value="banglaDesh1235">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">

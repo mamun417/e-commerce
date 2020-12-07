@@ -58,6 +58,43 @@
                                 @endforeach
                             </ul>
                         </div>
+
+                        <div class="cart_items">
+                            <div class="cart_list p-3">
+                                <div class="row">
+                                    <div class="col-sm-8"></div>
+                                    <div class="col-sm-4">
+                                        <div>
+                                            Sub Total: <b>TK {{ Cart::instance('cart')->subtotal() }}</b>
+                                        </div>
+
+                                        <div>
+                                            Shipping: <b>TK {{ Cart::instance('cart')->total() }}</b>
+                                        </div>
+
+                                        <div>
+                                            Vat: <b>0%</b>
+                                        </div>
+
+                                        <div class="mt-2">
+                                            Order Total: <b>TK {{ Cart::instance('cart')->subtotal() }}</b>
+                                        </div>
+
+                                        <form class="form-inline mt-2">
+                                            <div class="form-group mr-2 mb-2">
+                                                <input type="password" class="form-control form-control-sm" placeholder="Enter Your Coupon Code">
+                                            </div>
+                                            <button type="submit" class="btn btn-sm btn-primary mb-2">Apply</button>
+                                        </form>
+
+                                        <div class="mt-4">
+                                            <button type="button" class="btn btn-sm btn-danger">Cancel</button>
+                                            <a href="{{ route('checkout') }}" class="btn btn-sm btn-success">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

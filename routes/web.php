@@ -25,6 +25,13 @@ Route::get('cart', 'CartController@index')->name('cart.index');
 Route::match(['get', 'post'], 'cart/{slug}', 'CartController@store')->name('cart.store');
 Route::get('cart/remove/{rowId}', 'CartController@remove')->name('cart.remove');
 
+Route::group(['middleware' => ['auth']], function () {
+    // checkout
+    Route::get('checkout', 'CheckoutController@checkout')->name('checkout');
+    Route::post('checkout', 'CheckoutController@orderSubmit');
+});
+
+
 Route::group(['middleware' => ['auth'], 'as' => 'user.'], function () {
 
     // profile
