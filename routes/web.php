@@ -100,6 +100,10 @@ Route::group([
     // newsletter
     Route::resource('newsletters', 'NewsLetterController')->only(['index', 'destroy']);
 
+    // settings
+    Route::get('settings', 'SettingController@show')->name('setting.show');
+    Route::put('settings', 'SettingController@update')->name('setting.update');
+
     // password
     Route::get('password-change', 'AdminController@changePassword')->name('password.change');
     Route::post('password-update', 'AdminController@updatePassword')->name('password.update');

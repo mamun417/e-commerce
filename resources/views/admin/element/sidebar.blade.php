@@ -75,6 +75,12 @@
                     <i class="fa fa-youtube-play"></i> <span class="nav-label">Newsletters</span>
                 </a>
             </li>
+
+            <li class="{{ getActiveClassByController('SettingController') }}">
+                <a href="{{ route('admin.setting.show') }}">
+                    <i class="fa fa-gear"></i> <span class="nav-label">Settings</span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
