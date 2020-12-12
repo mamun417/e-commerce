@@ -10,23 +10,23 @@ class SettingController extends Controller
 {
     public function show()
     {
-        $settings = Setting::all();
+        $setting = Setting::all()->mapWithKeys(function ($item) {
+            return [$item['name'] => $item['value']];
+        });
 
-        return view('admin.setting.setting', compact('settings'));
-
-        dd($settings->toArray());
+        return view('admin.setting.setting', compact('setting'));
     }
 
     public function update(Request $request)
     {
         collect($request->all())->except(['_token', '_method'])
             ->each(function ($value, $name) {
-                Setting::updateOrCreate([
-                    'name' => $name,
-                    'value' => $value,
-                ]);
+                Setting::updateOrCreate(
+                    ['name' => $name],
+                    ['value' => $value]
+                );
             });
 
-        return Setting::all();
+        return redirect()->route('admin.setting.show');
     }
 }

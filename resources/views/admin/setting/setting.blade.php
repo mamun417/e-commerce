@@ -33,7 +33,7 @@
                                 <div class="col-sm-4">
                                     <div class="form-group">
                                         <label>Site Title</label>
-                                        <input name="title" value="{{ @$setting->title }}"
+                                        <input name="title" value="{{ @$setting['title'] }}"
                                                type="text"
                                                placeholder="Enter site title" class="form-control">
 
@@ -47,7 +47,7 @@
                                     <div class="form-group">
                                         <label>Company Name</label>
                                         <input name="company_name"
-                                               value="{{ @$setting->company_name }}"
+                                               value="{{ @$setting['company_name'] }}"
                                                type="text"
                                                placeholder="Enter company name" class="form-control">
 
@@ -61,7 +61,7 @@
                                     <div class="form-group">
                                         <label>Email</label>
                                         <input name="email"
-                                               value="{{ @$setting->email }}"
+                                               value="{{ @$setting['email'] }}"
                                                type="email"
                                                placeholder="Enter email address" class="form-control">
 
@@ -75,7 +75,7 @@
                                     <div class="form-group">
                                         <label>Phone Number</label>
                                         <input name="phone"
-                                               value="{{ @$setting->phone }}"
+                                               value="{{ @$setting['phone'] }}"
                                                type="number"
                                                placeholder="Enter phone number" class="form-control">
 
@@ -89,7 +89,7 @@
                                     <div class="form-group">
                                         <label>Company Address</label>
                                         <input name="address"
-                                               value="{{ @$setting->address }}"
+                                               value="{{ @$setting['address'] }}"
                                                type="text"
                                                placeholder="Enter company address" class="form-control">
 
@@ -103,7 +103,7 @@
                                     <div class="form-group">
                                         <label>Facebook</label>
                                         <input name="facebook"
-                                               value="{{ @$setting->facebook }}"
+                                               value="{{ @$setting['facebook'] }}"
                                                type="text"
                                                placeholder="Enter facebook account link" class="form-control">
 
@@ -117,7 +117,7 @@
                                     <div class="form-group">
                                         <label>Youtube</label>
                                         <input name="youtube"
-                                               value="{{ @$setting->youtube }}"
+                                               value="{{ @$setting['youtube'] }}"
                                                type="text"
                                                placeholder="Enter youtube channel link" class="form-control">
 
@@ -131,7 +131,7 @@
                                     <div class="form-group">
                                         <label>Twitter</label>
                                         <input name="twitter"
-                                               value="{{ @$setting->twitter }}"
+                                               value="{{ @$setting['twitter'] }}"
                                                type="text"
                                                placeholder="Enter twitter account link" class="form-control">
 
