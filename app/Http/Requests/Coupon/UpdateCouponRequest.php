@@ -26,8 +26,8 @@ class UpdateCouponRequest extends FormRequest
      */
     public function rules()
     {
-        $coupon_id = $this->coupon->id;
-
+        $coupon_id = $this->id;
+        
         return [
             'coupon' => 'required|max:255|unique:coupons,coupon,' . $coupon_id,
             'amount' => 'required|numeric',

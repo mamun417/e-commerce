@@ -25,6 +25,7 @@ Route::get('cart', 'CartController@index')->name('cart.index');
 Route::match(['get', 'post'], 'cart/{slug}', 'CartController@store')->name('cart.store');
 Route::get('cart/remove/{rowId}', 'CartController@remove')->name('cart.remove');
 Route::get('cart-empty', 'CartController@empty')->name('cart.empty');
+Route::post('coupon/apply', 'CouponController@apply')->name('coupon.apply');
 
 Route::group(['middleware' => ['auth']], function () {
     // checkout

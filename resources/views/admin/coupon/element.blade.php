@@ -1,3 +1,5 @@
+<input type="hidden" name="id" value="{{ $coupon->id }}">
+
 <div class="form-group">
     <label>Coupon</label><span class="required-star"> *</span>
     <input name="coupon" value="{{ isset($update) ? $coupon->coupon : old('coupon') }}" type="text"
@@ -26,7 +28,7 @@
         @php($check_selected_amount_type = isset($update) ? $coupon->amount_type : old('amount_type'))
 
         @foreach(\App\Models\Coupon::AMOUNT_TYPES as $key => $type)
-            <option {{ $check_selected_amount_type == $type ? 'selected' : ''}} value="{{ $key }}">
+            <option {{ $check_selected_amount_type == $key ? 'selected' : ''}} value="{{ $key }}">
                 {{ $type }}
             </option>
         @endforeach

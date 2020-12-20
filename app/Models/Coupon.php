@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Coupon extends Model
 {
+    const ACTIVE = '1';
     const AMOUNT_FIX = 1;
     const AMOUNT_PERCENT = 0;
     const AMOUNT_TYPES = [self::AMOUNT_FIX => 'Fixed', self::AMOUNT_PERCENT => 'Percent'];
@@ -22,5 +23,10 @@ class Coupon extends Model
     public static function getAmountTypeName($type)
     {
         return self::AMOUNT_TYPES[$type];
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('status', self::ACTIVE);
     }
 }

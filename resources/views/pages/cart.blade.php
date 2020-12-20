@@ -79,7 +79,7 @@
                                             </div>
 
                                             <div class="footer_title mt-2">
-                                                Shipping : TK {{ Cart::instance('cart')->total() }}
+                                                Shipping : TK {{ $shipping_charge = 20 }}
                                             </div>
 
                                             <div class="footer_title mt-2">
@@ -87,15 +87,22 @@
                                             </div>
 
                                             <div class="mt-2 footer_title">
-                                                Order Total : TK {{ Cart::instance('cart')->subtotal() }}
+                                                Order Total : TK {{ Cart::instance('cart')->total() + $shipping_charge }}
                                             </div>
 
-                                            <form class="form-inline mt-4">
+                                            <form action="{{ route('coupon.apply') }}" method="post" class="form-inline mt-4">
+                                                @csrf()
+
                                                 <div class="form-group mr-2 mb-2">
-                                                    <input type="password" class="form-control form-control-sm"
+                                                    <input name="coupon" type="text" class="form-control form-control-sm"
                                                            placeholder="Enter your coupon code">
                                                 </div>
+
                                                 <button type="submit" class="btn btn-sm btn-primary mb-2">Apply</button>
+
+                                                @error('coupon')
+                                                <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                                                @enderror
                                             </form>
 
                                             <div class="mt-2">

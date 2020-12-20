@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Coupon\StoreCouponRequest;
+use App\Http\Requests\Coupon\UpdateCouponRequest;
 use App\Models\Coupon;
 use Illuminate\Http\Request;
 
@@ -49,7 +50,7 @@ class CouponController extends Controller
         return view('admin.coupon.edit', compact('coupon'));
     }
 
-    public function update(Request $request, Coupon $coupon)
+    public function update(UpdateCouponRequest $request, Coupon $coupon)
     {
         $request_data = $request->only(['coupon', 'amount', 'amount_type', 'expire_date', 'user_ids']);
 
