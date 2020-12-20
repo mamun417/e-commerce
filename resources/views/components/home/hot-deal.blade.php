@@ -13,7 +13,7 @@
                                     <div class="deals_image">
                                         <a href="{{ route('product.show', $product->slug) }}">
                                             <img src="{{ getImageUrl($product->image_one) }}" alt="{{ $product->name }}"
-                                                 style="height: 310px; width: 310px">
+                                                 style="height: 310px; width: 310px" loading="lazy">
                                         </a>
                                     </div>
                                     <div class="deals_content">

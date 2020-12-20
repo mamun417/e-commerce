@@ -26,7 +26,8 @@
                                     class="popular_category d-flex flex-column align-items-center justify-content-center">
                                     <div class="popular_category_image">
                                         <img src="{{ getImageUrl($category->image) }}" alt="{{ $category->name }}"
-                                            style="height: 9rem;"></div>
+                                            style="height: 9rem;" loading="lazy">
+                                    </div>
                                     <div class="popular_category_text">{{ $category->name }}</div>
                                 </div>
                             </div>

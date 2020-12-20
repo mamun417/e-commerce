@@ -62,6 +62,12 @@ class CartController extends Controller
             'cart_count' => Cart::instance('cart')->content()->count(),
             'cart_total' => Cart::instance('cart')->total(),
             'message' => 'Product remove from cart successfully.'
-        ], 200);
+        ]);
+    }
+
+    public function empty()
+    {
+        Cart::instance('cart')->destroy();
+        return back()->with('success', 'Cart empty successful.');
     }
 }

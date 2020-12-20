@@ -29,7 +29,7 @@
                                 <div class="trends_item is_new">
                                     <div
                                         class="trends_image d-flex flex-column align-items-center justify-content-center">
-                                        <img src="{{ getImageUrl($product->image_one) }}" alt="">
+                                        <img src="{{ getImageUrl($product->image_one) }}" alt="" loading="lazy">
                                     </div>
                                     <div class="trends_content">
                                         <div class="trends_category">

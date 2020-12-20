@@ -5,7 +5,7 @@
         <div class="product_image d-flex flex-column align-items-center justify-content-center">
             <a href="{{ route('product.show', $product->slug) }}">
                 <img src="{{ getImageUrl($product->image_one) }}"
-                     alt="{{ $product->name }}" style="height: 115px">
+                     alt="{{ $product->name }}" style="height: 115px" loading="lazy">
             </a>
         </div>
 

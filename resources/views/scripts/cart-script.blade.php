@@ -33,4 +33,23 @@
                 toastr.error(error.response.data.errors['quantity'][0]);
             })
     }
+
+    function removeCart(e) {
+
+        let rowId = $(e).data("rowId")
+
+        axios.get('{{ route('cart.remove', '') }}/' + rowId)
+            .then(response => {
+
+                $(e).parents('.cart_item').fadeOut('slow') // remove dom
+
+                $('#cart-counter').html(response.data.cart_count)
+                $('#cart-total').html(response.data.cart_total)
+
+                toastr.success(response.data.message);
+            })
+            .catch(error => {
+                toastr.error(error.response.data.message);
+            })
+    }
 </script>
