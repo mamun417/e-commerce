@@ -79,35 +79,54 @@
                                             </div>
 
                                             <div class="footer_title mt-2">
-                                                Shipping : TK {{ $shipping_charge = 20 }}
+                                                Shipping : TK 00
                                             </div>
 
                                             <div class="footer_title mt-2">
                                                 Vat : 0%
                                             </div>
 
+                                            @php($coupon_key = \App\Models\Coupon::COUPON_KEY)
+
                                             <div class="mt-2 footer_title">
-                                                Order Total : TK {{ Cart::instance('cart')->total() + $shipping_charge }}
+                                                Total : TK {{ session($coupon_key) ? session($coupon_key)['discount_price'] : Cart::instance('cart')->total() }}
                                             </div>
 
-                                            <form action="{{ route('coupon.apply') }}" method="post" class="form-inline mt-4">
-                                                @csrf()
-
-                                                <div class="form-group mr-2 mb-2">
-                                                    <input name="coupon" type="text" class="form-control form-control-sm"
-                                                           placeholder="Enter your coupon code">
+                                            @if (session($coupon_key))
+                                                <div class="btn float_right text-danger" title="Remove promo code"
+                                                     onclick="window.location = '{{ route('coupon.remove') }}'">
+                                                    <i class="fa fa-times-circle"></i>
                                                 </div>
+                                                <p class="text-success mt-2">
+                                                    Discount Coupon Applied Successfully.<br>
+                                                    Promo Code : <b>{{ @session($coupon_key)['name'] }}</b>,
+                                                    {{ @session($coupon_key)['amount'] }}
+                                                    {{ \App\Models\Coupon::AMOUNT_PERCENT == session($coupon_key)['type'] ? '%' : '' }}
+                                                    Discount.
+                                                </p>
+                                            @else
+                                                <form action="{{ route('coupon.apply') }}" method="post"
+                                                      class="form-inline mt-4 mb-2">
+                                                    @csrf()
 
-                                                <button type="submit" class="btn btn-sm btn-primary mb-2">Apply</button>
+                                                    <div class="form-group mr-2 mb-2">
+                                                        <input name="coupon" type="text"
+                                                               class="form-control form-control-sm"
+                                                               placeholder="Enter your coupon code">
+                                                    </div>
 
-                                                @error('coupon')
-                                                <span class="help-block m-b-none text-danger">{{ $message }}</span>
-                                                @enderror
-                                            </form>
+                                                    <button type="submit" class="btn btn-sm btn-primary mb-2">Apply
+                                                    </button>
 
-                                            <div class="mt-2">
+                                                    @error('coupon')
+                                                    <span class="help-block m-b-none text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </form>
+                                            @endif
+
+                                            <div>
                                                 <a href="{{ route('checkout') }}"
-                                                   class="btn btn-primary w-100 mt-3 font-weight-bold h-50">
+                                                   class="btn btn-primary w-100 font-weight-bold h-50">
                                                     Checkout Now
                                                 </a>
                                             </div>
@@ -117,7 +136,8 @@
                             @else
                                 <div class="col-sm-12 mt-5">
                                     <div class="alert alert-danger">
-                                        <strong>Your cart is empty, You should go to <a href="{{ route('home') }}"> shopping
+                                        <strong>Your cart is empty, You should go to <a href="{{ route('home') }}">
+                                                shopping
                                                 page </a>
                                         </strong>
                                     </div>

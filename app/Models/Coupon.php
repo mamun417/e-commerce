@@ -14,6 +14,7 @@ class Coupon extends Model
     const ACTIVE = '1';
     const AMOUNT_FIX = 1;
     const AMOUNT_PERCENT = 0;
+    const COUPON_KEY = 'coupon';
     const AMOUNT_TYPES = [self::AMOUNT_FIX => 'Fixed', self::AMOUNT_PERCENT => 'Percent'];
 
     protected $fillable = [

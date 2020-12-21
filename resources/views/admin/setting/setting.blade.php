@@ -79,7 +79,7 @@
                                                type="number"
                                                placeholder="Enter phone number" class="form-control">
 
-                                        @error('discount_price')
+                                        @error('phone')
                                         <span class="help-block m-b-none text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
