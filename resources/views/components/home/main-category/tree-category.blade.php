@@ -1,6 +1,8 @@
 @if (!count($category->children))
     <li>
-        <a href="#">{{ $category->name }} <i class="fas fa-chevron-right ml-auto"></i></a>
+        <a href="{{ route('product-by-category', $category->slug) }}">
+            {{ $category->name }} <i class="fas fa-chevron-right ml-auto"></i>
+        </a>
     </li>
 @else
     <li class="hassubs">

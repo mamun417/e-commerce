@@ -172,7 +172,3 @@
         </div>
     </div>
 @endsection
-
-@section('script')
-    @include('scripts.cart-script')
-@endsection

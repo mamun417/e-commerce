@@ -11,8 +11,15 @@ class ProductController extends Controller
     {
         $product = Product::whereSlug($slug)->firstOrFail();
 
-        $view = request('quick_view') ? 'components.quick-view-product' : 'pages.product';
+        $view = request('quick_view') ? 'components.quick-view-product' : 'pages.single-product';
 
         return view($view, compact('product'));
+    }
+
+    public function byCategory($slug)
+    {
+        $products = Product::all();
+
+        return view('pages.products', compact('products'));
     }
 }
