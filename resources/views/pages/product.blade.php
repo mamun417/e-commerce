@@ -137,7 +137,7 @@
                                         <button onclick="addToCart(true)" type="button" class="btn btn-info mr-2">Buy
                                             Now
                                         </button>
-                                        <button onclick="addToCart()" type="button" class="btn btn-primary">Add to
+                                        <button onclick="addToCart()" type="button" class="btn btn-outline-dark">Add to
                                             Cart
                                         </button>
                                     </div>
