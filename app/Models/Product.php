@@ -24,7 +24,8 @@ class Product extends Model
         'status', 'name', 'category_id', 'quantity', 'selling_price',
         'discount_price', 'description', 'slug', 'brand_id',
         'color', 'size', 'video_link', 'main_slider',
-        'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend', 'buyone_getone', 'image_one', 'image_two', 'image_three'
+        'hot_deal', 'best_rated', 'mid_slider', 'hot_new', 'trend',
+        'buyone_getone', 'image_one', 'image_two', 'image_three'
     ];
 
     protected $appends = ['discount_percent'];

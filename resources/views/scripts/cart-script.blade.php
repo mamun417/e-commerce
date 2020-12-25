@@ -29,7 +29,6 @@
                 }
             })
             .catch(error => {
-                console.log(error)
                 toastr.error(error.response.data.errors['quantity'][0]);
             })
     }

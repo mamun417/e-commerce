@@ -6,7 +6,9 @@
     </li>
 @else
     <li class="hassubs">
-        <a href="#">{{ $category->name }}<i class="fas fa-chevron-right"></i></a>
+        <a href="{{ route('product-by-category', $category->slug) }}">
+            {{ $category->name }} <i class="fas fa-chevron-right"></i>
+        </a>
         <ul>
             @foreach($category->children as $category)
                 @include('components.home.main-category.tree-category')

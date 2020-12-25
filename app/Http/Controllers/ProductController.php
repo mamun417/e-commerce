@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Partial\Helper\CategoryHelper;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -18,7 +20,11 @@ class ProductController extends Controller
 
     public function byCategory($slug)
     {
-        $products = Product::all();
+        $child_categories = (new CategoryHelper)->getChildCategories($slug);
+
+        dd($child_categories);
+
+        $products = Product::latest()->paginate(15);
 
         return view('pages.products', compact('products'));
     }
