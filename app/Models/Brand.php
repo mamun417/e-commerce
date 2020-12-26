@@ -22,11 +22,4 @@ class Brand extends Model
     {
         return $query->where('status', self::ACTIVE);
     }
-
-    public static function getBrands($disable = true)
-    {
-        $brands = Brand::latest();
-        $brands = !$disable ? $brands->active() : $brands;
-        return $brands->get();
-    }
 }

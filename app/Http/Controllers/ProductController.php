@@ -20,12 +20,20 @@ class ProductController extends Controller
 
     public function byCategory($slug)
     {
-        $child_categories = (new CategoryHelper)->getChildCategories($slug);
+        $category = Category::whereSlug($slug)->first();
 
-        dd($child_categories);
+        $child_categories = (new CategoryHelper)->getChildCategories($category);
 
-        $products = Product::latest()->paginate(15);
+        // collect ids list
+        $child_category_ids = array_map(function ($child_cat) {
+            return $child_cat['id'];
+        }, $child_categories);
 
-        return view('pages.products', compact('products'));
+        // target category + its all child categories
+        $category_ids = array_merge([$category->id], $child_category_ids);
+
+        $products = Product::whereIn('id', $category_ids)->latest()->paginate(15);
+
+        return view('pages.products', compact('products', 'child_categories'));
     }
 }

@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Partial\Handler\FileHandler;
+use App\Http\Controllers\Partial\Helper\BrandHelper;
+use App\Http\Controllers\Partial\Helper\CategoryHelper;
 use App\Http\Requests\Product\StoreProductRequest;
 use App\Http\Requests\Product\UpdateProductRequest;
-use App\Models\Brand;
-use App\Models\Category;
 use App\Models\Product;
 
 class ProductController extends Controller
@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         $per_page = request('perPage') ?? 10;
         $type = request('type');
-        $keyword = request()->keyword;
+        $keyword = request('keyword');
 
         $products = Product::latest()->with('category', 'brand');
 
@@ -37,7 +37,7 @@ class ProductController extends Controller
     {
         $parent_categories = CategoryHelper::getMainCategories(false);
 
-        $brands = Brand::getBrands();
+        $brands = BrandHelper::getBrands();
 
         return view('admin.product.create', compact('parent_categories', 'brands'));
     }
@@ -76,7 +76,7 @@ class ProductController extends Controller
     {
         $parent_categories = CategoryHelper::getMainCategories(false);
 
-        $brands = Brand::getBrands();
+        $brands = BrandHelper::getBrands();
 
         return view('admin.product.edit', compact('product', 'parent_categories', 'brands'));
     }

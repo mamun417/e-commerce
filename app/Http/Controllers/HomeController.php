@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Helper\ProductHelper;
+use App\Http\Controllers\Partial\Helper\BrandHelper;
 use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -38,7 +39,7 @@ class HomeController extends Controller
             }
         }
 
-        $brands = Brand::getBrands(false);
+        $brands = BrandHelper::getBrands(false);
 
         return view('pages.home', compact('products', 'brands'));
     }

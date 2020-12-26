@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Cart')
+@section('title', 'Shop')
 
 @push('extra-links')
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/shop_styles.css') }} ">
@@ -15,19 +15,14 @@
                     <!-- Shop Sidebar -->
                     <div class="shop_sidebar">
                         <div class="sidebar_section">
-                            <div class="sidebar_title">Categories</div>
-                            <ul class="sidebar_categories">
-                                <li><a href="#">Computers & Laptops</a></li>
-                                <li><a href="#">Cameras & Photos</a></li>
-                                <li><a href="#">Hardware</a></li>
-                                <li><a href="#">Smartphones & Tablets</a></li>
-                                <li><a href="#">TV & Audio</a></li>
-                                <li><a href="#">Gadgets</a></li>
-                                <li><a href="#">Car Electronics</a></li>
-                                <li><a href="#">Video Games & Consoles</a></li>
-                                <li><a href="#">Accessories</a></li>
+                            <div class="sidebar_subtitle brands_subtitle mt-0">Brands</div>
+                            <ul class="brands_list">
+                                @foreach($brands as $brand)
+                                    <li class="brand"><a href="#">{{ $brand->name }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
+
                         <div class="sidebar_section filter_by_section">
                             <div class="sidebar_title">Filter By</div>
                             <div class="sidebar_subtitle">Price</div>
@@ -51,19 +46,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="sidebar_section">
-                            <div class="sidebar_subtitle brands_subtitle">Brands</div>
-                            <ul class="brands_list">
-                                <li class="brand"><a href="#">Apple</a></li>
-                                <li class="brand"><a href="#">Beoplay</a></li>
-                                <li class="brand"><a href="#">Google</a></li>
-                                <li class="brand"><a href="#">Meizu</a></li>
-                                <li class="brand"><a href="#">OnePlus</a></li>
-                                <li class="brand"><a href="#">Samsung</a></li>
-                                <li class="brand"><a href="#">Sony</a></li>
-                                <li class="brand"><a href="#">Xiaomi</a></li>
-                            </ul>
-                        </div>
                     </div>
 
                 </div>
@@ -73,6 +55,17 @@
                     <!-- Shop Content -->
 
                     <div class="shop_content">
+
+                        @if (count($child_categories))
+                            <div class="mb-4">
+                                @foreach($child_categories as $category)
+                                    <a href="{{ route('product-by-category', $category['slug']) }}" class="btn btn-sm btn-outline-secondary mr-2">
+                                        {{ $category['name'] }}
+                                    </a>
+                                @endforeach
+                            </div>
+                        @endif
+
                         <div class="shop_bar clearfix">
                             <div class="shop_product_count"><span>{{ $products->total() }}</span> products found</div>
                             <div class="shop_sorting">
