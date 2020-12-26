@@ -74,34 +74,18 @@ class CategoryHelper extends Controller
     public function getChildCategories($slug): array
     {
         $category = Category::whereSlug($slug)->first();
-
-        $child_categories = $this->makeChildCategoryList($category);
-
-        dd($child_categories);
-
-        return $child_categories;
+        return $this->makeChildCategoryList($category);
     }
 
-    private function makeChildCategoryList($category): array
+    private function makeChildCategoryList($category, $child_categories = []): array
     {
-        info($category->toArray());
-        $child_categories = [];
-
         $childs = $category->children;
 
         foreach ($childs as $item) {
-
             $child_categories[] = $item->toArray();
 
             if (count($item->children)) {
-
-//                info('ok');
-
-                $this->makeChildCategoryList($item);
-
-//                foreach ($item->children as $nested_item) {
-//                    $child_categories[] = $nested_item->toArray();
-//                }
+                $child_categories = $this->makeChildCategoryList($item, $child_categories);
             }
         }
 

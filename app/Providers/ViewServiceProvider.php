@@ -2,9 +2,7 @@
 
 namespace App\Providers;
 
-use App\Http\View\Composers\CategoryComposer;
-use App\Models\Category;
-use App\Models\Product;
+use App\Http\Controllers\Partial\Helper\CategoryHelper;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
