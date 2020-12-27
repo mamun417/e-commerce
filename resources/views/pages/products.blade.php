@@ -18,7 +18,9 @@
                             <div class="sidebar_subtitle brands_subtitle mt-0">Brands</div>
                             <ul class="brands_list">
                                 @foreach($brands as $brand)
-                                    <li class="brand"><a href="#">{{ $brand->name }}</a></li>
+                                    <li class="brand">
+                                        <a href="{{ route('product-by-brand', $brand->slug) }}">{{ $brand->name }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>
@@ -56,10 +58,11 @@
 
                     <div class="shop_content">
 
-                        @if (count($child_categories))
+                        @if (@count($child_categories))
                             <div class="mb-4">
                                 @foreach($child_categories as $category)
-                                    <a href="{{ route('product-by-category', $category['slug']) }}" class="btn btn-sm btn-outline-secondary mr-2">
+                                    <a href="{{ route('product-by-category', $category['slug']) }}"
+                                       class="btn btn-sm btn-outline-secondary mr-2">
                                         {{ $category['name'] }}
                                     </a>
                                 @endforeach
@@ -100,8 +103,12 @@
                                     <div class="product_border"></div>
                                     <div
                                         class="product_image d-flex flex-column align-items-center justify-content-center">
-                                        <img height="115px" width="115px" src="{{ getImageUrl($product->image_one) }}"
-                                             alt=""></div>
+                                        <a href="{{ route('product.show', $product->slug) }}">
+                                            <img height="115px" width="115px"
+                                                 src="{{ getImageUrl($product->image_one) }}"
+                                                 alt="{{ $product->name }}">
+                                        </a>
+                                    </div>
                                     <div class="product_content">
 
                                         <div class="product_price">
@@ -114,7 +121,11 @@
                                         </div>
 
                                         <div class="product_name">
-                                            <div><a href="#" tabindex="0">{{ $product->name }}</a></div>
+                                            <div>
+                                                <a href="{{ route('product.show', $product->slug) }}" tabindex="0">
+                                                    {{ $product->name }}
+                                                </a>
+                                            </div>
                                         </div>
 
                                         <div class="">

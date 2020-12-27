@@ -2,19 +2,11 @@
 
 namespace App\Models;
 
+use Eloquent;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @method static create(array $request_data)
- * @method static latest()
- * @method static whereMainSlider(int $int)
- * @method static active()
- * @method static whereSlug($slug)
- * @method static whereIn(string $string, array $category_ids)
- * @property mixed status
- * @property mixed description
- * @property mixed discount_price
- * @property mixed selling_price
+ * @mixin Eloquent
  */
 class Product extends Model
 {

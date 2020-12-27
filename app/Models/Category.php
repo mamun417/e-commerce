@@ -2,18 +2,11 @@
 
 namespace App\Models;
 
+use Eloquent;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @method static create($param)
- * @method static latest()
- * @method static find(int $int)
- * @method static whereSlug($slug)
- * @property mixed parent_id
- * @property mixed parent
- * @property mixed id
- * @property mixed image
- * @property mixed status
+ * @mixin Eloquent
  */
 class Category extends Model
 {

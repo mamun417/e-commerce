@@ -14,6 +14,7 @@ Auth::routes(['verify' => true]);
 // product
 Route::get('product/{slug}', 'ProductController@show')->name('product.show');
 Route::get('product/category/{slug}', 'ProductController@byCategory')->name('product-by-category');
+Route::get('product/brand/{slug}', 'ProductController@byBrand')->name('product-by-brand');
 
 // wishlist
 Route::get('wishlist', 'WishlistController@index')->name('wishlist.index');
