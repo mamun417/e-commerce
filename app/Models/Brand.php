@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static latest()
  * @method static create(array $request_data)
+ * @method static whereIn(string $string, \Illuminate\Support\Collection $brand_ids)
  * @property mixed image
  * @property mixed status
  */

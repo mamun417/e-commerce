@@ -31,9 +31,9 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('parent_categories', $parent_categories);
         });
 
-        View::composer(['pages.products'], function ($view) {
-            $brands = BrandHelper::getBrands(false);
-            $view->with('brands', $brands);
-        });
+//        View::composer(['pages.products'], function ($view) {
+//            $brands = BrandHelper::getBrands(false);
+//            $view->with('brands', $brands);
+//        });
     }
 }
