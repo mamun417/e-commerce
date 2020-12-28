@@ -33,7 +33,7 @@ Route::get('cart/coupon/remove', 'CouponController@remove')->name('coupon.remove
 Route::group(['middleware' => ['auth']], function () {
     // checkout
     Route::get('checkout', 'CheckoutController@checkout')->name('checkout');
-    Route::post('checkout', 'CheckoutController@orderSubmit');
+    Route::post('order', 'CheckoutController@order')->name('order');
 });
 
 

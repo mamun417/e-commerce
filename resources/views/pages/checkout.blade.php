@@ -23,7 +23,7 @@
                                         <div class="cart_list p-3">
                                             <h4 class="text-center">Shipping Information</h4>
 
-                                            <form action="{{ route('register') }}" id="contact_form" method="post">
+                                            <form action="{{ route('order') }}" method="post">
                                                 @csrf
 
                                                 <div class="form-group">
@@ -72,12 +72,14 @@
 
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Address</label>
-                                                    <input type="text" class="form-control"
-                                                           aria-describedby="emailHelp"
-                                                           placeholder="Enter Full Address " name="address"
+                                                    <input type="text"
+                                                           class="form-control @error('address') is-invalid @enderror"
+                                                           placeholder="Enter Full Address"
+                                                           name="address"
+                                                           value="{{ old('address') }}"
                                                            required="">
 
-                                                    @error('password')
+                                                    @error('address')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
@@ -86,12 +88,14 @@
 
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">City</label>
-                                                    <input type="text" class="form-control"
-                                                           aria-describedby="emailHelp"
-                                                           placeholder="Enter city name" name="city"
+                                                    <input type="text"
+                                                           class="form-control @error('city') is-invalid @enderror"
+                                                           placeholder="Enter city name"
+                                                           value="{{ old('city') }}"
+                                                           name="city"
                                                            required="">
 
-                                                    @error('password_confirmation')
+                                                    @error('city')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
@@ -101,55 +105,30 @@
                                                 <div><b>Select Payment Method</b></div>
 
                                                 <div class="form-group mt-2">
-                                                    <ul class="logos_list">
-                                                        <li>
-                                                            <input id="mastercard" type="radio" name="payment"
-                                                                   value="stripe">
+                                                    <ul class="logos_list @error('payment') is-invalid @enderror"
+                                                        @foreach($payment_methods as $method)
+                                                            <li>
+                                                                <input id="{{ $method }}" type="radio" name="payment"
+                                                                       value="{{ $method }}">
 
-                                                            <label for="mastercard">
-                                                                <img
-                                                                    src="{{ asset('frontend/images/mastercard.png') }}"
-                                                                    style="width: 100px; height: 60px;">
-                                                            </label>
-                                                        </li>
-
-                                                        <li>
-                                                            <input id="paypal" type="radio" name="payment"
-                                                                   value="paypal">
-
-                                                            <label for="paypal">
-                                                                <img
-                                                                    src="{{ asset('frontend/images/paypal.png') }}"
-                                                                    style="width: 100px; height: 60px;">
-                                                            </label>
-                                                        </li>
-
-                                                        <li>
-                                                            <input id="moille" type="radio" name="payment"
-                                                                   value="ideal">
-
-                                                            <label for="moille">
-                                                                <img
-                                                                    src="{{ asset('frontend/images/mollie.png') }}"
-                                                                    style="width: 100px; height: 60px;">
-                                                            </label>
-                                                        </li>
-
-                                                        <li>
-                                                            <input id="handcash" type="radio" name="payment"
-                                                                   value="ideal">
-
-                                                            <label for="handcash">
-                                                                <img
-                                                                    src="{{ asset('frontend/images/handcash.png') }}"
-                                                                    style="width: 100px; height: 60px;">
-                                                            </label>
-                                                        </li>
+                                                                <label for="{{ $method }}">
+                                                                    <img
+                                                                        src="{{ asset('frontend/images/'.$method.'.png') }}"
+                                                                        style="width: 100px; height: 60px;">
+                                                                </label>
+                                                            </li>
+                                                        @endforeach
                                                     </ul>
+
+                                                    @error('payment')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror
                                                 </div>
 
                                                 <div class="contact_form_button text-center">
-                                                    <button type="submit" class="btn btn-info">Pay Now</button>
+                                                    <button type="submit" class="btn btn-info">Order Submit</button>
                                                 </div>
                                             </form>
                                         </div>
