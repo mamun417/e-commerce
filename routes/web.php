@@ -1,8 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-
 /**********************************
  * start frontend routes
  **********************************/
@@ -34,6 +31,8 @@ Route::group(['middleware' => ['auth']], function () {
     // checkout
     Route::get('checkout', 'CheckoutController@checkout')->name('checkout');
     Route::post('order', 'CheckoutController@order')->name('order');
+
+    Route::post('payment/stripe/charge', 'CheckoutController@stripePaymentCharge')->name('stripe.charge');
 });
 
 

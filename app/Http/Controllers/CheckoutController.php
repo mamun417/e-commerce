@@ -31,4 +31,25 @@ class CheckoutController extends Controller
 
         dd($request->all());
     }
+
+    public function stripePaymentCharge()
+    {
+        $stripe = new \Stripe\StripeClient(
+            'sk_test_51I3Pv2Jka6F1E1TdXyINUL4oKXfebjfJoWLpEzzrO0kbTMYI2KUGoZc8mmZIoJsbbi7n6VKlDuy0WFdseSpbkdzh00zHdBMe18'
+        );
+
+        try {
+            $res = $stripe->charges->create([
+                'amount' => 5*100,
+                'currency' => 'usd',
+                'source' => request('stripeToken'),
+                'description' => 'My First Test Charge (created for API docs)',
+                'metadata' => ['order_id' => uniqid()]
+            ]);
+        }catch (\Exception $exception){
+            return $exception->getMessage();
+        }
+
+        return $res;
+    }
 }
