@@ -4,6 +4,9 @@
 @push('extra-links')
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/product_styles.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/styles/product_responsive.css') }}">
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60129c6cf37af6cd"></script>
 @endpush
 
 @section('content')
@@ -150,23 +153,30 @@
                 <div class="featured">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab"
                                aria-controls="home" aria-selected="true">Description</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
                                aria-controls="profile" aria-selected="false">Review</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="py-4">
                                 {!! $product->description !!}
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="tab-pane fade show active" id="profile" role="tabpanel"
+                             aria-labelledby="profile-tab">
                             <div class="py-4">
-                                Review goes here...
+                                <div id="fb-root"></div>
+                                <script async defer crossorigin="anonymous"
+                                        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=2385700178355528"
+                                        nonce="2dh6vnRE"></script>
+                                <div class="fb-comments"
+                                     data-href="{{ request()->url() }}"
+                                     data-width="" data-numposts="5"></div>
                             </div>
                         </div>
                     </div>
