@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.ico') }}">
 
+    <link rel="stylesheet" href="{{ asset('css/frontend/style.css') }}">
+
     @stack('extra-links')
 </head>
 
@@ -19,20 +21,8 @@
     @include('components.footer')
 </div>
 
-<script src="{{ asset('frontend/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{ asset('frontend/styles/bootstrap4/popper.js')}}"></script>
-<script src="{{ asset('frontend/styles/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{ asset('frontend/plugins/greensock/TweenMax.min.js')}}"></script>
-<script src="{{ asset('frontend/plugins/greensock/TimelineMax.min.js')}}"></script>
-<script src="{{ asset('frontend/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
-<script src="{{ asset('frontend/plugins/greensock/animation.gsap.min.js')}}"></script>
-<script src="{{ asset('frontend/plugins/greensock/ScrollToPlugin.min.js') }}"></script>
-<script src="{{ asset('frontend/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
-<script src="{{ asset('frontend/plugins/slick-1.8.0/slick.js')}}"></script>
-<script src="{{ asset('frontend/plugins/easing/easing.js')}}"></script>
-<script src="{{ asset('backend/js/plugins/toastr/toastr.min.js') }}"></script>
-<script src="{{ asset('frontend/js/axois.js') }}"></script>
-<script src="{{ asset('frontend/js/custom.js')}}"></script>
+<script src="{{ asset('js/frontend/app.js')}}"></script>
+
 @yield('script')
 
 <script>
